@@ -1,0 +1,281 @@
+2021-01-20 20:02:37,478 - Model - INFO - PARAMETER ...
+2021-01-20 20:02:37,478 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-20 20:02:37,509 - Model - INFO - The number of test data is: 2874
+2021-01-20 20:05:25,060 - Model - INFO - eval mIoU of Airplane       0.792308
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Bag            0.727473
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Cap            0.772467
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Car            0.749650
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Chair          0.892165
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Earphone       0.619924
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Guitar         0.888469
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Knife          0.857991
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Lamp           0.773736
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Laptop         0.955077
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Motorbike      0.442585
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Mug            0.954239
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Pistol         0.788765
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Rocket         0.499486
+2021-01-20 20:05:25,061 - Model - INFO - eval mIoU of Skateboard     0.723021
+2021-01-20 20:05:25,062 - Model - INFO - eval mIoU of Table          0.803035
+2021-01-20 20:05:25,062 - Model - INFO - Accuracy is: 0.93043
+2021-01-20 20:05:25,062 - Model - INFO - Class avg accuracy is: 0.78122
+2021-01-20 20:05:25,062 - Model - INFO - Class avg mIOU is: 0.76502
+2021-01-20 20:05:25,062 - Model - INFO - Inctance avg mIOU is: 0.82027
+2021-01-20 20:16:50,658 - Model - INFO - PARAMETER ...
+2021-01-20 20:16:50,658 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-20 20:16:50,688 - Model - INFO - The number of test data is: 2874
+2021-01-20 20:19:37,406 - Model - INFO - eval mIoU of Airplane       0.787341
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Bag            0.719846
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Cap            0.775639
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Car            0.743971
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Chair          0.891727
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Earphone       0.584780
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Guitar         0.889609
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Knife          0.845500
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Lamp           0.777088
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Laptop         0.956609
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Motorbike      0.452525
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Mug            0.950244
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Pistol         0.775759
+2021-01-20 20:19:37,407 - Model - INFO - eval mIoU of Rocket         0.525262
+2021-01-20 20:19:37,408 - Model - INFO - eval mIoU of Skateboard     0.713528
+2021-01-20 20:19:37,408 - Model - INFO - eval mIoU of Table          0.802324
+2021-01-20 20:19:37,408 - Model - INFO - Average time consumption for one inference is: 0.30060
+2021-01-20 20:19:37,408 - Model - INFO - Accuracy is: 0.92976
+2021-01-20 20:19:37,408 - Model - INFO - Class avg accuracy is: 0.77990
+2021-01-20 20:19:37,408 - Model - INFO - Class avg mIOU is: 0.76198
+2021-01-20 20:19:37,408 - Model - INFO - Inctance avg mIOU is: 0.81888
+2021-01-20 20:25:18,238 - Model - INFO - PARAMETER ...
+2021-01-20 20:25:18,238 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-20 20:25:18,268 - Model - INFO - The number of test data is: 2874
+2021-01-20 20:25:21,127 - Model - INFO - Average time consumption for one inference is: 0.49805
+2021-01-20 20:25:24,399 - Model - INFO - PARAMETER ...
+2021-01-20 20:25:24,400 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-20 20:25:24,430 - Model - INFO - The number of test data is: 2874
+2021-01-20 20:25:27,231 - Model - INFO - Average time consumption for one inference is: 0.49299
+2021-01-21 11:01:03,266 - Model - INFO - PARAMETER ...
+2021-01-21 11:01:03,266 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:01:03,297 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:03:54,107 - Model - INFO - Average time consumption for one inference is: 0.30799
+2021-01-21 11:05:44,076 - Model - INFO - PARAMETER ...
+2021-01-21 11:05:44,076 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:05:44,107 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:08:34,383 - Model - INFO - Average time consumption for one inference is: 0.30706
+2021-01-21 11:10:40,683 - Model - INFO - PARAMETER ...
+2021-01-21 11:10:40,683 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:10:40,713 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:12:57,109 - Model - INFO - Average time consumption for one inference is: 0.23699
+2021-01-21 11:16:47,781 - Model - INFO - PARAMETER ...
+2021-01-21 11:16:47,781 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:16:47,811 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:18:44,748 - Model - INFO - Average time consumption for one inference is: 0.20879
+2021-01-21 11:19:38,712 - Model - INFO - PARAMETER ...
+2021-01-21 11:19:38,712 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:19:38,762 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:20:26,371 - Model - INFO - PARAMETER ...
+2021-01-21 11:20:26,371 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:20:26,401 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:20:39,173 - Model - INFO - PARAMETER ...
+2021-01-21 11:20:39,173 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:20:39,203 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:21:01,549 - Model - INFO - PARAMETER ...
+2021-01-21 11:21:01,549 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:21:01,579 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:22:02,655 - Model - INFO - PARAMETER ...
+2021-01-21 11:22:02,655 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:22:02,685 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:22:52,007 - Model - INFO - PARAMETER ...
+2021-01-21 11:22:52,008 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:22:52,038 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:23:05,275 - Model - INFO - PARAMETER ...
+2021-01-21 11:23:05,275 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:23:05,307 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:23:19,787 - Model - INFO - PARAMETER ...
+2021-01-21 11:23:19,787 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:23:19,817 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:26:55,734 - Model - INFO - PARAMETER ...
+2021-01-21 11:26:55,734 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:26:55,764 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:28:02,677 - Model - INFO - Average time consumption for one inference is: 0.11575
+2021-01-21 11:33:09,285 - Model - INFO - PARAMETER ...
+2021-01-21 11:33:09,285 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:33:09,316 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:35:05,088 - Model - INFO - Average time consumption for one inference is: 0.20678
+2021-01-21 11:36:40,713 - Model - INFO - PARAMETER ...
+2021-01-21 11:36:40,713 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:36:40,743 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:37:45,628 - Model - INFO - Average time consumption for one inference is: 0.11242
+2021-01-21 11:37:53,882 - Model - INFO - PARAMETER ...
+2021-01-21 11:37:53,882 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:37:53,913 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:38:07,547 - Model - INFO - Average time consumption for one inference is: 0.00061
+2021-01-21 11:44:01,024 - Model - INFO - PARAMETER ...
+2021-01-21 11:44:01,024 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:44:01,054 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:47:11,318 - Model - INFO - PARAMETER ...
+2021-01-21 11:47:11,318 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:47:11,349 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:49:14,014 - Model - INFO - PARAMETER ...
+2021-01-21 11:49:14,014 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:49:14,047 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:50:01,360 - Model - INFO - PARAMETER ...
+2021-01-21 11:50:01,360 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:50:01,390 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:50:41,167 - Model - INFO - PARAMETER ...
+2021-01-21 11:50:41,167 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:50:41,198 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:52:43,802 - Model - INFO - PARAMETER ...
+2021-01-21 11:52:43,802 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 11:52:43,832 - Model - INFO - The number of test data is: 2874
+2021-01-21 11:55:32,751 - Model - INFO - Average time consumption for one inference is: 0.29858
+2021-01-21 12:00:18,962 - Model - INFO - PARAMETER ...
+2021-01-21 12:00:18,962 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:00:18,992 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:01:30,778 - Model - INFO - PARAMETER ...
+2021-01-21 12:01:30,778 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:01:30,809 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:02:08,508 - Model - INFO - PARAMETER ...
+2021-01-21 12:02:08,508 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:02:08,539 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:04:58,657 - Model - INFO - PARAMETER ...
+2021-01-21 12:04:58,657 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:04:58,689 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:05:49,488 - Model - INFO - PARAMETER ...
+2021-01-21 12:05:49,488 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:05:49,518 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:06:21,876 - Model - INFO - PARAMETER ...
+2021-01-21 12:06:21,876 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:06:21,907 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:15:29,807 - Model - INFO - PARAMETER ...
+2021-01-21 12:15:29,807 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:15:29,838 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:16:06,722 - Model - INFO - PARAMETER ...
+2021-01-21 12:16:06,722 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:16:06,753 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:16:17,896 - Model - INFO - Average time consumption for one inference is: 5.29551
+2021-01-21 12:27:29,931 - Model - INFO - PARAMETER ...
+2021-01-21 12:27:29,931 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:27:29,963 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:30:14,361 - Model - INFO - PARAMETER ...
+2021-01-21 12:30:14,361 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:30:14,392 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:30:32,104 - Model - INFO - PARAMETER ...
+2021-01-21 12:30:32,104 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:30:32,135 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:33:56,511 - Model - INFO - PARAMETER ...
+2021-01-21 12:33:56,511 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:33:56,541 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:34:28,749 - Model - INFO - PARAMETER ...
+2021-01-21 12:34:28,749 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:34:28,780 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:34:40,381 - Model - INFO - Average time consumption for one inference is: 5.53098
+2021-01-21 12:36:01,606 - Model - INFO - PARAMETER ...
+2021-01-21 12:36:01,606 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:36:01,637 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:36:13,297 - Model - INFO - Average time consumption for one inference is: 5.55989
+2021-01-21 12:37:35,977 - Model - INFO - PARAMETER ...
+2021-01-21 12:37:35,977 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:37:36,007 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:37:47,635 - Model - INFO - Average time consumption for one inference is: 5.57449
+2021-01-21 12:44:49,878 - Model - INFO - PARAMETER ...
+2021-01-21 12:44:49,878 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-01-21 12:44:49,909 - Model - INFO - The number of test data is: 2874
+2021-01-21 12:45:01,261 - Model - INFO - Average time consumption for one inference is: 5.40152
+2021-01-24 22:04:04,879 - Model - INFO - PARAMETER ...
+2021-01-24 22:04:04,879 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=False, num_point=2048, num_votes=3)
+2021-01-24 22:04:04,909 - Model - INFO - The number of test data is: 2874
+2021-01-24 22:04:21,476 - Model - INFO - PARAMETER ...
+2021-01-24 22:04:21,476 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=False, num_point=2048, num_votes=3)
+2021-01-24 22:04:21,506 - Model - INFO - The number of test data is: 2874
+2021-01-26 11:20:07,752 - Model - INFO - PARAMETER ...
+2021-01-26 11:20:07,752 - Model - INFO - Namespace(batch_size=16, gpu='None', log_dir='pointnet2_part_seg_msg', normal=False, num_point=2048, num_votes=3)
+2021-01-26 11:20:07,783 - Model - INFO - The number of test data is: 2874
+2021-01-26 11:20:20,199 - Model - INFO - Average time consumption for one inference is: 6.00436
+2021-12-02 12:39:58,127 - Model - INFO - PARAMETER ...
+2021-12-02 12:39:58,127 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-02 12:39:58,234 - Model - INFO - The number of test data is: 2874
+2021-12-05 14:38:25,731 - Model - INFO - PARAMETER ...
+2021-12-05 14:38:25,731 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-05 14:38:25,760 - Model - INFO - The number of test data is: 2874
+2021-12-05 14:40:43,319 - Model - INFO - PARAMETER ...
+2021-12-05 14:40:43,319 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-05 14:40:43,354 - Model - INFO - The number of test data is: 2874
+2021-12-13 16:01:26,047 - Model - INFO - PARAMETER ...
+2021-12-13 16:01:26,047 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-13 16:01:26,076 - Model - INFO - The number of test data is: 2874
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Airplane       0.835406
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Bag            0.830947
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Cap            0.862914
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Car            0.789716
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Chair          0.908548
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Earphone       0.754615
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Guitar         0.908453
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Knife          0.861810
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Lamp           0.842302
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Laptop         0.960047
+2021-12-13 16:03:35,625 - Model - INFO - eval mIoU of Motorbike      0.725326
+2021-12-13 16:03:35,626 - Model - INFO - eval mIoU of Mug            0.956806
+2021-12-13 16:03:35,626 - Model - INFO - eval mIoU of Pistol         0.813506
+2021-12-13 16:03:35,626 - Model - INFO - eval mIoU of Rocket         0.633392
+2021-12-13 16:03:35,626 - Model - INFO - eval mIoU of Skateboard     0.765017
+2021-12-13 16:03:35,626 - Model - INFO - eval mIoU of Table          0.827939
+2021-12-13 16:03:35,626 - Model - INFO - Accuracy is: 0.94392
+2021-12-13 16:03:35,626 - Model - INFO - Class avg accuracy is: 0.87578
+2021-12-13 16:03:35,626 - Model - INFO - Class avg mIOU is: 0.82980
+2021-12-13 16:03:35,626 - Model - INFO - Inctance avg mIOU is: 0.85507
+2021-12-14 13:21:15,162 - Model - INFO - PARAMETER ...
+2021-12-14 13:21:15,162 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-14 13:21:15,190 - Model - INFO - The number of test data is: 2874
+2021-12-14 13:24:12,300 - Model - INFO - PARAMETER ...
+2021-12-14 13:24:12,301 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-14 13:24:12,328 - Model - INFO - The number of test data is: 2874
+2021-12-14 13:27:56,331 - Model - INFO - PARAMETER ...
+2021-12-14 13:27:56,331 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-14 13:27:56,358 - Model - INFO - The number of test data is: 2874
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Airplane       0.840188
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Bag            nan
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Cap            nan
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Car            nan
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Chair          nan
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Earphone       nan
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Guitar         nan
+2021-12-14 13:29:16,335 - Model - INFO - eval mIoU of Knife          nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Lamp           nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Laptop         nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Motorbike      nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Mug            nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Pistol         nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Rocket         nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Skateboard     nan
+2021-12-14 13:29:16,336 - Model - INFO - eval mIoU of Table          nan
+2021-12-14 13:29:16,336 - Model - INFO - Accuracy is: 0.92328
+2021-12-14 13:29:16,336 - Model - INFO - Class avg accuracy is: nan
+2021-12-14 13:29:16,336 - Model - INFO - Class avg mIOU is: nan
+2021-12-14 13:29:16,336 - Model - INFO - Inctance avg mIOU is: 0.84019
+2021-12-14 15:52:27,202 - Model - INFO - PARAMETER ...
+2021-12-14 15:52:27,202 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-14 15:52:27,231 - Model - INFO - The number of test data is: 2874
+2021-12-14 15:53:58,617 - Model - INFO - eval mIoU of Airplane       0.832843
+2021-12-14 15:53:58,617 - Model - INFO - eval mIoU of Bag            nan
+2021-12-14 15:53:58,617 - Model - INFO - eval mIoU of Cap            nan
+2021-12-14 15:53:58,617 - Model - INFO - eval mIoU of Car            nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Chair          nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Earphone       nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Guitar         nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Knife          nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Lamp           nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Laptop         nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Motorbike      nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Mug            nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Pistol         nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Rocket         nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Skateboard     nan
+2021-12-14 15:53:58,618 - Model - INFO - eval mIoU of Table          nan
+2021-12-14 15:53:58,618 - Model - INFO - Accuracy is: 0.91520
+2021-12-14 15:53:58,618 - Model - INFO - Class avg accuracy is: nan
+2021-12-14 15:53:58,618 - Model - INFO - Class avg mIOU is: nan
+2021-12-14 15:53:58,618 - Model - INFO - Inctance avg mIOU is: 0.83284
+2021-12-14 15:59:39,140 - Model - INFO - PARAMETER ...
+2021-12-14 15:59:39,140 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-14 16:01:08,562 - Model - INFO - Accuracy is: 0.91650
+2021-12-14 16:01:08,562 - Model - INFO - Inctance avg mIOU is: 0.83512

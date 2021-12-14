@@ -1,0 +1,1 @@
+python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
