@@ -3,7 +3,6 @@ import torch
 import torch.nn.functional as F
 from models.pointnet_util import PointNetSetAbstractionMsg,PointNetSetAbstraction,PointNetFeaturePropagation
 
-
 class get_model(nn.Module):
     def __init__(self, num_classes, normal_channel=False):
         super(get_model, self).__init__()
@@ -28,7 +27,7 @@ class get_model(nn.Module):
         B,C,N = xyz.shape
         if self.normal_channel:
             l0_points = xyz
-            l0_xyz = xyz[:,:3,:]
+            l0_xyz = torch.clone(xyz[:,:3,:])
         else:
             l0_points = xyz
             l0_xyz = xyz

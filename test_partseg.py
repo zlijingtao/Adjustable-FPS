@@ -11,7 +11,7 @@ import sys
 import importlib
 from tqdm import tqdm
 import numpy as np
-
+from models.pointnet_util import pcloud_sort, DIMSORT, DIMSORT_RANGE, VISUALIZE
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
@@ -38,7 +38,8 @@ def parse_args():
     parser.add_argument('--num_point', type=int, default=2048, help='Point Number [default: 2048]')
     parser.add_argument('--log_dir', type=str, default='pointnet2_part_seg_ssg', help='Experiment root')
     parser.add_argument('--normal', action='store_true', default=False, help='Whether to use normal information [default: False]')
-    parser.add_argument('--num_votes', type=int, default=3, help='Aggregate segmentation scores with voting [default: 3]')
+    # parser.add_argument('--num_votes', type=int, default=3, help='Aggregate segmentation scores with voting [default: 3]') # Default Option
+    parser.add_argument('--num_votes', type=int, default=1, help='Aggregate segmentation scores with voting [default: 3]') # Simplify the process
     return parser.parse_args()
 
 def main(args):
@@ -76,7 +77,10 @@ def main(args):
         classifier = MODEL.get_model(num_part, normal_channel=args.normal).cuda()
     else:
         classifier = MODEL.get_model(num_part, normal_channel=args.normal)
-    checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
+    if use_gpu:
+        checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
+    else:
+        checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth', map_location=torch.device('cpu'))
     classifier.load_state_dict(checkpoint['model_state_dict'])
 
 
@@ -91,10 +95,23 @@ def main(args):
         for cat in seg_classes.keys():
             for label in seg_classes[cat]:
                 seg_label_to_cat[label] = cat
+        if use_gpu:
+            points = torch.load("./test_point_batch.pt")
+            label = torch.load("./test_label_batch.pt")
+            target = torch.load("./test_target_batch.pt")
+        else:
+            points = torch.load("./test_point_batch.pt", map_location=torch.device('cpu'))
+            label = torch.load("./test_label_batch.pt", map_location=torch.device('cpu'))
+            target = torch.load("./test_target_batch.pt", map_location=torch.device('cpu'))
+        if DIMSORT:
+            points, target = pcloud_sort(points, target, sel_dim = 2)
+        if VISUALIZE:
+            from PIL import Image
+            from visualizer.pc_utils import point_cloud_three_views
+            im_array = point_cloud_three_views(points.numpy()[0, :, :])
+            img = Image.fromarray(np.uint8(im_array * 255.0))
+            img.save('pd0-orig.jpg')
 
-        points = torch.load("./test_point_batch.pt")
-        label = torch.load("./test_label_batch.pt")
-        target = torch.load("./test_target_batch.pt")
         batchsize, num_point, _ = points.size()
         cur_batch_size, NUM_POINT, _ = points.size()
         if use_gpu:

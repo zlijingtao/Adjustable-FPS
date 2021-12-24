@@ -279,3 +279,639 @@
 2021-12-14 15:59:39,140 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
 2021-12-14 16:01:08,562 - Model - INFO - Accuracy is: 0.91650
 2021-12-14 16:01:08,562 - Model - INFO - Inctance avg mIOU is: 0.83512
+2021-12-22 10:41:47,458 - Model - INFO - PARAMETER ...
+2021-12-22 10:41:47,458 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 10:44:52,243 - Model - INFO - PARAMETER ...
+2021-12-22 10:44:52,243 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 10:45:18,033 - Model - INFO - Accuracy is: 0.91587
+2021-12-22 10:45:18,033 - Model - INFO - Inctance avg mIOU is: 0.83363
+2021-12-22 10:46:29,947 - Model - INFO - PARAMETER ...
+2021-12-22 10:46:29,947 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 10:46:55,961 - Model - INFO - Accuracy is: 0.91654
+2021-12-22 10:46:55,961 - Model - INFO - Inctance avg mIOU is: 0.83436
+2021-12-22 10:53:54,274 - Model - INFO - PARAMETER ...
+2021-12-22 10:53:54,274 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 10:54:20,326 - Model - INFO - Accuracy is: 0.91532
+2021-12-22 10:54:20,326 - Model - INFO - Inctance avg mIOU is: 0.83347
+2021-12-22 11:15:06,208 - Model - INFO - PARAMETER ...
+2021-12-22 11:15:06,209 - Model - INFO - Namespace(batch_size=16, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 11:15:32,240 - Model - INFO - Accuracy is: 0.91270
+2021-12-22 11:15:32,240 - Model - INFO - Inctance avg mIOU is: 0.82929
+2021-12-22 11:22:55,310 - Model - INFO - PARAMETER ...
+2021-12-22 11:22:55,310 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:23:04,176 - Model - INFO - Accuracy is: 0.91445
+2021-12-22 11:23:04,176 - Model - INFO - Inctance avg mIOU is: 0.83212
+2021-12-22 11:44:43,722 - Model - INFO - PARAMETER ...
+2021-12-22 11:44:43,722 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:44:52,389 - Model - INFO - Accuracy is: 0.91327
+2021-12-22 11:44:52,389 - Model - INFO - Inctance avg mIOU is: 0.83007
+2021-12-22 11:46:20,729 - Model - INFO - PARAMETER ...
+2021-12-22 11:46:20,729 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:46:29,483 - Model - INFO - Accuracy is: 0.91571
+2021-12-22 11:46:29,483 - Model - INFO - Inctance avg mIOU is: 0.83131
+2021-12-22 11:49:47,433 - Model - INFO - PARAMETER ...
+2021-12-22 11:49:47,433 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:49:56,159 - Model - INFO - Accuracy is: 0.91184
+2021-12-22 11:49:56,159 - Model - INFO - Inctance avg mIOU is: 0.82925
+2021-12-22 11:51:17,968 - Model - INFO - PARAMETER ...
+2021-12-22 11:51:17,968 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:51:26,644 - Model - INFO - Accuracy is: 0.91115
+2021-12-22 11:51:26,644 - Model - INFO - Inctance avg mIOU is: 0.82604
+2021-12-22 11:56:38,957 - Model - INFO - PARAMETER ...
+2021-12-22 11:56:38,957 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:57:24,363 - Model - INFO - PARAMETER ...
+2021-12-22 11:57:24,363 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:57:33,016 - Model - INFO - Accuracy is: 0.32410
+2021-12-22 11:57:33,016 - Model - INFO - Inctance avg mIOU is: 0.14944
+2021-12-22 11:58:33,995 - Model - INFO - PARAMETER ...
+2021-12-22 11:58:33,995 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 11:58:42,485 - Model - INFO - Accuracy is: 0.32355
+2021-12-22 11:58:42,485 - Model - INFO - Inctance avg mIOU is: 0.14897
+2021-12-22 12:04:04,358 - Model - INFO - PARAMETER ...
+2021-12-22 12:04:04,358 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:04:13,026 - Model - INFO - Accuracy is: 0.39848
+2021-12-22 12:04:13,026 - Model - INFO - Inctance avg mIOU is: 0.24918
+2021-12-22 12:05:49,218 - Model - INFO - PARAMETER ...
+2021-12-22 12:05:49,218 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:05:57,861 - Model - INFO - Accuracy is: 0.39825
+2021-12-22 12:05:57,861 - Model - INFO - Inctance avg mIOU is: 0.25985
+2021-12-22 12:08:45,762 - Model - INFO - PARAMETER ...
+2021-12-22 12:08:45,762 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:08:54,402 - Model - INFO - Accuracy is: 0.39858
+2021-12-22 12:08:54,402 - Model - INFO - Inctance avg mIOU is: 0.24961
+2021-12-22 12:13:01,165 - Model - INFO - PARAMETER ...
+2021-12-22 12:13:01,165 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:13:09,937 - Model - INFO - Accuracy is: 0.39856
+2021-12-22 12:13:09,938 - Model - INFO - Inctance avg mIOU is: 0.25979
+2021-12-22 12:14:28,615 - Model - INFO - PARAMETER ...
+2021-12-22 12:14:28,615 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:14:37,280 - Model - INFO - Accuracy is: 0.39850
+2021-12-22 12:14:37,280 - Model - INFO - Inctance avg mIOU is: 0.23881
+2021-12-22 12:18:43,603 - Model - INFO - PARAMETER ...
+2021-12-22 12:18:43,603 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:18:52,266 - Model - INFO - Accuracy is: 0.39913
+2021-12-22 12:18:52,266 - Model - INFO - Inctance avg mIOU is: 0.24909
+2021-12-22 12:18:56,860 - Model - INFO - PARAMETER ...
+2021-12-22 12:18:56,860 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 12:19:05,536 - Model - INFO - Accuracy is: 0.39771
+2021-12-22 12:19:05,536 - Model - INFO - Inctance avg mIOU is: 0.23896
+2021-12-22 12:19:22,927 - Model - INFO - PARAMETER ...
+2021-12-22 12:19:22,928 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:38:35,223 - Model - INFO - PARAMETER ...
+2021-12-22 13:38:35,223 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:38:57,141 - Model - INFO - PARAMETER ...
+2021-12-22 13:38:57,141 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:39:12,159 - Model - INFO - PARAMETER ...
+2021-12-22 13:39:12,159 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:40:22,752 - Model - INFO - PARAMETER ...
+2021-12-22 13:40:22,752 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:40:31,531 - Model - INFO - Accuracy is: 0.39699
+2021-12-22 13:40:31,531 - Model - INFO - Inctance avg mIOU is: 0.24851
+2021-12-22 13:41:35,059 - Model - INFO - PARAMETER ...
+2021-12-22 13:41:35,059 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:41:43,709 - Model - INFO - Accuracy is: 0.39697
+2021-12-22 13:41:43,709 - Model - INFO - Inctance avg mIOU is: 0.24945
+2021-12-22 13:42:47,735 - Model - INFO - PARAMETER ...
+2021-12-22 13:42:47,735 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:42:56,455 - Model - INFO - Accuracy is: 0.39773
+2021-12-22 13:42:56,455 - Model - INFO - Inctance avg mIOU is: 0.26001
+2021-12-22 13:43:42,024 - Model - INFO - PARAMETER ...
+2021-12-22 13:43:42,024 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:43:50,796 - Model - INFO - Accuracy is: 0.39716
+2021-12-22 13:43:50,796 - Model - INFO - Inctance avg mIOU is: 0.23847
+2021-12-22 13:44:01,283 - Model - INFO - PARAMETER ...
+2021-12-22 13:44:01,283 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:44:09,969 - Model - INFO - Accuracy is: 0.39734
+2021-12-22 13:44:09,969 - Model - INFO - Inctance avg mIOU is: 0.24962
+2021-12-22 13:44:53,507 - Model - INFO - PARAMETER ...
+2021-12-22 13:44:53,507 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:45:02,195 - Model - INFO - Accuracy is: 0.39775
+2021-12-22 13:45:02,195 - Model - INFO - Inctance avg mIOU is: 0.25974
+2021-12-22 13:46:20,983 - Model - INFO - PARAMETER ...
+2021-12-22 13:46:20,983 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:46:29,778 - Model - INFO - Accuracy is: 0.39960
+2021-12-22 13:46:29,778 - Model - INFO - Inctance avg mIOU is: 0.25981
+2021-12-22 13:46:40,417 - Model - INFO - PARAMETER ...
+2021-12-22 13:46:40,417 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:46:49,219 - Model - INFO - Accuracy is: 0.39783
+2021-12-22 13:46:49,219 - Model - INFO - Inctance avg mIOU is: 0.24911
+2021-12-22 13:47:42,067 - Model - INFO - PARAMETER ...
+2021-12-22 13:47:42,067 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:47:50,895 - Model - INFO - Accuracy is: 0.39644
+2021-12-22 13:47:50,895 - Model - INFO - Inctance avg mIOU is: 0.25926
+2021-12-22 13:48:03,166 - Model - INFO - PARAMETER ...
+2021-12-22 13:48:03,167 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:48:12,000 - Model - INFO - Accuracy is: 0.39854
+2021-12-22 13:48:12,000 - Model - INFO - Inctance avg mIOU is: 0.25985
+2021-12-22 13:49:47,846 - Model - INFO - PARAMETER ...
+2021-12-22 13:49:47,846 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:49:56,491 - Model - INFO - Accuracy is: 0.39848
+2021-12-22 13:49:56,491 - Model - INFO - Inctance avg mIOU is: 0.24964
+2021-12-22 13:50:09,544 - Model - INFO - PARAMETER ...
+2021-12-22 13:50:09,544 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:50:18,395 - Model - INFO - Accuracy is: 0.39691
+2021-12-22 13:50:18,395 - Model - INFO - Inctance avg mIOU is: 0.23823
+2021-12-22 13:50:33,098 - Model - INFO - PARAMETER ...
+2021-12-22 13:50:33,098 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:50:41,747 - Model - INFO - Accuracy is: 0.39665
+2021-12-22 13:50:41,747 - Model - INFO - Inctance avg mIOU is: 0.24870
+2021-12-22 13:54:37,420 - Model - INFO - PARAMETER ...
+2021-12-22 13:54:37,420 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:54:46,232 - Model - INFO - Accuracy is: 0.39618
+2021-12-22 13:54:46,232 - Model - INFO - Inctance avg mIOU is: 0.24843
+2021-12-22 13:55:34,636 - Model - INFO - PARAMETER ...
+2021-12-22 13:55:34,636 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:55:43,485 - Model - INFO - Accuracy is: 0.39872
+2021-12-22 13:55:43,485 - Model - INFO - Inctance avg mIOU is: 0.24934
+2021-12-22 13:58:10,222 - Model - INFO - PARAMETER ...
+2021-12-22 13:58:10,222 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 13:58:18,912 - Model - INFO - Accuracy is: 0.39467
+2021-12-22 13:58:18,912 - Model - INFO - Inctance avg mIOU is: 0.24765
+2021-12-22 13:59:53,250 - Model - INFO - PARAMETER ...
+2021-12-22 13:59:53,250 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:00:04,984 - Model - INFO - PARAMETER ...
+2021-12-22 14:00:04,984 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:00:13,666 - Model - INFO - Accuracy is: 0.39677
+2021-12-22 14:00:13,666 - Model - INFO - Inctance avg mIOU is: 0.24861
+2021-12-22 14:02:42,211 - Model - INFO - PARAMETER ...
+2021-12-22 14:02:42,211 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:02:51,115 - Model - INFO - Accuracy is: 0.39893
+2021-12-22 14:02:51,115 - Model - INFO - Inctance avg mIOU is: 0.24930
+2021-12-22 14:02:55,315 - Model - INFO - PARAMETER ...
+2021-12-22 14:02:55,315 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:03:04,118 - Model - INFO - Accuracy is: 0.39760
+2021-12-22 14:03:04,118 - Model - INFO - Inctance avg mIOU is: 0.24886
+2021-12-22 14:03:32,993 - Model - INFO - PARAMETER ...
+2021-12-22 14:03:32,993 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:03:41,691 - Model - INFO - Accuracy is: 0.39781
+2021-12-22 14:03:41,691 - Model - INFO - Inctance avg mIOU is: 0.24905
+2021-12-22 14:04:21,542 - Model - INFO - PARAMETER ...
+2021-12-22 14:04:21,542 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:04:30,219 - Model - INFO - Accuracy is: 0.39807
+2021-12-22 14:04:30,219 - Model - INFO - Inctance avg mIOU is: 0.24936
+2021-12-22 14:06:17,253 - Model - INFO - PARAMETER ...
+2021-12-22 14:06:17,254 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:06:26,071 - Model - INFO - Accuracy is: 0.39815
+2021-12-22 14:06:26,071 - Model - INFO - Inctance avg mIOU is: 0.25956
+2021-12-22 14:06:35,680 - Model - INFO - PARAMETER ...
+2021-12-22 14:06:35,680 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:06:44,133 - Model - INFO - Accuracy is: 0.32296
+2021-12-22 14:06:44,134 - Model - INFO - Inctance avg mIOU is: 0.13867
+2021-12-22 14:08:16,445 - Model - INFO - PARAMETER ...
+2021-12-22 14:08:16,445 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:08:25,025 - Model - INFO - Accuracy is: 0.34580
+2021-12-22 14:08:25,025 - Model - INFO - Inctance avg mIOU is: 0.19402
+2021-12-22 14:09:22,183 - Model - INFO - PARAMETER ...
+2021-12-22 14:09:22,183 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:10:23,836 - Model - INFO - PARAMETER ...
+2021-12-22 14:10:23,836 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:10:32,326 - Model - INFO - Accuracy is: 0.34617
+2021-12-22 14:10:32,326 - Model - INFO - Inctance avg mIOU is: 0.18399
+2021-12-22 14:10:59,673 - Model - INFO - PARAMETER ...
+2021-12-22 14:10:59,673 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:11:08,184 - Model - INFO - Accuracy is: 0.40133
+2021-12-22 14:11:08,184 - Model - INFO - Inctance avg mIOU is: 0.25865
+2021-12-22 14:13:45,569 - Model - INFO - PARAMETER ...
+2021-12-22 14:13:45,569 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:13:54,180 - Model - INFO - Accuracy is: 0.40365
+2021-12-22 14:13:54,180 - Model - INFO - Inctance avg mIOU is: 0.25892
+2021-12-22 14:14:37,279 - Model - INFO - PARAMETER ...
+2021-12-22 14:14:37,279 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:15:08,307 - Model - INFO - PARAMETER ...
+2021-12-22 14:15:08,308 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:15:36,572 - Model - INFO - PARAMETER ...
+2021-12-22 14:15:36,572 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:16:26,336 - Model - INFO - PARAMETER ...
+2021-12-22 14:16:26,336 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:16:34,831 - Model - INFO - Accuracy is: 0.34705
+2021-12-22 14:16:34,831 - Model - INFO - Inctance avg mIOU is: 0.18421
+2021-12-22 14:18:26,207 - Model - INFO - PARAMETER ...
+2021-12-22 14:18:26,207 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:18:41,108 - Model - INFO - PARAMETER ...
+2021-12-22 14:18:41,109 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:18:49,694 - Model - INFO - Accuracy is: 0.34969
+2021-12-22 14:18:49,694 - Model - INFO - Inctance avg mIOU is: 0.19536
+2021-12-22 14:19:32,707 - Model - INFO - PARAMETER ...
+2021-12-22 14:19:32,707 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:19:41,275 - Model - INFO - Accuracy is: 0.34623
+2021-12-22 14:19:41,275 - Model - INFO - Inctance avg mIOU is: 0.20478
+2021-12-22 14:20:16,956 - Model - INFO - PARAMETER ...
+2021-12-22 14:20:16,956 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:20:25,556 - Model - INFO - Accuracy is: 0.34741
+2021-12-22 14:20:25,556 - Model - INFO - Inctance avg mIOU is: 0.19480
+2021-12-22 14:23:40,467 - Model - INFO - PARAMETER ...
+2021-12-22 14:23:40,467 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:23:49,073 - Model - INFO - Accuracy is: 0.36532
+2021-12-22 14:23:49,073 - Model - INFO - Inctance avg mIOU is: 0.16699
+2021-12-22 14:25:57,553 - Model - INFO - PARAMETER ...
+2021-12-22 14:25:57,553 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:26:06,264 - Model - INFO - Accuracy is: 0.34694
+2021-12-22 14:26:06,264 - Model - INFO - Inctance avg mIOU is: 0.18385
+2021-12-22 14:26:53,067 - Model - INFO - PARAMETER ...
+2021-12-22 14:26:53,067 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:27:01,699 - Model - INFO - Accuracy is: 0.34554
+2021-12-22 14:27:01,700 - Model - INFO - Inctance avg mIOU is: 0.19366
+2021-12-22 14:32:01,306 - Model - INFO - PARAMETER ...
+2021-12-22 14:32:01,306 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:32:27,308 - Model - INFO - PARAMETER ...
+2021-12-22 14:32:27,309 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:32:35,944 - Model - INFO - Accuracy is: 0.70636
+2021-12-22 14:32:35,945 - Model - INFO - Inctance avg mIOU is: 0.55362
+2021-12-22 14:33:32,416 - Model - INFO - PARAMETER ...
+2021-12-22 14:33:32,416 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 14:33:40,929 - Model - INFO - Accuracy is: 0.70685
+2021-12-22 14:33:40,929 - Model - INFO - Inctance avg mIOU is: 0.56240
+2021-12-22 14:36:30,824 - Model - INFO - PARAMETER ...
+2021-12-22 14:36:30,824 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 14:36:56,818 - Model - INFO - Accuracy is: 0.70831
+2021-12-22 14:36:56,818 - Model - INFO - Inctance avg mIOU is: 0.55436
+2021-12-22 14:37:53,360 - Model - INFO - PARAMETER ...
+2021-12-22 14:37:53,361 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 14:38:18,779 - Model - INFO - Accuracy is: 0.81394
+2021-12-22 14:38:18,779 - Model - INFO - Inctance avg mIOU is: 0.69129
+2021-12-22 14:38:29,507 - Model - INFO - PARAMETER ...
+2021-12-22 14:38:29,507 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 14:38:54,713 - Model - INFO - Accuracy is: 0.80477
+2021-12-22 14:38:54,714 - Model - INFO - Inctance avg mIOU is: 0.62834
+2021-12-22 14:39:13,025 - Model - INFO - PARAMETER ...
+2021-12-22 14:39:13,025 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 14:39:39,025 - Model - INFO - Accuracy is: 0.91585
+2021-12-22 14:39:39,026 - Model - INFO - Inctance avg mIOU is: 0.83524
+2021-12-22 15:31:51,036 - Model - INFO - PARAMETER ...
+2021-12-22 15:31:51,036 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 15:32:17,044 - Model - INFO - Accuracy is: 0.91683
+2021-12-22 15:32:17,044 - Model - INFO - Inctance avg mIOU is: 0.83501
+2021-12-22 15:32:30,270 - Model - INFO - PARAMETER ...
+2021-12-22 15:32:30,270 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 15:32:55,651 - Model - INFO - Accuracy is: 0.80373
+2021-12-22 15:32:55,652 - Model - INFO - Inctance avg mIOU is: 0.62871
+2021-12-22 15:36:27,049 - Model - INFO - PARAMETER ...
+2021-12-22 15:36:27,049 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=3)
+2021-12-22 15:36:52,490 - Model - INFO - Accuracy is: 0.80469
+2021-12-22 15:36:52,490 - Model - INFO - Inctance avg mIOU is: 0.62820
+2021-12-22 15:43:47,205 - Model - INFO - PARAMETER ...
+2021-12-22 15:43:47,206 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:44:47,404 - Model - INFO - PARAMETER ...
+2021-12-22 15:44:47,404 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:45:39,437 - Model - INFO - PARAMETER ...
+2021-12-22 15:45:39,438 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:46:24,291 - Model - INFO - PARAMETER ...
+2021-12-22 15:46:24,291 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:47:18,787 - Model - INFO - PARAMETER ...
+2021-12-22 15:47:18,787 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:47:27,492 - Model - INFO - Accuracy is: 0.80101
+2021-12-22 15:47:27,492 - Model - INFO - Inctance avg mIOU is: 0.62375
+2021-12-22 15:52:20,615 - Model - INFO - PARAMETER ...
+2021-12-22 15:52:20,615 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:52:29,319 - Model - INFO - Accuracy is: 0.80103
+2021-12-22 15:52:29,319 - Model - INFO - Inctance avg mIOU is: 0.62503
+2021-12-22 15:54:10,393 - Model - INFO - PARAMETER ...
+2021-12-22 15:54:10,393 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:54:19,048 - Model - INFO - Accuracy is: 0.80139
+2021-12-22 15:54:19,049 - Model - INFO - Inctance avg mIOU is: 0.62286
+2021-12-22 15:55:04,463 - Model - INFO - PARAMETER ...
+2021-12-22 15:55:04,463 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 15:55:13,027 - Model - INFO - Accuracy is: 0.80377
+2021-12-22 15:55:13,028 - Model - INFO - Inctance avg mIOU is: 0.61719
+2021-12-22 16:13:59,233 - Model - INFO - PARAMETER ...
+2021-12-22 16:13:59,233 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:14:07,957 - Model - INFO - Accuracy is: 0.80322
+2021-12-22 16:14:07,957 - Model - INFO - Inctance avg mIOU is: 0.62682
+2021-12-22 16:14:26,379 - Model - INFO - PARAMETER ...
+2021-12-22 16:14:26,379 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:14:35,166 - Model - INFO - Accuracy is: 0.70799
+2021-12-22 16:14:35,166 - Model - INFO - Inctance avg mIOU is: 0.57399
+2021-12-22 16:14:47,147 - Model - INFO - PARAMETER ...
+2021-12-22 16:14:47,147 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:14:56,084 - Model - INFO - Accuracy is: 0.70862
+2021-12-22 16:14:56,084 - Model - INFO - Inctance avg mIOU is: 0.55380
+2021-12-22 16:15:09,690 - Model - INFO - PARAMETER ...
+2021-12-22 16:15:09,690 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:15:18,317 - Model - INFO - Accuracy is: 0.70551
+2021-12-22 16:15:18,317 - Model - INFO - Inctance avg mIOU is: 0.57082
+2021-12-22 16:16:17,466 - Model - INFO - PARAMETER ...
+2021-12-22 16:16:17,466 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:16:26,207 - Model - INFO - Accuracy is: 0.70329
+2021-12-22 16:16:26,207 - Model - INFO - Inctance avg mIOU is: 0.57065
+2021-12-22 16:18:56,804 - Model - INFO - PARAMETER ...
+2021-12-22 16:18:56,804 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:19:05,579 - Model - INFO - Accuracy is: 0.80994
+2021-12-22 16:19:05,579 - Model - INFO - Inctance avg mIOU is: 0.68633
+2021-12-22 16:19:45,764 - Model - INFO - PARAMETER ...
+2021-12-22 16:19:45,764 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:19:54,662 - Model - INFO - Accuracy is: 0.80902
+2021-12-22 16:19:54,662 - Model - INFO - Inctance avg mIOU is: 0.68307
+2021-12-22 16:29:15,118 - Model - INFO - PARAMETER ...
+2021-12-22 16:29:15,118 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:29:23,813 - Model - INFO - Accuracy is: 0.70567
+2021-12-22 16:29:23,813 - Model - INFO - Inctance avg mIOU is: 0.55164
+2021-12-22 16:30:38,448 - Model - INFO - PARAMETER ...
+2021-12-22 16:30:38,448 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 16:30:47,385 - Model - INFO - Accuracy is: 0.91384
+2021-12-22 16:30:47,385 - Model - INFO - Inctance avg mIOU is: 0.83090
+2021-12-22 18:53:38,229 - Model - INFO - PARAMETER ...
+2021-12-22 18:53:38,229 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 18:53:46,886 - Model - INFO - Accuracy is: 0.70821
+2021-12-22 18:53:46,886 - Model - INFO - Inctance avg mIOU is: 0.56495
+2021-12-22 18:55:15,893 - Model - INFO - PARAMETER ...
+2021-12-22 18:55:15,894 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-22 18:55:24,548 - Model - INFO - Accuracy is: 0.70787
+2021-12-22 18:55:24,548 - Model - INFO - Inctance avg mIOU is: 0.56587
+2021-12-23 11:35:06,316 - Model - INFO - PARAMETER ...
+2021-12-23 11:35:06,316 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:35:14,960 - Model - INFO - Accuracy is: 0.70744
+2021-12-23 11:35:14,960 - Model - INFO - Inctance avg mIOU is: 0.56369
+2021-12-23 11:36:12,256 - Model - INFO - PARAMETER ...
+2021-12-23 11:36:12,256 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:36:21,084 - Model - INFO - Accuracy is: 0.91492
+2021-12-23 11:36:21,084 - Model - INFO - Inctance avg mIOU is: 0.83301
+2021-12-23 11:41:38,497 - Model - INFO - PARAMETER ...
+2021-12-23 11:41:38,497 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:41:47,293 - Model - INFO - Accuracy is: 0.91406
+2021-12-23 11:41:47,293 - Model - INFO - Inctance avg mIOU is: 0.83234
+2021-12-23 11:42:33,817 - Model - INFO - PARAMETER ...
+2021-12-23 11:42:33,817 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:42:42,442 - Model - INFO - Accuracy is: 0.70717
+2021-12-23 11:42:42,442 - Model - INFO - Inctance avg mIOU is: 0.56549
+2021-12-23 11:43:18,214 - Model - INFO - PARAMETER ...
+2021-12-23 11:43:18,214 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:43:26,946 - Model - INFO - Accuracy is: 0.70738
+2021-12-23 11:43:26,946 - Model - INFO - Inctance avg mIOU is: 0.57324
+2021-12-23 11:43:54,066 - Model - INFO - PARAMETER ...
+2021-12-23 11:43:54,066 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:44:02,836 - Model - INFO - Accuracy is: 0.70439
+2021-12-23 11:44:02,836 - Model - INFO - Inctance avg mIOU is: 0.56297
+2021-12-23 11:48:31,967 - Model - INFO - PARAMETER ...
+2021-12-23 11:48:31,967 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:48:40,754 - Model - INFO - Accuracy is: 0.91518
+2021-12-23 11:48:40,755 - Model - INFO - Inctance avg mIOU is: 0.83176
+2021-12-23 11:49:25,620 - Model - INFO - PARAMETER ...
+2021-12-23 11:49:25,620 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:49:34,417 - Model - INFO - Accuracy is: 0.91557
+2021-12-23 11:49:34,417 - Model - INFO - Inctance avg mIOU is: 0.82070
+2021-12-23 11:51:18,312 - Model - INFO - PARAMETER ...
+2021-12-23 11:51:18,312 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:51:26,304 - Model - INFO - PARAMETER ...
+2021-12-23 11:51:26,304 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:51:34,922 - Model - INFO - Accuracy is: 0.70565
+2021-12-23 11:51:34,922 - Model - INFO - Inctance avg mIOU is: 0.56124
+2021-12-23 11:52:45,710 - Model - INFO - PARAMETER ...
+2021-12-23 11:52:45,710 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:52:54,308 - Model - INFO - Accuracy is: 0.70618
+2021-12-23 11:52:54,308 - Model - INFO - Inctance avg mIOU is: 0.56515
+2021-12-23 11:53:58,816 - Model - INFO - PARAMETER ...
+2021-12-23 11:53:58,816 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:54:07,618 - Model - INFO - Accuracy is: 0.91709
+2021-12-23 11:54:07,618 - Model - INFO - Inctance avg mIOU is: 0.83388
+2021-12-23 11:56:34,263 - Model - INFO - PARAMETER ...
+2021-12-23 11:56:34,263 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:56:43,306 - Model - INFO - Accuracy is: 0.91128
+2021-12-23 11:56:43,306 - Model - INFO - Inctance avg mIOU is: 0.82636
+2021-12-23 11:56:56,295 - Model - INFO - PARAMETER ...
+2021-12-23 11:56:56,295 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:57:04,914 - Model - INFO - Accuracy is: 0.69362
+2021-12-23 11:57:04,914 - Model - INFO - Inctance avg mIOU is: 0.54468
+2021-12-23 11:58:39,821 - Model - INFO - PARAMETER ...
+2021-12-23 11:58:39,821 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 11:58:48,835 - Model - INFO - Accuracy is: 0.91687
+2021-12-23 11:58:48,835 - Model - INFO - Inctance avg mIOU is: 0.83012
+2021-12-23 12:02:19,767 - Model - INFO - PARAMETER ...
+2021-12-23 12:02:19,767 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:03:37,185 - Model - INFO - PARAMETER ...
+2021-12-23 12:03:37,185 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:03:59,912 - Model - INFO - PARAMETER ...
+2021-12-23 12:03:59,912 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:05:00,128 - Model - INFO - PARAMETER ...
+2021-12-23 12:05:00,128 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:05:08,835 - Model - INFO - Accuracy is: 0.70355
+2021-12-23 12:05:08,835 - Model - INFO - Inctance avg mIOU is: 0.56041
+2021-12-23 12:06:41,500 - Model - INFO - PARAMETER ...
+2021-12-23 12:06:41,500 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:06:50,163 - Model - INFO - Accuracy is: 0.69741
+2021-12-23 12:06:50,164 - Model - INFO - Inctance avg mIOU is: 0.56122
+2021-12-23 12:07:03,940 - Model - INFO - PARAMETER ...
+2021-12-23 12:07:03,940 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:07:12,670 - Model - INFO - Accuracy is: 0.69602
+2021-12-23 12:07:12,670 - Model - INFO - Inctance avg mIOU is: 0.56101
+2021-12-23 12:15:36,051 - Model - INFO - PARAMETER ...
+2021-12-23 12:15:36,051 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:15:53,469 - Model - INFO - PARAMETER ...
+2021-12-23 12:15:53,469 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:16:02,350 - Model - INFO - Accuracy is: 0.74164
+2021-12-23 12:16:02,351 - Model - INFO - Inctance avg mIOU is: 0.61417
+2021-12-23 12:16:13,332 - Model - INFO - PARAMETER ...
+2021-12-23 12:16:13,332 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:16:22,237 - Model - INFO - Accuracy is: 0.78044
+2021-12-23 12:16:22,237 - Model - INFO - Inctance avg mIOU is: 0.67727
+2021-12-23 12:16:47,766 - Model - INFO - PARAMETER ...
+2021-12-23 12:16:47,766 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:16:56,625 - Model - INFO - Accuracy is: 0.77991
+2021-12-23 12:16:56,626 - Model - INFO - Inctance avg mIOU is: 0.66668
+2021-12-23 12:18:42,229 - Model - INFO - PARAMETER ...
+2021-12-23 12:18:42,229 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:19:13,976 - Model - INFO - PARAMETER ...
+2021-12-23 12:19:13,976 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:19:22,463 - Model - INFO - Accuracy is: 0.36007
+2021-12-23 12:19:22,463 - Model - INFO - Inctance avg mIOU is: 0.15299
+2021-12-23 12:22:06,565 - Model - INFO - PARAMETER ...
+2021-12-23 12:22:06,565 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:22:15,417 - Model - INFO - Accuracy is: 0.90806
+2021-12-23 12:22:15,417 - Model - INFO - Inctance avg mIOU is: 0.81160
+2021-12-23 12:27:05,851 - Model - INFO - PARAMETER ...
+2021-12-23 12:27:05,851 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:27:14,489 - Model - INFO - Accuracy is: 0.55109
+2021-12-23 12:27:14,490 - Model - INFO - Inctance avg mIOU is: 0.30794
+2021-12-23 12:28:02,775 - Model - INFO - PARAMETER ...
+2021-12-23 12:28:02,775 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:28:11,580 - Model - INFO - Accuracy is: 0.90967
+2021-12-23 12:28:11,581 - Model - INFO - Inctance avg mIOU is: 0.82162
+2021-12-23 12:37:45,679 - Model - INFO - PARAMETER ...
+2021-12-23 12:37:45,679 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:37:57,063 - Model - INFO - Accuracy is: 0.91018
+2021-12-23 12:37:57,063 - Model - INFO - Inctance avg mIOU is: 0.82321
+2021-12-23 12:38:30,729 - Model - INFO - PARAMETER ...
+2021-12-23 12:38:30,729 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:38:39,826 - Model - INFO - Accuracy is: 0.91012
+2021-12-23 12:38:39,827 - Model - INFO - Inctance avg mIOU is: 0.82020
+2021-12-23 12:40:37,973 - Model - INFO - PARAMETER ...
+2021-12-23 12:40:37,973 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:40:46,987 - Model - INFO - Accuracy is: 0.51375
+2021-12-23 12:40:46,987 - Model - INFO - Inctance avg mIOU is: 0.34547
+2021-12-23 12:46:08,264 - Model - INFO - PARAMETER ...
+2021-12-23 12:46:08,264 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:46:17,297 - Model - INFO - Accuracy is: 0.90727
+2021-12-23 12:46:17,297 - Model - INFO - Inctance avg mIOU is: 0.82017
+2021-12-23 12:46:45,735 - Model - INFO - PARAMETER ...
+2021-12-23 12:46:45,735 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:46:54,697 - Model - INFO - Accuracy is: 0.71484
+2021-12-23 12:46:54,697 - Model - INFO - Inctance avg mIOU is: 0.57656
+2021-12-23 12:49:44,732 - Model - INFO - PARAMETER ...
+2021-12-23 12:49:44,732 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:49:53,573 - Model - INFO - Accuracy is: 0.71543
+2021-12-23 12:49:53,573 - Model - INFO - Inctance avg mIOU is: 0.58222
+2021-12-23 12:51:12,510 - Model - INFO - PARAMETER ...
+2021-12-23 12:51:12,510 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:53:16,337 - Model - INFO - PARAMETER ...
+2021-12-23 12:53:16,337 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:54:32,467 - Model - INFO - PARAMETER ...
+2021-12-23 12:54:32,467 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:58:58,591 - Model - INFO - PARAMETER ...
+2021-12-23 12:58:58,591 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 12:59:07,522 - Model - INFO - Accuracy is: 0.79602
+2021-12-23 12:59:07,522 - Model - INFO - Inctance avg mIOU is: 0.60402
+2021-12-23 12:59:44,190 - Model - INFO - PARAMETER ...
+2021-12-23 12:59:44,190 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:00:21,857 - Model - INFO - PARAMETER ...
+2021-12-23 13:00:21,858 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:00:30,719 - Model - INFO - Accuracy is: 0.79110
+2021-12-23 13:00:30,719 - Model - INFO - Inctance avg mIOU is: 0.59134
+2021-12-23 13:00:38,856 - Model - INFO - PARAMETER ...
+2021-12-23 13:00:38,856 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:00:47,789 - Model - INFO - Accuracy is: 0.91184
+2021-12-23 13:00:47,789 - Model - INFO - Inctance avg mIOU is: 0.82402
+2021-12-23 13:01:48,356 - Model - INFO - PARAMETER ...
+2021-12-23 13:01:48,356 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:01:57,337 - Model - INFO - Accuracy is: 0.90755
+2021-12-23 13:01:57,337 - Model - INFO - Inctance avg mIOU is: 0.81871
+2021-12-23 13:02:15,742 - Model - INFO - PARAMETER ...
+2021-12-23 13:02:15,742 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:02:24,660 - Model - INFO - Accuracy is: 0.78833
+2021-12-23 13:02:24,660 - Model - INFO - Inctance avg mIOU is: 0.58008
+2021-12-23 13:05:37,030 - Model - INFO - PARAMETER ...
+2021-12-23 13:05:37,030 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:05:45,937 - Model - INFO - Accuracy is: 0.91034
+2021-12-23 13:05:45,937 - Model - INFO - Inctance avg mIOU is: 0.81052
+2021-12-23 13:20:07,604 - Model - INFO - PARAMETER ...
+2021-12-23 13:20:07,604 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:20:27,541 - Model - INFO - PARAMETER ...
+2021-12-23 13:20:27,541 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:21:06,992 - Model - INFO - PARAMETER ...
+2021-12-23 13:21:06,992 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:22:50,012 - Model - INFO - PARAMETER ...
+2021-12-23 13:22:50,012 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:22:58,963 - Model - INFO - Accuracy is: 0.90837
+2021-12-23 13:22:58,963 - Model - INFO - Inctance avg mIOU is: 0.81912
+2021-12-23 13:23:15,138 - Model - INFO - PARAMETER ...
+2021-12-23 13:23:15,139 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:24:42,123 - Model - INFO - PARAMETER ...
+2021-12-23 13:24:42,123 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:24:51,010 - Model - INFO - Accuracy is: 0.90955
+2021-12-23 13:24:51,011 - Model - INFO - Inctance avg mIOU is: 0.81963
+2021-12-23 13:25:22,671 - Model - INFO - PARAMETER ...
+2021-12-23 13:25:22,671 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:32:11,868 - Model - INFO - PARAMETER ...
+2021-12-23 13:32:11,868 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:32:20,751 - Model - INFO - Accuracy is: 0.90861
+2021-12-23 13:32:20,751 - Model - INFO - Inctance avg mIOU is: 0.81922
+2021-12-23 13:32:33,267 - Model - INFO - PARAMETER ...
+2021-12-23 13:32:33,268 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:32:42,327 - Model - INFO - Accuracy is: 0.78591
+2021-12-23 13:32:42,327 - Model - INFO - Inctance avg mIOU is: 0.58769
+2021-12-23 13:34:19,880 - Model - INFO - PARAMETER ...
+2021-12-23 13:34:19,880 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:34:28,835 - Model - INFO - Accuracy is: 0.91390
+2021-12-23 13:34:28,836 - Model - INFO - Inctance avg mIOU is: 0.82583
+2021-12-23 13:34:56,258 - Model - INFO - PARAMETER ...
+2021-12-23 13:34:56,258 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:35:05,262 - Model - INFO - Accuracy is: 0.91036
+2021-12-23 13:35:05,263 - Model - INFO - Inctance avg mIOU is: 0.82371
+2021-12-23 13:35:26,427 - Model - INFO - PARAMETER ...
+2021-12-23 13:35:26,427 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:35:35,402 - Model - INFO - Accuracy is: 0.79362
+2021-12-23 13:35:35,402 - Model - INFO - Inctance avg mIOU is: 0.59635
+2021-12-23 13:36:07,904 - Model - INFO - PARAMETER ...
+2021-12-23 13:36:07,904 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:36:16,884 - Model - INFO - Accuracy is: 0.79370
+2021-12-23 13:36:16,885 - Model - INFO - Inctance avg mIOU is: 0.60501
+2021-12-23 13:36:21,528 - Model - INFO - PARAMETER ...
+2021-12-23 13:36:21,529 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 13:36:30,399 - Model - INFO - Accuracy is: 0.90666
+2021-12-23 13:36:30,400 - Model - INFO - Inctance avg mIOU is: 0.81794
+2021-12-23 14:12:36,983 - Model - INFO - PARAMETER ...
+2021-12-23 14:12:36,983 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:12:46,016 - Model - INFO - Accuracy is: 0.49723
+2021-12-23 14:12:46,016 - Model - INFO - Inctance avg mIOU is: 0.25324
+2021-12-23 14:20:14,480 - Model - INFO - PARAMETER ...
+2021-12-23 14:20:14,480 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:20:23,596 - Model - INFO - Accuracy is: 0.90969
+2021-12-23 14:20:23,596 - Model - INFO - Inctance avg mIOU is: 0.82257
+2021-12-23 14:22:08,746 - Model - INFO - PARAMETER ...
+2021-12-23 14:22:08,746 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:22:50,570 - Model - INFO - PARAMETER ...
+2021-12-23 14:22:50,570 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:23:16,289 - Model - INFO - PARAMETER ...
+2021-12-23 14:23:16,289 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:23:41,372 - Model - INFO - PARAMETER ...
+2021-12-23 14:23:41,372 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:23:50,514 - Model - INFO - Accuracy is: 0.90788
+2021-12-23 14:23:50,514 - Model - INFO - Inctance avg mIOU is: 0.81889
+2021-12-23 14:23:57,715 - Model - INFO - PARAMETER ...
+2021-12-23 14:23:57,715 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:24:06,902 - Model - INFO - Accuracy is: 0.78636
+2021-12-23 14:24:06,903 - Model - INFO - Inctance avg mIOU is: 0.60619
+2021-12-23 14:25:44,625 - Model - INFO - PARAMETER ...
+2021-12-23 14:25:44,625 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:25:53,614 - Model - INFO - Accuracy is: 0.90835
+2021-12-23 14:25:53,614 - Model - INFO - Inctance avg mIOU is: 0.81981
+2021-12-23 14:36:25,778 - Model - INFO - PARAMETER ...
+2021-12-23 14:36:25,778 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:36:52,684 - Model - INFO - PARAMETER ...
+2021-12-23 14:36:52,684 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:37:44,222 - Model - INFO - PARAMETER ...
+2021-12-23 14:37:44,222 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:38:25,077 - Model - INFO - PARAMETER ...
+2021-12-23 14:38:25,077 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:38:34,303 - Model - INFO - Accuracy is: 0.52242
+2021-12-23 14:38:34,303 - Model - INFO - Inctance avg mIOU is: 0.25676
+2021-12-23 14:40:02,807 - Model - INFO - PARAMETER ...
+2021-12-23 14:40:02,807 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:40:12,145 - Model - INFO - Accuracy is: 0.49668
+2021-12-23 14:40:12,145 - Model - INFO - Inctance avg mIOU is: 0.23958
+2021-12-23 14:52:11,993 - Model - INFO - PARAMETER ...
+2021-12-23 14:52:11,993 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:52:38,872 - Model - INFO - PARAMETER ...
+2021-12-23 14:52:38,872 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:53:00,292 - Model - INFO - PARAMETER ...
+2021-12-23 14:53:00,292 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 14:58:18,604 - Model - INFO - PARAMETER ...
+2021-12-23 14:58:18,605 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:00:22,986 - Model - INFO - PARAMETER ...
+2021-12-23 15:00:22,986 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:01:01,546 - Model - INFO - PARAMETER ...
+2021-12-23 15:01:01,546 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:04:08,237 - Model - INFO - PARAMETER ...
+2021-12-23 15:04:08,237 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:04:17,602 - Model - INFO - Accuracy is: 0.91164
+2021-12-23 15:04:17,602 - Model - INFO - Inctance avg mIOU is: 0.81403
+2021-12-23 15:06:08,411 - Model - INFO - PARAMETER ...
+2021-12-23 15:06:08,411 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:06:25,249 - Model - INFO - PARAMETER ...
+2021-12-23 15:06:25,249 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:09:00,045 - Model - INFO - PARAMETER ...
+2021-12-23 15:09:00,045 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:11:05,431 - Model - INFO - PARAMETER ...
+2021-12-23 15:11:05,431 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:12:43,304 - Model - INFO - PARAMETER ...
+2021-12-23 15:12:43,305 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:18:34,580 - Model - INFO - PARAMETER ...
+2021-12-23 15:18:34,580 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:26:44,887 - Model - INFO - Accuracy is: 0.91636
+2021-12-23 15:26:44,887 - Model - INFO - Inctance avg mIOU is: 0.82290
+2021-12-23 15:29:48,811 - Model - INFO - PARAMETER ...
+2021-12-23 15:29:48,811 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 15:38:02,834 - Model - INFO - Accuracy is: 0.81814
+2021-12-23 15:38:02,835 - Model - INFO - Inctance avg mIOU is: 0.63893
+2021-12-23 23:14:06,044 - Model - INFO - PARAMETER ...
+2021-12-23 23:14:06,044 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-23 23:22:04,269 - Model - INFO - Accuracy is: 0.91058
+2021-12-23 23:22:04,269 - Model - INFO - Inctance avg mIOU is: 0.81888
+2021-12-24 13:24:08,263 - Model - INFO - PARAMETER ...
+2021-12-24 13:24:08,263 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-24 13:32:25,051 - Model - INFO - Accuracy is: 0.91311
+2021-12-24 13:32:25,051 - Model - INFO - Inctance avg mIOU is: 0.81163
+2021-12-24 13:33:29,988 - Model - INFO - PARAMETER ...
+2021-12-24 13:33:29,988 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-24 13:43:24,519 - Model - INFO - PARAMETER ...
+2021-12-24 13:43:24,519 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2021-12-24 13:51:57,513 - Model - INFO - Accuracy is: 0.91518
+2021-12-24 13:51:57,513 - Model - INFO - Inctance avg mIOU is: 0.81757
