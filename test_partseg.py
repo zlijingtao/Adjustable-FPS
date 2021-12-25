@@ -12,6 +12,8 @@ import importlib
 from tqdm import tqdm
 import numpy as np
 from models.pointnet_util import pcloud_sort, DIMSORT, DIMSORT_RANGE, VISUALIZE
+from PIL import Image
+from visualizer.pc_utils import point_cloud_three_views
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
@@ -106,8 +108,7 @@ def main(args):
         if DIMSORT:
             points, target = pcloud_sort(points, target, sel_dim = 2)
         if VISUALIZE:
-            from PIL import Image
-            from visualizer.pc_utils import point_cloud_three_views
+            print("save FPS sampled PD")
             im_array = point_cloud_three_views(points.numpy()[0, :, :])
             img = Image.fromarray(np.uint8(im_array * 255.0))
             img.save('pd0-orig.jpg')

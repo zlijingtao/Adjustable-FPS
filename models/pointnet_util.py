@@ -6,9 +6,11 @@ import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
 DIMSORT = True
-DIMSORT_DIV = 8
+DIMSORT_DIV = 1
 DIMSORT_RANGE = int(2048 / DIMSORT_DIV)
 VISUALIZE = True
+TEST_FPS = False
+TEST_QB = False
 def timeit(tag, t):
     print("{}: {}s".format(tag, time() - t))
     return time()
@@ -99,6 +101,20 @@ def index_points_query_ball(radius, nsample, xyz, new_xyz):
 
     return new_points
 
+def determine_segment(sorted_array, num_segment):
+    seg_table = [0]
+    length = len(sorted_array)
+    
+    level_gap = 2.0 / num_segment
+    current_level = -1.0 + level_gap
+    for i in range(length):
+        if sorted_array[i] > current_level:
+            seg_table.append(i)
+            current_level += level_gap
+    while len(seg_table) < num_segment + 1:
+        seg_table.append(length)
+    return seg_table
+
 def index_points_query_ball_include_points(radius, nsample, xyz, xyz2, new_xyz):
     """
     Input:
@@ -117,7 +133,17 @@ def index_points_query_ball_include_points(radius, nsample, xyz, xyz2, new_xyz):
     group_idx = torch.zeros([B, S, nsample]).long()
     permu_list = torch.randperm(N)
     for i in range(B):
+        if not TEST_FPS:
+            seg_table = determine_segment(xyz[i, :, 2], DIMSORT_DIV)
+            # print(seg_table)
+
         for j in range(S):
+
+            if not TEST_FPS:
+                lower = seg_table[int(((new_xyz[i, j, 2] + 1.0) * DIMSORT_DIV) // 2)]
+                upper = seg_table[int(((new_xyz[i, j, 2] + 1.0) * DIMSORT_DIV) // 2 + 1)]
+                permu_list = lower + torch.randperm(upper - lower)
+
             count = 0
             for k in permu_list:
                 dist = (torch.sum(torch.square(xyz[i, k, :] - new_xyz[i, j, :])))
@@ -146,16 +172,33 @@ def farthest_point_sample(xyz, npoint):
     device = xyz.device
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
-    distance = torch.ones(B, N).to(device) * 1e10
-    farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
-    batch_indices = torch.arange(B, dtype=torch.long).to(device)
-    for i in range(npoint):
-        centroids[:, i] = farthest
-        centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
-        dist = torch.sum((xyz - centroid) ** 2, -1)
-        mask = dist < distance
-        distance[mask] = dist[mask]
-        farthest = torch.max(distance, -1)[1]
+
+    if DIMSORT and not TEST_QB:
+        for b in range(B):
+            distance = torch.ones(1, N).to(device) * 1e10
+            farthest = torch.randint(0, N, (1,), dtype=torch.long).to(device)
+            for i in range(npoint):
+                centroids[b, i] = farthest
+                centroid = xyz[b, farthest, :].view(1, 3)
+                upper = farthest + DIMSORT_RANGE//2 if farthest <= N - DIMSORT_RANGE//2 else N
+                lower = farthest - DIMSORT_RANGE//2 if farthest > DIMSORT_RANGE//2 else 0
+                dist = torch.ones(1, N).to(device) * 1e10
+                dist[0, lower:upper] = torch.sum((xyz[b, lower:upper, :] - centroid) ** 2, -1)
+                mask = dist < distance
+                distance[mask] = dist[mask]
+                farthest = torch.max(distance, dim = -1)[1].long()
+    else:
+        distance = torch.ones(B, N).to(device) * 1e10
+        farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
+        batch_indices = torch.arange(B, dtype=torch.long).to(device)
+        for i in range(npoint):
+            centroids[:, i] = farthest
+            centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
+            dist = torch.sum((xyz - centroid) ** 2, -1)
+            mask = dist < distance
+            distance[mask] = dist[mask]
+            farthest = torch.max(distance, -1)[1]
+    
     return centroids
 
 
@@ -173,7 +216,7 @@ def query_ball_point(radius, nsample, xyz, new_xyz):
     B, N, C = xyz.shape
     _, S, _ = new_xyz.shape
     group_idx = torch.arange(N, dtype=torch.long).to(device).view(1, 1, N).repeat([B, S, 1])
-    
+
     sqrdists = square_distance(new_xyz, xyz) # calculate square distance in a sequential way and xxx
 
     group_idx[sqrdists > radius ** 2] = N
@@ -351,6 +394,7 @@ class PointNetSetAbstractionMsg(nn.Module):
         new_xyz = index_points(xyz, farthest_point_sample(xyz, S))
         
         if VISUALIZE:
+            print("save FPS sampled PD")
             im_array = point_cloud_three_views(new_xyz.numpy()[0, :, :])
             img = Image.fromarray(np.uint8(im_array * 255.0))
             img.save('pd0-sample{}.jpg'.format(new_xyz.size(1)))
