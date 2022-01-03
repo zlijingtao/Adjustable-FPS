@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
 DIMSORT = True
-DIMSORT_DIV = 1
+DIMSORT_DIV = 16
 DIMSORT_RANGE = int(2048 / DIMSORT_DIV)
 VISUALIZE = True
 TEST_FPS = False
@@ -104,7 +104,6 @@ def index_points_query_ball(radius, nsample, xyz, new_xyz):
 def determine_segment(sorted_array, num_segment):
     seg_table = [0]
     length = len(sorted_array)
-    
     level_gap = 2.0 / num_segment
     current_level = -1.0 + level_gap
     for i in range(length):
@@ -132,16 +131,33 @@ def index_points_query_ball_include_points(radius, nsample, xyz, xyz2, new_xyz):
     # """TODO: Accelerate this"""
     group_idx = torch.zeros([B, S, nsample]).long()
     permu_list = torch.randperm(N)
+    num_segment = 2.0 // radius
+    if num_segment > DIMSORT_DIV:
+        num_segment = DIMSORT_DIV
+    actual_computation = 0
     for i in range(B):
         if not TEST_FPS:
-            seg_table = determine_segment(xyz[i, :, 2], DIMSORT_DIV)
+            seg_table = determine_segment(xyz[i, :, 2], num_segment)
             # print(seg_table)
 
         for j in range(S):
 
             if not TEST_FPS:
-                lower = seg_table[int(((new_xyz[i, j, 2] + 1.0) * DIMSORT_DIV) // 2)]
-                upper = seg_table[int(((new_xyz[i, j, 2] + 1.0) * DIMSORT_DIV) // 2 + 1)]
+                seg_pos = int(((new_xyz[i, j, 2] + 1.0) * num_segment) // 2)
+                if seg_pos > 0 and seg_pos < len(seg_table) - 2:
+                    lower = seg_table[seg_pos - 1]
+                    upper = seg_table[seg_pos + 2]
+                elif seg_pos > 0:
+                    lower = seg_table[seg_pos - 1]
+                    upper = seg_table[-1]
+                elif seg_pos < len(seg_table) - 2:
+                    lower = seg_table[0]
+                    upper = seg_table[seg_pos + 2]
+                else:
+                    lower = seg_table[0]
+                    upper = seg_table[-1]
+                actual_computation += upper - lower
+                
                 permu_list = lower + torch.randperm(upper - lower)
 
             count = 0
@@ -155,7 +171,8 @@ def index_points_query_ball_include_points(radius, nsample, xyz, xyz2, new_xyz):
             while count <= nsample - 1:
                 group_idx[i, j, count] = group_idx[i, j, count - 1]
                 count += 1
-    
+    if not TEST_FPS:
+        print("Dimsort's QB computation is {:2.2f}% of the original, ({}/ {})".format(100 * actual_computation / (B * S * N), actual_computation, B * S * N))
     new_points = index_points(xyz, group_idx)
     new_points2 = index_points(xyz2, group_idx)
 
@@ -172,7 +189,7 @@ def farthest_point_sample(xyz, npoint):
     device = xyz.device
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
-
+    actual_computation = 0
     if DIMSORT and not TEST_QB:
         for b in range(B):
             distance = torch.ones(1, N).to(device) * 1e10
@@ -184,9 +201,11 @@ def farthest_point_sample(xyz, npoint):
                 lower = farthest - DIMSORT_RANGE//2 if farthest > DIMSORT_RANGE//2 else 0
                 dist = torch.ones(1, N).to(device) * 1e10
                 dist[0, lower:upper] = torch.sum((xyz[b, lower:upper, :] - centroid) ** 2, -1)
+                actual_computation += (upper - lower)
                 mask = dist < distance
                 distance[mask] = dist[mask]
                 farthest = torch.max(distance, dim = -1)[1].long()
+        print("Dimsort's FPS computation is {:2.2f}% of the original, ({}/{})".format(100 * int(actual_computation) / (B * npoint * N), int(actual_computation), B * npoint * N))
     else:
         distance = torch.ones(B, N).to(device) * 1e10
         farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)

@@ -108,7 +108,7 @@ def main(args):
         if DIMSORT:
             points, target = pcloud_sort(points, target, sel_dim = 2)
         if VISUALIZE:
-            print("save FPS sampled PD")
+            # print("save original PD")
             im_array = point_cloud_three_views(points.numpy()[0, :, :])
             img = Image.fromarray(np.uint8(im_array * 255.0))
             img.save('pd0-orig.jpg')
