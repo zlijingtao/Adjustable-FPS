@@ -11,7 +11,7 @@ import sys
 import importlib
 from tqdm import tqdm
 import numpy as np
-from models.pointnet_util import pcloud_sort, DIMSORT, DIMSORT_RANGE, VISUALIZE
+from models.pointnet_util import pcloud_sort, TEST_DIMSORT, DIMSORT_RANGE, VISUALIZE
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -105,7 +105,7 @@ def main(args):
             points = torch.load("./test_point_batch.pt", map_location=torch.device('cpu'))
             label = torch.load("./test_label_batch.pt", map_location=torch.device('cpu'))
             target = torch.load("./test_target_batch.pt", map_location=torch.device('cpu'))
-        if DIMSORT:
+        if TEST_DIMSORT:
             points, target = pcloud_sort(points, target, sel_dim = 2)
         if VISUALIZE:
             # print("save original PD")

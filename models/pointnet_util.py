@@ -5,12 +5,29 @@ from time import time
 import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
-DIMSORT = True
-DIMSORT_DIV = 16
-DIMSORT_RANGE = int(2048 / DIMSORT_DIV)
+from .grid_gcn_final import RVS, CAS, VoxelModule
+TEST_DIMSORT = True
+DIMSORT_RANGE = 4
+DIMSORT_RANGE2 = 64 # range for claculating neighbors
+
+TEST_GRIDGCN = False
+GRIDGCN_SAMPLE_OPT = "cas"
+VOXEL_SIZE = 40
+
 VISUALIZE = True
-TEST_FPS = False
-TEST_QB = False
+
+def normalization(points):
+    
+    size = points.size()
+    xyz = torch.zeros_like(points)
+    for i in range(size[0]): # batch
+        xyz_max = torch.max(points[i,:,:], 0)
+        xyz_min = torch.min(points[i,:,:], 0)
+        
+        xyz[i] = (points[i,:,:]-xyz_min.values)/(xyz_max.values-xyz_min.values)
+        
+    return xyz
+
 def timeit(tag, t):
     print("{}: {}s".format(tag, time() - t))
     return time()
@@ -66,7 +83,7 @@ def index_points(points, idx):
     new_points = points[batch_indices, idx, :]
     return new_points
 
-def index_points_query_ball(radius, nsample, xyz, new_xyz):
+def index_points_query_ball(radius, nsample, xyz, new_xyz, centroid_index):
     """
     Input:
         radius: local region radius
@@ -80,103 +97,114 @@ def index_points_query_ball(radius, nsample, xyz, new_xyz):
     B, N, C = xyz.shape
     _, S, _ = new_xyz.shape
 
-    # """TODO: Accelerate this"""
-    group_idx = torch.zeros([B, S, nsample]).long()
     permu_list = torch.randperm(N)
-    for i in range(B):
-        for j in range(S):
-            count = 0
-            for k in permu_list:
-                dist = (torch.sum(torch.square(xyz[i, k, :] - new_xyz[i, j, :])))
-                if dist < radius ** 2:
-                    group_idx[i, j, count] = k
-                    count += 1
-                    if count >= nsample:
-                        break
-            while count <= nsample - 1:
-                group_idx[i, j, count] = group_idx[i, j, count - 1]
-                count += 1
+    permuted_xyz = xyz[:, permu_list, :]
     
+    group_idx = torch.zeros([B, S, N]).long()
+    
+    sqrdists = square_distance(new_xyz, permuted_xyz) # calculate square distance in a sequential way and xxx
+
+    group_idx[sqrdists > radius ** 2] = N
+    group_idx = group_idx.sort(dim=-1)[0][:, :, :nsample]
+    group_first = group_idx[:, :, 0].view(B, S, 1).repeat([1, 1, nsample])
+    mask = group_idx == N
+    group_idx[mask] = group_first[mask]
+
     new_points = index_points(xyz, group_idx)
 
     return new_points
 
-def determine_segment(sorted_array, num_segment):
-    seg_table = [0]
-    length = len(sorted_array)
-    level_gap = 2.0 / num_segment
-    current_level = -1.0 + level_gap
-    for i in range(length):
-        if sorted_array[i] > current_level:
-            seg_table.append(i)
-            current_level += level_gap
-    while len(seg_table) < num_segment + 1:
-        seg_table.append(length)
-    return seg_table
 
-def index_points_query_ball_include_points(radius, nsample, xyz, xyz2, new_xyz):
-    """
-    Input:
-        radius: local region radius
-        nsample: max sample number in local region
-        xyz: all points, [B, N, 3]
-        new_xyz: query points, [B, S, 3]
-    Return:
-        group_idx: grouped points index, [B, S, nsample]
-    """
-    device = xyz.device
-    B, N, C = xyz.shape
-    _, S, _ = new_xyz.shape
+# def determine_segment(sorted_array, num_segment):
+#     batch_size = sorted_array.size(0)
+#     seg_table = [[0] for i in range(batch_size)]
+    
+#     length = sorted_array.size(1)
+#     level_gap = 2.0 / num_segment
+#     current_level = -1.0 + level_gap
+#     for b in range(batch_size):
+#         for i in range(length):
+#             if sorted_array[b, i] > current_level:
+#                 seg_table[b].append(i)
+#                 current_level += level_gap
+#         while len(seg_table) < num_segment + 1:
+#             seg_table.append(length)
+#     return seg_table
 
-    # """TODO: Accelerate this"""
-    group_idx = torch.zeros([B, S, nsample]).long()
-    permu_list = torch.randperm(N)
-    num_segment = 2.0 // radius
-    if num_segment > DIMSORT_DIV:
-        num_segment = DIMSORT_DIV
-    actual_computation = 0
-    for i in range(B):
-        if not TEST_FPS:
-            seg_table = determine_segment(xyz[i, :, 2], num_segment)
-            # print(seg_table)
+# def index_points_query_ball_include_points(radius, nsample, xyz, xyz2, new_xyz, centroid_index):
+#     """
+#     Input:
+#         radius: local region radius
+#         nsample: max sample number in local region
+#         xyz: all points, [B, N, 3]
+#         new_xyz: query points, [B, S, 3]
+#     Return:
+#         group_idx: grouped points index, [B, S, nsample]
+#     """
+#     device = xyz.device
+#     B, N, C = xyz.shape
+#     _, S, _ = new_xyz.shape
+#     lookaround_range = 4*nsample
+#     permu_list = torch.randperm(lookaround_range)
+#     group_idx = torch.zeros([B, S, lookaround_range]).long()
+#     x_range = torch.clip(centroid_index.view(B, S, 1) + permu_list.unsqueeze(0).unsqueeze(0).repeat(B, S, 1) - lookaround_range//2, 0, N-1)
 
-        for j in range(S):
+#     sqrdists = torch.zeros((B, S, lookaround_range))
+#     for i in range(B):
+#         for j in range(S):
+#             src = xyz[i, centroid_index[i, j], :]
+#             for k in permu_list:
+#                 sqrdists [i, j, k] = torch.sum((xyz[i, x_range[i, j, k], :] - src) ** 2)
 
-            if not TEST_FPS:
-                seg_pos = int(((new_xyz[i, j, 2] + 1.0) * num_segment) // 2)
-                if seg_pos > 0 and seg_pos < len(seg_table) - 2:
-                    lower = seg_table[seg_pos - 1]
-                    upper = seg_table[seg_pos + 2]
-                elif seg_pos > 0:
-                    lower = seg_table[seg_pos - 1]
-                    upper = seg_table[-1]
-                elif seg_pos < len(seg_table) - 2:
-                    lower = seg_table[0]
-                    upper = seg_table[seg_pos + 2]
-                else:
-                    lower = seg_table[0]
-                    upper = seg_table[-1]
-                actual_computation += upper - lower
-                
-                permu_list = lower + torch.randperm(upper - lower)
+#     group_idx[sqrdists > radius ** 2] = N
 
-            count = 0
-            for k in permu_list:
-                dist = (torch.sum(torch.square(xyz[i, k, :] - new_xyz[i, j, :])))
-                if dist < radius ** 2:
-                    group_idx[i, j, count] = k
-                    count += 1
-                    if count >= nsample:
-                        break
-            while count <= nsample - 1:
-                group_idx[i, j, count] = group_idx[i, j, count - 1]
-                count += 1
-    if not TEST_FPS:
-        print("Dimsort's QB computation is {:2.2f}% of the original, ({}/ {})".format(100 * actual_computation / (B * S * N), actual_computation, B * S * N))
-    new_points = index_points(xyz, group_idx)
-    new_points2 = index_points(xyz2, group_idx)
+#     group_idx = group_idx.sort(dim=-1)[0][:, :, :nsample]
 
-    return new_points, new_points2
+#     group_first = group_idx[:, :, 0].view(B, S, 1).repeat([1, 1, nsample])
+#     mask = group_idx == N
+#     group_idx[mask] = group_first[mask]
+
+#     # for i in range(B):
+#     #     # seg_table = determine_segment(xyz[i, :, 2], num_segment)
+
+#     #     for j in range(S):
+#     #         index = centroid_index[i, j]
+#     #         x_range = torch.clip((index.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1)
+#     #         # seg_pos = int(((new_xyz[i, j, 2] + 1.0) * num_segment) // 2)
+#     #         # if seg_pos > 0 and seg_pos < len(seg_table) - 2:
+#     #         #     lower = seg_table[seg_pos - 1]
+#     #         #     upper = seg_table[seg_pos + 2]
+#     #         # elif seg_pos > 0:
+#     #         #     lower = seg_table[seg_pos - 1]
+#     #         #     upper = seg_table[-1]
+#     #         # elif seg_pos < len(seg_table) - 2:
+#     #         #     lower = seg_table[0]
+#     #         #     upper = seg_table[seg_pos + 2]
+#     #         # else:
+#     #         #     lower = seg_table[0]
+#     #         #     upper = seg_table[-1]
+#     #         # print(lower, upper)
+
+#     #         actual_computation += upper - lower
+            
+#     #         permu_list = lower + torch.randperm(upper - lower)
+
+#     #         count = 0
+#     #         for k in permu_list:
+#     #             dist = (torch.sum(torch.square(xyz[i, k, :] - new_xyz[i, j, :])))
+#     #             if dist < radius ** 2:
+#     #                 group_idx[i, j, count] = k
+#     #                 count += 1
+#     #                 if count >= nsample:
+#     #                     break
+#     #         while count <= nsample - 1:
+#     #             group_idx[i, j, count] = group_idx[i, j, count - 1]
+#     #             count += 1
+#     # print("Dimsort's QB computation is {:2.2f}% of the original, ({}/ {})".format(100 * actual_computation / (B * S * N), actual_computation, B * S * N))
+#     new_points = index_points(xyz, group_idx)
+#     new_points2 = index_points(xyz2, group_idx)
+
+#     return new_points, new_points2
 
 def farthest_point_sample(xyz, npoint):
     """
@@ -189,23 +217,24 @@ def farthest_point_sample(xyz, npoint):
     device = xyz.device
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
-    actual_computation = 0
-    if DIMSORT and not TEST_QB:
-        for b in range(B):
-            distance = torch.ones(1, N).to(device) * 1e10
-            farthest = torch.randint(0, N, (1,), dtype=torch.long).to(device)
-            for i in range(npoint):
-                centroids[b, i] = farthest
-                centroid = xyz[b, farthest, :].view(1, 3)
-                upper = farthest + DIMSORT_RANGE//2 if farthest <= N - DIMSORT_RANGE//2 else N
-                lower = farthest - DIMSORT_RANGE//2 if farthest > DIMSORT_RANGE//2 else 0
-                dist = torch.ones(1, N).to(device) * 1e10
-                dist[0, lower:upper] = torch.sum((xyz[b, lower:upper, :] - centroid) ** 2, -1)
-                actual_computation += (upper - lower)
-                mask = dist < distance
-                distance[mask] = dist[mask]
-                farthest = torch.max(distance, dim = -1)[1].long()
-        print("Dimsort's FPS computation is {:2.2f}% of the original, ({}/{})".format(100 * int(actual_computation) / (B * npoint * N), int(actual_computation), B * npoint * N))
+    # actual_computation = 0
+
+    if TEST_DIMSORT:
+        distance = torch.ones(B, N).to(device) * 1e10
+        farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
+        batch_indices = torch.arange(B, dtype=torch.long).to(device)
+        for i in range(npoint):
+            centroids[:, i] = farthest
+            centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
+            x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1)
+            # print(x_range.size())
+            dist = torch.ones(B, N).to(device) * 1e10
+            dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
+            dist = dist.scatter_(1, x_range, dist_val)
+            mask = dist < distance
+            distance[mask] = dist[mask]
+            farthest = torch.max(distance, dim = -1)[1].long()
+
     else:
         distance = torch.ones(B, N).to(device) * 1e10
         farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
@@ -220,6 +249,41 @@ def farthest_point_sample(xyz, npoint):
     
     return centroids
 
+
+def gridgcn_sample(xyz, npoint):
+    """
+    Input:
+        xyz: pointcloud data, [B, N, 3]
+        npoint: number of samples
+    Return:
+        centroids: sampled pointcloud index, [B, npoint]
+    """
+    device = xyz.device
+    B, N, C = xyz.shape
+    centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
+    selfvoxels = VoxelModule(VOXEL_SIZE,B)
+
+    norm_xyz  = normalization(xyz)
+    # print("Done normalization")
+
+    index_voxels, context_points, mask = selfvoxels(norm_xyz)
+    #index_voxels, a list of B items, each item is a dictionary, which contains (-7, 0, -30): tensor([71]). per_key is voxel index and contains the id of point cloud.
+    #context_points, a list of B items, and use three layers of indexing (x, y, z of the voxel index) to get all 27 of its labels. To access, see below
+    '''
+    for neighbour_voxel in context_points[0][x][y][z]:
+        voxel_tuple = tuple(neighbour_voxel.tolist())
+        val = index_voxels[0].get(voxel_tuple)
+    
+    '''
+
+    if GRIDGCN_SAMPLE_OPT == "cas": ## Perform CAS
+        cas = CAS(npoint)
+        centroids = cas(norm_xyz, index_voxels, context_points)
+    elif GRIDGCN_SAMPLE_OPT == "rvs": ## Perform RVS
+        rvs = RVS(npoint)
+        centroids, _ = rvs(xyz, index_voxels)
+    
+    return centroids
 
 def query_ball_point(radius, nsample, xyz, new_xyz):
     """
@@ -289,7 +353,12 @@ def sample_and_group(npoint, radius, nsample, xyz, points, returnfps=False):
     """
     B, N, C = xyz.shape
     S = npoint
-    fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
+    start_time = time()
+    if not TEST_GRIDGCN:
+        fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
+    else:
+        fps_idx = gridgcn_sample(xyz, npoint) # [B, npoint, C]
+    print("Time cost for FPS is {}".format(time() - start_time))
     torch.cuda.empty_cache()
     new_xyz = index_points(xyz, fps_idx)
     torch.cuda.empty_cache()
@@ -409,9 +478,14 @@ class PointNetSetAbstractionMsg(nn.Module):
 
         B, N, C = xyz.shape
         S = self.npoint
-
-        new_xyz = index_points(xyz, farthest_point_sample(xyz, S))
-        
+        start_time = time()
+        if not TEST_GRIDGCN:
+            centroid_index = farthest_point_sample(xyz, S)
+            new_xyz = index_points(xyz, centroid_index)
+        else:
+            centroid_index = gridgcn_sample(xyz, S)
+            new_xyz = index_points(xyz, centroid_index) # [B, npoint, C]
+        print("Time cost for FPS is {}".format(time() - start_time))
         if VISUALIZE:
             print("save FPS sampled PD")
             im_array = point_cloud_three_views(new_xyz.numpy()[0, :, :])
@@ -422,10 +496,15 @@ class PointNetSetAbstractionMsg(nn.Module):
             K = self.nsample_list[i]
             
             if points is not None:
-                if DIMSORT:
-                    grouped_xyz, grouped_points = index_points_query_ball_include_points(radius, K, xyz, points, new_xyz)
+                if TEST_DIMSORT:
+                    permu_list = torch.randperm(N)
+                    permuted_xyz = xyz[:, permu_list, :]
+                    permuted_points = points[:, permu_list, :]
+                    group_idx = query_ball_point(radius, K, permuted_xyz, new_xyz)
+                    grouped_xyz = index_points(permuted_xyz, group_idx) 
+                    grouped_points = index_points(permuted_points, group_idx)
                     grouped_xyz -= new_xyz.view(B, S, 1, C)
-                    grouped_points = torch.cat([grouped_points, grouped_xyz], dim=-1)
+                    grouped_points = torch.cat([grouped_points, grouped_xyz], dim=-1) 
                 else:
                     group_idx = query_ball_point(radius, K, xyz, new_xyz)
                     grouped_xyz = index_points(xyz, group_idx) 
@@ -433,8 +512,8 @@ class PointNetSetAbstractionMsg(nn.Module):
                     grouped_xyz -= new_xyz.view(B, S, 1, C)
                     grouped_points = torch.cat([grouped_points, grouped_xyz], dim=-1) 
             else:
-                if DIMSORT:
-                    grouped_xyz = index_points_query_ball(radius, K, xyz, new_xyz)
+                if TEST_DIMSORT:
+                    grouped_xyz = index_points_query_ball(radius, K, xyz, new_xyz, centroid_index)
                 else:
                     group_idx = query_ball_point(radius, K, xyz, new_xyz)
                     grouped_xyz = index_points(xyz, group_idx) 
