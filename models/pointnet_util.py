@@ -6,15 +6,20 @@ import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
 from .grid_gcn_final import RVS, CAS, VoxelModule
-TEST_DIMSORT = True
-DIMSORT_RANGE = 4
-DIMSORT_RANGE2 = 64 # range for claculating neighbors
 
-TEST_GRIDGCN = False
-GRIDGCN_SAMPLE_OPT = "cas"
-VOXEL_SIZE = 40
-
+'''Universal Setting'''
+PARALLEL_OPTION = True
+SAVE_COMPUTATION_TWO_AXIS = False
 VISUALIZE = True
+
+'''Dimsort Setting'''
+TEST_DIMSORT = False
+DIMSORT_RANGE = 4
+
+'''Grid-GCN Setting'''
+TEST_GRIDGCN = False
+GRIDGCN_SAMPLE_OPT = "cas" #rvs/cas
+VOXEL_SIZE = 40
 
 def normalization(points):
     
@@ -220,32 +225,104 @@ def farthest_point_sample(xyz, npoint):
     # actual_computation = 0
 
     if TEST_DIMSORT:
-        distance = torch.ones(B, N).to(device) * 1e10
-        farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
-        batch_indices = torch.arange(B, dtype=torch.long).to(device)
-        for i in range(npoint):
-            centroids[:, i] = farthest
-            centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
-            x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1)
-            # print(x_range.size())
-            dist = torch.ones(B, N).to(device) * 1e10
-            dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
-            dist = dist.scatter_(1, x_range, dist_val)
-            mask = dist < distance
-            distance[mask] = dist[mask]
-            farthest = torch.max(distance, dim = -1)[1].long()
+        
+        if PARALLEL_OPTION: # solve problem on 16 cores.
+            distance = torch.ones(B, N).to(device) * 1e10
+            farthest = torch.zeros((B, 16)).long().to(device)
+            batch_indices = torch.arange(B, dtype=torch.long).to(device)
+            point_partition = npoint//16
+            
+            for c in range(16):
+                local_region_l = (N // 16) * c
+                local_region_u = N // 16 + local_region_l
+                
+                farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
+                for i in range(point_partition):
+                    centroids[:, i + point_partition * c] = farthest[:, c]
+                    if not SAVE_COMPUTATION_TWO_AXIS:
+                        centroid = xyz[batch_indices, farthest[:, c], :].view(B, 1, 3)
+                    else:
+                        centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+                    x_range = torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), local_region_l, local_region_u-1)
+                    dist = torch.ones(B, N).to(device) * 1e10
+                    if not SAVE_COMPUTATION_TWO_AXIS:
+                        dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
+                    else:
+                        dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,2)) - centroid[batch_indices]) ** 2, -1)
+                    dist = dist.scatter_(1, x_range, dist_val)
+                    mask = dist < distance
+                    distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
+                    farthest[:, c] = torch.max(distance[:, local_region_l: local_region_u], dim = -1)[1].long() + local_region_l
+        else:
+            distance = torch.ones(B, N).to(device) * 1e10
+            farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
+            batch_indices = torch.arange(B, dtype=torch.long).to(device)
+            for i in range(npoint):
+                centroids[:, i] = farthest
+                if not SAVE_COMPUTATION_TWO_AXIS:
+                    centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
+                else:
+                    centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
+                x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1)
+                # print(x_range.size())
+                dist = torch.ones(B, N).to(device) * 1e10
+                if not SAVE_COMPUTATION_TWO_AXIS:
+                    dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
+                else:
+                    dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,2)) - centroid[batch_indices]) ** 2, -1)
+                dist = dist.scatter_(1, x_range, dist_val)
+                mask = dist < distance
+                distance[mask] = dist[mask]
+                farthest = torch.max(distance, dim = -1)[1].long()
 
     else:
-        distance = torch.ones(B, N).to(device) * 1e10
-        farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
-        batch_indices = torch.arange(B, dtype=torch.long).to(device)
-        for i in range(npoint):
-            centroids[:, i] = farthest
-            centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
-            dist = torch.sum((xyz - centroid) ** 2, -1)
-            mask = dist < distance
-            distance[mask] = dist[mask]
-            farthest = torch.max(distance, -1)[1]
+        if PARALLEL_OPTION: # solve problem on 16 cores.
+            distance = torch.ones(B, N).to(device) * 1e10
+            farthest = torch.zeros((B, 16)).long().to(device)
+            batch_indices = torch.arange(B, dtype=torch.long).to(device)
+            point_partition = npoint//16
+            
+            for c in range(16):
+                local_region_l = (N // 16) * c
+                local_region_u = N // 16 + local_region_l
+                
+                farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
+                for i in range(point_partition):
+                    centroids[:, i + point_partition * c] = farthest[:, c]
+                    if not SAVE_COMPUTATION_TWO_AXIS:
+                        centroid = xyz[batch_indices, farthest[:, c], :].view(B, 1, 3)
+                    else:
+                        centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+                    
+                    x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1)
+                    dist = torch.ones(B, N).to(device) * 1e10
+                    if not SAVE_COMPUTATION_TWO_AXIS:
+                        dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
+                    else:
+                        dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,2)) - centroid[batch_indices]) ** 2, -1)
+                    dist = dist.scatter_(1, x_range, dist_val)
+                    
+                    mask = dist < distance
+                    distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
+                    farthest[:, c] = torch.max(distance[:, local_region_l: local_region_u], dim = -1)[1].long() + local_region_l
+        
+        else:
+            distance = torch.ones(B, N).to(device) * 1e10
+            farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
+            batch_indices = torch.arange(B, dtype=torch.long).to(device)
+            for i in range(npoint):
+                centroids[:, i] = farthest
+                if not SAVE_COMPUTATION_TWO_AXIS:
+                    centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
+                else:
+                    centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
+                if not SAVE_COMPUTATION_TWO_AXIS:
+                    dist = torch.sum((xyz - centroid) ** 2, -1)
+                else:
+                    dist = torch.sum((xyz[:, :, 1:] - centroid) ** 2, -1)
+                mask = dist < distance
+                distance[mask] = dist[mask]
+                farthest = torch.max(distance, -1)[1]
     
     return centroids
 
@@ -261,12 +338,17 @@ def gridgcn_sample(xyz, npoint):
     device = xyz.device
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
-    selfvoxels = VoxelModule(VOXEL_SIZE,B)
+    if GRIDGCN_SAMPLE_OPT == "cas": ## Perform CAS   
+        selfvoxels = VoxelModule(VOXEL_SIZE,B)
+    elif GRIDGCN_SAMPLE_OPT == "rvs": ## Perform RVS
+        selfvoxels = VoxelModule(VOXEL_SIZE,B, easy_neibor = False)
 
     norm_xyz  = normalization(xyz)
     # print("Done normalization")
+    
 
-    index_voxels, context_points, mask = selfvoxels(norm_xyz)
+    
+    index_voxels, context_points, _ = selfvoxels(norm_xyz)
     #index_voxels, a list of B items, each item is a dictionary, which contains (-7, 0, -30): tensor([71]). per_key is voxel index and contains the id of point cloud.
     #context_points, a list of B items, and use three layers of indexing (x, y, z of the voxel index) to get all 27 of its labels. To access, see below
     '''
@@ -311,6 +393,7 @@ def query_ball_point(radius, nsample, xyz, new_xyz):
 
 def pcloud_sort(npoint, npoint2 = None, sel_dim = -1):
     #firstly choose the longest dimension to sort
+    print("Doing sorting")
     batch_size = npoint.size(0)
     if sel_dim == -1:
         range_x = torch.max(npoint[:, :, 0]) - torch.min(npoint[:, :, 0])

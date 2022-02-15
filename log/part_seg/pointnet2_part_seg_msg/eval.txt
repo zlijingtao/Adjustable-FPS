@@ -1481,3 +1481,472 @@
 2022-02-02 16:13:43,978 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
 2022-02-02 16:13:55,873 - Model - INFO - Accuracy is: 0.75059
 2022-02-02 16:13:55,874 - Model - INFO - Inctance avg mIOU is: 0.60003
+2022-02-02 16:15:39,308 - Model - INFO - PARAMETER ...
+2022-02-02 16:15:39,308 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:15:51,275 - Model - INFO - Accuracy is: 0.90397
+2022-02-02 16:15:51,275 - Model - INFO - Inctance avg mIOU is: 0.81378
+2022-02-02 16:17:00,797 - Model - INFO - PARAMETER ...
+2022-02-02 16:17:00,797 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:17:12,978 - Model - INFO - Accuracy is: 0.91486
+2022-02-02 16:17:12,978 - Model - INFO - Inctance avg mIOU is: 0.82510
+2022-02-02 16:17:48,147 - Model - INFO - PARAMETER ...
+2022-02-02 16:17:48,147 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:18:00,112 - Model - INFO - Accuracy is: 0.75511
+2022-02-02 16:18:00,113 - Model - INFO - Inctance avg mIOU is: 0.60395
+2022-02-02 16:21:23,601 - Model - INFO - PARAMETER ...
+2022-02-02 16:21:23,601 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:22:13,971 - Model - INFO - PARAMETER ...
+2022-02-02 16:22:13,971 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:22:26,997 - Model - INFO - Accuracy is: 0.90894
+2022-02-02 16:22:26,997 - Model - INFO - Inctance avg mIOU is: 0.82306
+2022-02-02 16:22:53,524 - Model - INFO - PARAMETER ...
+2022-02-02 16:22:53,524 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:23:06,582 - Model - INFO - Accuracy is: 0.90936
+2022-02-02 16:23:06,583 - Model - INFO - Inctance avg mIOU is: 0.82361
+2022-02-02 16:23:15,825 - Model - INFO - PARAMETER ...
+2022-02-02 16:23:15,826 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:23:27,916 - Model - INFO - Accuracy is: 0.90847
+2022-02-02 16:23:27,916 - Model - INFO - Inctance avg mIOU is: 0.81696
+2022-02-02 16:24:01,518 - Model - INFO - PARAMETER ...
+2022-02-02 16:24:01,518 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:24:13,553 - Model - INFO - Accuracy is: 0.91174
+2022-02-02 16:24:13,553 - Model - INFO - Inctance avg mIOU is: 0.82469
+2022-02-02 16:25:27,452 - Model - INFO - PARAMETER ...
+2022-02-02 16:25:27,452 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:25:39,503 - Model - INFO - Accuracy is: 0.91512
+2022-02-02 16:25:39,503 - Model - INFO - Inctance avg mIOU is: 0.82801
+2022-02-02 16:26:29,873 - Model - INFO - PARAMETER ...
+2022-02-02 16:26:29,873 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:26:42,126 - Model - INFO - Accuracy is: 0.91689
+2022-02-02 16:26:42,126 - Model - INFO - Inctance avg mIOU is: 0.83299
+2022-02-02 16:27:38,794 - Model - INFO - PARAMETER ...
+2022-02-02 16:27:38,794 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:27:51,124 - Model - INFO - Accuracy is: 0.91913
+2022-02-02 16:27:51,124 - Model - INFO - Inctance avg mIOU is: 0.83506
+2022-02-02 16:31:00,139 - Model - INFO - PARAMETER ...
+2022-02-02 16:31:00,139 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:31:12,561 - Model - INFO - Accuracy is: 0.91532
+2022-02-02 16:31:12,562 - Model - INFO - Inctance avg mIOU is: 0.82928
+2022-02-02 16:31:46,809 - Model - INFO - PARAMETER ...
+2022-02-02 16:31:46,809 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:31:59,060 - Model - INFO - Accuracy is: 0.91323
+2022-02-02 16:31:59,060 - Model - INFO - Inctance avg mIOU is: 0.83152
+2022-02-02 16:32:03,608 - Model - INFO - PARAMETER ...
+2022-02-02 16:32:03,608 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:32:15,799 - Model - INFO - Accuracy is: 0.91429
+2022-02-02 16:32:15,799 - Model - INFO - Inctance avg mIOU is: 0.81902
+2022-02-02 16:32:23,227 - Model - INFO - PARAMETER ...
+2022-02-02 16:32:23,227 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:32:35,477 - Model - INFO - Accuracy is: 0.91384
+2022-02-02 16:32:35,478 - Model - INFO - Inctance avg mIOU is: 0.83099
+2022-02-02 16:32:41,100 - Model - INFO - PARAMETER ...
+2022-02-02 16:32:41,101 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:32:53,529 - Model - INFO - Accuracy is: 0.91337
+2022-02-02 16:32:53,529 - Model - INFO - Inctance avg mIOU is: 0.81949
+2022-02-02 16:36:54,838 - Model - INFO - PARAMETER ...
+2022-02-02 16:36:54,838 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-02 16:37:07,096 - Model - INFO - Accuracy is: 0.91266
+2022-02-02 16:37:07,097 - Model - INFO - Inctance avg mIOU is: 0.83028
+2022-02-05 18:31:58,466 - Model - INFO - PARAMETER ...
+2022-02-05 18:31:58,466 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-05 18:32:43,128 - Model - INFO - PARAMETER ...
+2022-02-05 18:32:43,128 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-05 18:33:59,271 - Model - INFO - PARAMETER ...
+2022-02-05 18:33:59,272 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-05 18:34:57,849 - Model - INFO - PARAMETER ...
+2022-02-05 18:34:57,850 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-05 18:35:40,877 - Model - INFO - PARAMETER ...
+2022-02-05 18:35:40,877 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-05 18:35:52,845 - Model - INFO - Accuracy is: 0.91056
+2022-02-05 18:35:52,845 - Model - INFO - Inctance avg mIOU is: 0.82235
+2022-02-07 13:11:37,842 - Model - INFO - PARAMETER ...
+2022-02-07 13:11:37,842 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:11:49,310 - Model - INFO - Accuracy is: 0.76744
+2022-02-07 13:11:49,310 - Model - INFO - Inctance avg mIOU is: 0.58659
+2022-02-07 13:11:58,928 - Model - INFO - PARAMETER ...
+2022-02-07 13:11:58,928 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:12:10,549 - Model - INFO - Accuracy is: 0.79563
+2022-02-07 13:12:10,549 - Model - INFO - Inctance avg mIOU is: 0.62019
+2022-02-07 13:12:19,631 - Model - INFO - PARAMETER ...
+2022-02-07 13:12:19,632 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:12:31,209 - Model - INFO - Accuracy is: 0.78194
+2022-02-07 13:12:31,209 - Model - INFO - Inctance avg mIOU is: 0.60397
+2022-02-07 13:12:43,823 - Model - INFO - PARAMETER ...
+2022-02-07 13:12:43,823 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:12:55,849 - Model - INFO - Accuracy is: 0.75832
+2022-02-07 13:12:55,849 - Model - INFO - Inctance avg mIOU is: 0.57461
+2022-02-07 13:24:02,943 - Model - INFO - PARAMETER ...
+2022-02-07 13:24:02,943 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:24:15,183 - Model - INFO - Accuracy is: 0.91168
+2022-02-07 13:24:15,183 - Model - INFO - Inctance avg mIOU is: 0.81930
+2022-02-07 13:26:52,325 - Model - INFO - PARAMETER ...
+2022-02-07 13:26:52,326 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:27:04,530 - Model - INFO - Accuracy is: 0.90769
+2022-02-07 13:27:04,530 - Model - INFO - Inctance avg mIOU is: 0.81301
+2022-02-07 13:27:09,108 - Model - INFO - PARAMETER ...
+2022-02-07 13:27:09,108 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:27:21,490 - Model - INFO - Accuracy is: 0.90767
+2022-02-07 13:27:21,490 - Model - INFO - Inctance avg mIOU is: 0.80748
+2022-02-07 13:27:27,518 - Model - INFO - PARAMETER ...
+2022-02-07 13:27:27,519 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:27:39,895 - Model - INFO - Accuracy is: 0.91062
+2022-02-07 13:27:39,895 - Model - INFO - Inctance avg mIOU is: 0.82107
+2022-02-07 13:39:16,505 - Model - INFO - PARAMETER ...
+2022-02-07 13:39:16,505 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:39:28,109 - Model - INFO - Accuracy is: 0.78501
+2022-02-07 13:39:28,109 - Model - INFO - Inctance avg mIOU is: 0.59899
+2022-02-07 13:44:41,565 - Model - INFO - PARAMETER ...
+2022-02-07 13:44:41,565 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:44:53,222 - Model - INFO - Accuracy is: 0.78109
+2022-02-07 13:44:53,222 - Model - INFO - Inctance avg mIOU is: 0.59583
+2022-02-07 13:48:00,403 - Model - INFO - PARAMETER ...
+2022-02-07 13:48:00,403 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:48:12,050 - Model - INFO - Accuracy is: 0.80251
+2022-02-07 13:48:12,050 - Model - INFO - Inctance avg mIOU is: 0.59588
+2022-02-07 13:48:17,401 - Model - INFO - PARAMETER ...
+2022-02-07 13:48:17,401 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:48:20,483 - Model - INFO - PARAMETER ...
+2022-02-07 13:48:20,483 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:49:11,598 - Model - INFO - PARAMETER ...
+2022-02-07 13:49:11,598 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:49:23,218 - Model - INFO - Accuracy is: 0.80196
+2022-02-07 13:49:23,218 - Model - INFO - Inctance avg mIOU is: 0.61262
+2022-02-07 13:51:18,435 - Model - INFO - PARAMETER ...
+2022-02-07 13:51:18,435 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:51:30,008 - Model - INFO - Accuracy is: 0.77979
+2022-02-07 13:51:30,008 - Model - INFO - Inctance avg mIOU is: 0.59964
+2022-02-07 13:52:01,041 - Model - INFO - PARAMETER ...
+2022-02-07 13:52:01,041 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 13:52:13,262 - Model - INFO - Accuracy is: 0.91005
+2022-02-07 13:52:13,262 - Model - INFO - Inctance avg mIOU is: 0.82145
+2022-02-07 14:21:49,658 - Model - INFO - PARAMETER ...
+2022-02-07 14:21:49,658 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 14:22:11,952 - Model - INFO - PARAMETER ...
+2022-02-07 14:22:11,952 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 14:22:23,642 - Model - INFO - Accuracy is: 0.76640
+2022-02-07 14:22:23,642 - Model - INFO - Inctance avg mIOU is: 0.58932
+2022-02-07 14:22:57,550 - Model - INFO - PARAMETER ...
+2022-02-07 14:22:57,550 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 14:23:09,390 - Model - INFO - Accuracy is: 0.78333
+2022-02-07 14:23:09,390 - Model - INFO - Inctance avg mIOU is: 0.60582
+2022-02-07 14:24:24,667 - Model - INFO - PARAMETER ...
+2022-02-07 14:24:24,667 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 14:26:06,044 - Model - INFO - PARAMETER ...
+2022-02-07 14:26:06,044 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 14:26:29,389 - Model - INFO - PARAMETER ...
+2022-02-07 14:26:29,389 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 14:26:41,827 - Model - INFO - Accuracy is: 0.91089
+2022-02-07 14:26:41,827 - Model - INFO - Inctance avg mIOU is: 0.81968
+2022-02-07 15:08:40,573 - Model - INFO - PARAMETER ...
+2022-02-07 15:08:40,573 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:08:52,946 - Model - INFO - Accuracy is: 0.91018
+2022-02-07 15:08:52,946 - Model - INFO - Inctance avg mIOU is: 0.81901
+2022-02-07 15:09:08,631 - Model - INFO - PARAMETER ...
+2022-02-07 15:09:08,631 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:09:20,950 - Model - INFO - Accuracy is: 0.90483
+2022-02-07 15:09:20,950 - Model - INFO - Inctance avg mIOU is: 0.81331
+2022-02-07 15:11:36,397 - Model - INFO - PARAMETER ...
+2022-02-07 15:11:36,397 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:11:48,911 - Model - INFO - Accuracy is: 0.90822
+2022-02-07 15:11:48,911 - Model - INFO - Inctance avg mIOU is: 0.80544
+2022-02-07 15:11:56,160 - Model - INFO - PARAMETER ...
+2022-02-07 15:11:56,160 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:12:08,580 - Model - INFO - Accuracy is: 0.91433
+2022-02-07 15:12:08,580 - Model - INFO - Inctance avg mIOU is: 0.82457
+2022-02-07 15:12:42,663 - Model - INFO - PARAMETER ...
+2022-02-07 15:12:42,663 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:12:55,054 - Model - INFO - Accuracy is: 0.91616
+2022-02-07 15:12:55,054 - Model - INFO - Inctance avg mIOU is: 0.82392
+2022-02-07 15:13:48,799 - Model - INFO - PARAMETER ...
+2022-02-07 15:13:48,799 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:14:01,316 - Model - INFO - Accuracy is: 0.91288
+2022-02-07 15:14:01,316 - Model - INFO - Inctance avg mIOU is: 0.82732
+2022-02-07 15:14:34,775 - Model - INFO - PARAMETER ...
+2022-02-07 15:14:34,775 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:14:47,371 - Model - INFO - Accuracy is: 0.90871
+2022-02-07 15:14:47,371 - Model - INFO - Inctance avg mIOU is: 0.81849
+2022-02-07 15:14:51,095 - Model - INFO - PARAMETER ...
+2022-02-07 15:14:51,095 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:15:03,894 - Model - INFO - Accuracy is: 0.91266
+2022-02-07 15:15:03,894 - Model - INFO - Inctance avg mIOU is: 0.80940
+2022-02-07 15:15:37,567 - Model - INFO - PARAMETER ...
+2022-02-07 15:15:37,567 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:15:50,099 - Model - INFO - Accuracy is: 0.91125
+2022-02-07 15:15:50,099 - Model - INFO - Inctance avg mIOU is: 0.81940
+2022-02-07 15:16:04,964 - Model - INFO - PARAMETER ...
+2022-02-07 15:16:04,964 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:16:17,501 - Model - INFO - Accuracy is: 0.90887
+2022-02-07 15:16:17,501 - Model - INFO - Inctance avg mIOU is: 0.80727
+2022-02-07 15:16:37,975 - Model - INFO - PARAMETER ...
+2022-02-07 15:16:37,975 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:16:50,539 - Model - INFO - Accuracy is: 0.91085
+2022-02-07 15:16:50,539 - Model - INFO - Inctance avg mIOU is: 0.82037
+2022-02-07 15:17:24,361 - Model - INFO - PARAMETER ...
+2022-02-07 15:17:24,361 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:17:36,955 - Model - INFO - Accuracy is: 0.90570
+2022-02-07 15:17:36,955 - Model - INFO - Inctance avg mIOU is: 0.80682
+2022-02-07 15:17:48,443 - Model - INFO - PARAMETER ...
+2022-02-07 15:17:48,443 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:18:01,295 - Model - INFO - Accuracy is: 0.91258
+2022-02-07 15:18:01,295 - Model - INFO - Inctance avg mIOU is: 0.82669
+2022-02-07 15:18:30,654 - Model - INFO - PARAMETER ...
+2022-02-07 15:18:30,654 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:18:43,345 - Model - INFO - Accuracy is: 0.90607
+2022-02-07 15:18:43,345 - Model - INFO - Inctance avg mIOU is: 0.81622
+2022-02-07 15:19:06,425 - Model - INFO - PARAMETER ...
+2022-02-07 15:19:06,425 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:19:18,999 - Model - INFO - Accuracy is: 0.91294
+2022-02-07 15:19:18,999 - Model - INFO - Inctance avg mIOU is: 0.80929
+2022-02-07 15:20:06,067 - Model - INFO - PARAMETER ...
+2022-02-07 15:20:06,067 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:20:17,896 - Model - INFO - Accuracy is: 0.51489
+2022-02-07 15:20:17,896 - Model - INFO - Inctance avg mIOU is: 0.32585
+2022-02-07 15:20:26,354 - Model - INFO - PARAMETER ...
+2022-02-07 15:20:26,354 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:20:39,175 - Model - INFO - Accuracy is: 0.90820
+2022-02-07 15:20:39,175 - Model - INFO - Inctance avg mIOU is: 0.81747
+2022-02-07 15:20:59,704 - Model - INFO - PARAMETER ...
+2022-02-07 15:20:59,704 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:21:12,161 - Model - INFO - Accuracy is: 0.70892
+2022-02-07 15:21:12,161 - Model - INFO - Inctance avg mIOU is: 0.52180
+2022-02-07 15:22:07,100 - Model - INFO - PARAMETER ...
+2022-02-07 15:22:07,101 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:22:17,360 - Model - INFO - PARAMETER ...
+2022-02-07 15:22:17,360 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:22:29,733 - Model - INFO - Accuracy is: 0.73818
+2022-02-07 15:22:29,734 - Model - INFO - Inctance avg mIOU is: 0.55670
+2022-02-07 15:22:58,092 - Model - INFO - PARAMETER ...
+2022-02-07 15:22:58,092 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:23:10,576 - Model - INFO - Accuracy is: 0.86401
+2022-02-07 15:23:10,576 - Model - INFO - Inctance avg mIOU is: 0.69850
+2022-02-07 15:24:30,251 - Model - INFO - PARAMETER ...
+2022-02-07 15:24:30,251 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:24:42,787 - Model - INFO - Accuracy is: 0.90908
+2022-02-07 15:24:42,787 - Model - INFO - Inctance avg mIOU is: 0.80747
+2022-02-07 15:30:32,839 - Model - INFO - PARAMETER ...
+2022-02-07 15:30:32,839 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:56:01,591 - Model - INFO - PARAMETER ...
+2022-02-07 15:56:01,591 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:57:04,465 - Model - INFO - PARAMETER ...
+2022-02-07 15:57:04,465 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 15:57:17,271 - Model - INFO - Accuracy (10-time avg) is: 0.91144
+2022-02-07 15:57:17,271 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81987
+2022-02-07 15:57:17,271 - Model - INFO - Time cost (10-time avg) is: 12.56366
+2022-02-07 16:42:34,761 - Model - INFO - PARAMETER ...
+2022-02-07 16:42:34,761 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 16:47:54,587 - Model - INFO - PARAMETER ...
+2022-02-07 16:47:54,587 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 16:50:00,669 - Model - INFO - Accuracy (10-time avg/std) is: 0.91120 (0.00269)
+2022-02-07 16:50:00,669 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82119 (0.00367)
+2022-02-07 16:50:00,669 - Model - INFO - Time cost (10-time avg) is: 12.41202 (0.13205)
+2022-02-07 16:55:57,911 - Model - INFO - PARAMETER ...
+2022-02-07 16:55:57,911 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 16:58:04,864 - Model - INFO - Accuracy (10-time avg/std) is: 0.90972 (0.00268)
+2022-02-07 16:58:04,864 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81659 (0.00479)
+2022-02-07 16:58:04,864 - Model - INFO - Time cost (10-time avg) is: 12.51211 (0.10661)
+2022-02-07 16:59:12,726 - Model - INFO - PARAMETER ...
+2022-02-07 16:59:12,726 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:01:20,789 - Model - INFO - Accuracy (10-time avg/std) is: 0.91308 (0.00136)
+2022-02-07 17:01:20,789 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82808 (0.00471)
+2022-02-07 17:01:20,790 - Model - INFO - Time cost (10-time avg) is: 12.61348 (0.23503)
+2022-02-07 17:02:39,593 - Model - INFO - PARAMETER ...
+2022-02-07 17:02:39,593 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:04:47,353 - Model - INFO - Accuracy (10-time avg/std) is: 0.90994 (0.00280)
+2022-02-07 17:04:47,354 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81451 (0.00622)
+2022-02-07 17:04:47,354 - Model - INFO - Time cost (10-time avg) is: 12.58202 (0.09947)
+2022-02-07 17:05:33,622 - Model - INFO - PARAMETER ...
+2022-02-07 17:05:33,623 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:07:39,256 - Model - INFO - Accuracy (10-time avg/std) is: 0.90863 (0.00225)
+2022-02-07 17:07:39,256 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81391 (0.00596)
+2022-02-07 17:07:39,256 - Model - INFO - Time cost (10-time avg) is: 12.36809 (0.04590)
+2022-02-07 17:09:35,719 - Model - INFO - PARAMETER ...
+2022-02-07 17:09:35,719 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:11:40,303 - Model - INFO - Accuracy (10-time avg/std) is: 0.91149 (0.00182)
+2022-02-07 17:11:40,303 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82006 (0.00351)
+2022-02-07 17:11:40,303 - Model - INFO - Time cost (10-time avg) is: 12.26777 (0.10436)
+2022-02-07 17:13:34,892 - Model - INFO - PARAMETER ...
+2022-02-07 17:13:34,892 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:15:40,578 - Model - INFO - Accuracy (10-time avg/std) is: 0.91179 (0.00281)
+2022-02-07 17:15:40,579 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81678 (0.00576)
+2022-02-07 17:15:40,579 - Model - INFO - Time cost (10-time avg) is: 12.38499 (0.10152)
+2022-02-07 17:16:29,013 - Model - INFO - PARAMETER ...
+2022-02-07 17:16:29,013 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:18:45,524 - Model - INFO - Accuracy (10-time avg/std) is: 0.91110 (0.00143)
+2022-02-07 17:18:45,524 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82380 (0.00422)
+2022-02-07 17:18:45,524 - Model - INFO - Time cost (10-time avg) is: 13.46429 (0.10773)
+2022-02-07 17:21:22,695 - Model - INFO - PARAMETER ...
+2022-02-07 17:21:22,695 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 17:24:19,817 - Model - INFO - Accuracy (10-time avg/std) is: 0.90940 (0.00165)
+2022-02-07 17:24:19,817 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82015 (0.00560)
+2022-02-07 17:24:19,817 - Model - INFO - Time cost (10-time avg) is: 17.53124 (0.15838)
+2022-02-07 20:24:03,570 - Model - INFO - PARAMETER ...
+2022-02-07 20:24:03,570 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 20:26:04,965 - Model - INFO - Accuracy (10-time avg/std) is: 0.90950 (0.00103)
+2022-02-07 20:26:04,966 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81316 (0.00607)
+2022-02-07 20:26:04,966 - Model - INFO - Time cost (10-time avg) is: 11.95670 (0.08510)
+2022-02-07 20:27:13,445 - Model - INFO - PARAMETER ...
+2022-02-07 20:27:13,445 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 20:29:19,292 - Model - INFO - Accuracy (10-time avg/std) is: 0.91083 (0.00252)
+2022-02-07 20:29:19,293 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81876 (0.00330)
+2022-02-07 20:29:19,293 - Model - INFO - Time cost (10-time avg) is: 12.40057 (0.07388)
+2022-02-07 20:30:18,980 - Model - INFO - PARAMETER ...
+2022-02-07 20:30:18,980 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 20:32:25,048 - Model - INFO - Accuracy (10-time avg/std) is: 0.91022 (0.00248)
+2022-02-07 20:32:25,048 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81432 (0.00499)
+2022-02-07 20:32:25,049 - Model - INFO - Time cost (10-time avg) is: 12.42760 (0.07444)
+2022-02-07 21:01:44,612 - Model - INFO - PARAMETER ...
+2022-02-07 21:01:44,613 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 21:03:47,118 - Model - INFO - Accuracy (10-time avg/std) is: 0.91035 (0.00193)
+2022-02-07 21:03:47,118 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81521 (0.00542)
+2022-02-07 21:03:47,118 - Model - INFO - Time cost (10-time avg) is: 12.06700 (0.07445)
+2022-02-07 21:06:38,088 - Model - INFO - PARAMETER ...
+2022-02-07 21:06:38,088 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 21:08:40,958 - Model - INFO - Accuracy (10-time avg/std) is: 0.91126 (0.00296)
+2022-02-07 21:08:40,958 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81992 (0.00345)
+2022-02-07 21:08:40,958 - Model - INFO - Time cost (10-time avg) is: 12.10241 (0.07481)
+2022-02-07 21:11:04,470 - Model - INFO - PARAMETER ...
+2022-02-07 21:11:04,470 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 21:13:07,972 - Model - INFO - Accuracy (10-time avg/std) is: 0.90948 (0.00268)
+2022-02-07 21:13:07,972 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81608 (0.00690)
+2022-02-07 21:13:07,972 - Model - INFO - Time cost (10-time avg) is: 12.16529 (0.10634)
+2022-02-07 22:05:39,559 - Model - INFO - PARAMETER ...
+2022-02-07 22:05:39,559 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-07 22:07:40,931 - Model - INFO - Accuracy (10-time avg/std) is: 0.90861 (0.00201)
+2022-02-07 22:07:40,931 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.80909 (0.00577)
+2022-02-07 22:07:40,932 - Model - INFO - Time cost (10-time avg) is: 11.95530 (0.11242)
+2022-02-08 12:30:12,926 - Model - INFO - PARAMETER ...
+2022-02-08 12:30:12,927 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:32:14,782 - Model - INFO - Accuracy (10-time avg/std) is: 0.90980 (0.00215)
+2022-02-08 12:32:14,782 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81783 (0.00493)
+2022-02-08 12:32:14,782 - Model - INFO - Time cost (10-time avg) is: 12.00772 (0.07905)
+2022-02-08 12:32:36,963 - Model - INFO - PARAMETER ...
+2022-02-08 12:32:36,964 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:34:40,099 - Model - INFO - Accuracy (10-time avg/std) is: 0.90994 (0.00299)
+2022-02-08 12:34:40,099 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81873 (0.00307)
+2022-02-08 12:34:40,099 - Model - INFO - Time cost (10-time avg) is: 12.12534 (0.08522)
+2022-02-08 12:35:41,410 - Model - INFO - PARAMETER ...
+2022-02-08 12:35:41,410 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:36:51,300 - Model - INFO - PARAMETER ...
+2022-02-08 12:36:51,300 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:37:20,545 - Model - INFO - PARAMETER ...
+2022-02-08 12:37:20,545 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:39:24,648 - Model - INFO - Accuracy (10-time avg/std) is: 0.90950 (0.00271)
+2022-02-08 12:39:24,648 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81967 (0.00481)
+2022-02-08 12:39:24,648 - Model - INFO - Time cost (10-time avg) is: 12.21655 (0.08658)
+2022-02-08 12:40:58,031 - Model - INFO - PARAMETER ...
+2022-02-08 12:40:58,031 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:43:00,237 - Model - INFO - Accuracy (10-time avg/std) is: 0.91235 (0.00315)
+2022-02-08 12:43:00,237 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82152 (0.00457)
+2022-02-08 12:43:00,237 - Model - INFO - Time cost (10-time avg) is: 12.03329 (0.07551)
+2022-02-08 12:44:44,548 - Model - INFO - PARAMETER ...
+2022-02-08 12:44:44,548 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:46:47,371 - Model - INFO - Accuracy (10-time avg/std) is: 0.91005 (0.00227)
+2022-02-08 12:46:47,371 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81804 (0.00531)
+2022-02-08 12:46:47,371 - Model - INFO - Time cost (10-time avg) is: 12.09836 (0.09575)
+2022-02-08 12:48:24,918 - Model - INFO - PARAMETER ...
+2022-02-08 12:48:24,918 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 12:50:28,115 - Model - INFO - Accuracy (10-time avg/std) is: 0.91046 (0.00291)
+2022-02-08 12:50:28,115 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82122 (0.00331)
+2022-02-08 12:50:28,115 - Model - INFO - Time cost (10-time avg) is: 12.13810 (0.12377)
+2022-02-08 13:01:19,669 - Model - INFO - PARAMETER ...
+2022-02-08 13:01:19,669 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:03:22,988 - Model - INFO - Accuracy (10-time avg/std) is: 0.91090 (0.00245)
+2022-02-08 13:03:22,988 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81688 (0.00690)
+2022-02-08 13:03:22,988 - Model - INFO - Time cost (10-time avg) is: 12.15143 (0.06635)
+2022-02-08 13:04:37,544 - Model - INFO - PARAMETER ...
+2022-02-08 13:04:37,544 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:06:42,638 - Model - INFO - Accuracy (10-time avg/std) is: 0.91101 (0.00225)
+2022-02-08 13:06:42,638 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81700 (0.00641)
+2022-02-08 13:06:42,638 - Model - INFO - Time cost (10-time avg) is: 12.33169 (0.09527)
+2022-02-08 13:07:25,890 - Model - INFO - PARAMETER ...
+2022-02-08 13:07:25,890 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:09:29,180 - Model - INFO - Accuracy (10-time avg/std) is: 0.91071 (0.00247)
+2022-02-08 13:09:29,181 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82081 (0.00289)
+2022-02-08 13:09:29,181 - Model - INFO - Time cost (10-time avg) is: 12.13942 (0.10859)
+2022-02-08 13:16:06,353 - Model - INFO - PARAMETER ...
+2022-02-08 13:16:06,353 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:18:08,572 - Model - INFO - Accuracy (10-time avg/std) is: 0.91036 (0.00305)
+2022-02-08 13:18:08,572 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81890 (0.00380)
+2022-02-08 13:18:08,572 - Model - INFO - Time cost (10-time avg) is: 12.04005 (0.06647)
+2022-02-08 13:52:18,444 - Model - INFO - PARAMETER ...
+2022-02-08 13:52:18,444 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:58:47,401 - Model - INFO - PARAMETER ...
+2022-02-08 13:58:47,401 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:59:13,655 - Model - INFO - PARAMETER ...
+2022-02-08 13:59:13,656 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:59:26,111 - Model - INFO - Accuracy (10-time avg/std) is: 0.48155 (0.00000)
+2022-02-08 13:59:26,111 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.26956 (0.00000)
+2022-02-08 13:59:26,111 - Model - INFO - Time cost (10-time avg) is: 12.24453 (0.00000)
+2022-02-08 13:59:41,719 - Model - INFO - PARAMETER ...
+2022-02-08 13:59:41,720 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 13:59:53,467 - Model - INFO - Accuracy (10-time avg/std) is: 0.61873 (0.00000)
+2022-02-08 13:59:53,467 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.41833 (0.00000)
+2022-02-08 13:59:53,468 - Model - INFO - Time cost (10-time avg) is: 11.53882 (0.00000)
+2022-02-08 14:00:25,883 - Model - INFO - PARAMETER ...
+2022-02-08 14:00:25,883 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:00:38,341 - Model - INFO - Accuracy (10-time avg/std) is: 0.91034 (0.00000)
+2022-02-08 14:00:38,342 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82109 (0.00000)
+2022-02-08 14:00:38,342 - Model - INFO - Time cost (10-time avg) is: 12.24483 (0.00000)
+2022-02-08 14:01:19,564 - Model - INFO - PARAMETER ...
+2022-02-08 14:01:19,564 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:01:32,028 - Model - INFO - Accuracy (10-time avg/std) is: 0.90963 (0.00000)
+2022-02-08 14:01:32,028 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81908 (0.00000)
+2022-02-08 14:01:32,028 - Model - INFO - Time cost (10-time avg) is: 12.25403 (0.00000)
+2022-02-08 14:01:54,196 - Model - INFO - PARAMETER ...
+2022-02-08 14:01:54,196 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:02:06,770 - Model - INFO - Accuracy (10-time avg/std) is: 0.91191 (0.00000)
+2022-02-08 14:02:06,770 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82410 (0.00000)
+2022-02-08 14:02:06,770 - Model - INFO - Time cost (10-time avg) is: 12.36995 (0.00000)
+2022-02-08 14:02:28,711 - Model - INFO - PARAMETER ...
+2022-02-08 14:02:28,711 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:02:38,535 - Model - INFO - PARAMETER ...
+2022-02-08 14:02:38,535 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:02:50,326 - Model - INFO - Accuracy (10-time avg/std) is: 0.59528 (0.00000)
+2022-02-08 14:02:50,326 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.38217 (0.00000)
+2022-02-08 14:02:50,326 - Model - INFO - Time cost (10-time avg) is: 11.58027 (0.00000)
+2022-02-08 14:03:59,291 - Model - INFO - PARAMETER ...
+2022-02-08 14:03:59,291 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:04:11,160 - Model - INFO - Accuracy (10-time avg/std) is: 0.58805 (0.00000)
+2022-02-08 14:04:11,160 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.38994 (0.00000)
+2022-02-08 14:04:11,160 - Model - INFO - Time cost (10-time avg) is: 11.65801 (0.00000)
+2022-02-08 14:08:43,090 - Model - INFO - PARAMETER ...
+2022-02-08 14:08:43,090 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:08:55,784 - Model - INFO - PARAMETER ...
+2022-02-08 14:08:55,784 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:09:08,083 - Model - INFO - Accuracy (10-time avg/std) is: 0.90420 (0.00000)
+2022-02-08 14:09:08,083 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81874 (0.00000)
+2022-02-08 14:09:08,084 - Model - INFO - Time cost (10-time avg) is: 12.09061 (0.00000)
+2022-02-08 14:10:06,301 - Model - INFO - PARAMETER ...
+2022-02-08 14:10:06,301 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-08 14:12:10,283 - Model - INFO - Accuracy (10-time avg/std) is: 0.90486 (0.00147)
+2022-02-08 14:12:10,283 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81706 (0.00353)
+2022-02-08 14:12:10,283 - Model - INFO - Time cost (10-time avg) is: 12.21645 (0.08228)
+2022-02-15 15:35:20,723 - Model - INFO - PARAMETER ...
+2022-02-15 15:35:20,723 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 15:37:20,937 - Model - INFO - Accuracy (10-time avg/std) is: 0.80285 (0.00673)
+2022-02-15 15:37:20,938 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.64808 (0.00851)
+2022-02-15 15:37:20,938 - Model - INFO - Time cost (10-time avg) is: 11.83677 (0.04412)
+2022-02-15 15:42:04,169 - Model - INFO - PARAMETER ...
+2022-02-15 15:42:04,169 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 15:44:04,408 - Model - INFO - Accuracy (10-time avg/std) is: 0.75416 (0.01218)
+2022-02-15 15:44:04,408 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.57220 (0.01391)
+2022-02-15 15:44:04,408 - Model - INFO - Time cost (10-time avg) is: 11.84324 (0.07025)
+2022-02-15 15:53:35,206 - Model - INFO - PARAMETER ...
+2022-02-15 15:53:35,206 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 15:55:32,236 - Model - INFO - Accuracy (10-time avg/std) is: 0.81229 (0.00548)
+2022-02-15 15:55:32,236 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.64556 (0.00722)
+2022-02-15 15:55:32,237 - Model - INFO - Time cost (10-time avg) is: 11.52076 (0.10445)
+2022-02-15 15:55:39,690 - Model - INFO - PARAMETER ...
+2022-02-15 15:55:39,690 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 15:56:25,651 - Model - INFO - PARAMETER ...
+2022-02-15 15:56:25,651 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 15:58:31,376 - Model - INFO - PARAMETER ...
+2022-02-15 15:58:31,377 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 16:00:39,162 - Model - INFO - Accuracy (10-time avg/std) is: 0.90716 (0.00117)
+2022-02-15 16:00:39,162 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81282 (0.00564)
+2022-02-15 16:00:39,162 - Model - INFO - Time cost (10-time avg) is: 12.59425 (0.11035)
+2022-02-15 16:01:31,881 - Model - INFO - PARAMETER ...
+2022-02-15 16:01:31,882 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-02-15 16:03:38,939 - Model - INFO - Accuracy (10-time avg/std) is: 0.90535 (0.00170)
+2022-02-15 16:03:38,939 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.80909 (0.00590)
+2022-02-15 16:03:38,940 - Model - INFO - Time cost (10-time avg) is: 12.52112 (0.07602)

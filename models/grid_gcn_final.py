@@ -40,20 +40,21 @@ def index_points(points, idx):
     return new_points
 
 class VoxelModule(nn.Module):
-    def __init__(self, voxel_size, batch_size):
+    def __init__(self, voxel_size, batch_size, easy_neibor = True):
         super(VoxelModule, self).__init__()
         self.voxel_size = voxel_size
         self.voxels = None
         self.neighbour_voxel_list = torch.empty(voxel_size,voxel_size,voxel_size,27,3)
-        for i in range(voxel_size):
-            for j in range(voxel_size):
-                for k in range(voxel_size):
-                    center_voxel_list = torch.from_numpy(np.array([[i,j,k]]).repeat(27,axis=0))
-                    neighbour_movement_list = torch.tensor([[-1,-1,-1],[-1,-1,0],[-1,-1,1],[-1,0,-1],[-1,0,0],[-1,0,1],[-1,1,-1],[-1,1,0],[-1,1,1],[0,-1,-1],[0,-1,0],[0,-1,1],[0,0,-1],[0,0,0],[0,0,1],[0,1,-1],[0,1,0],[0,1,1],[1,-1,-1],[1,-1,0],[1,-1,1],[1,0,-1],[1,0,0],[1,0,1],[1,1,-1],[1,1,0],[1,1,1]])
-                    neighbour_list = center_voxel_list + neighbour_movement_list
-                    neighbour_list = neighbour_list.int()
-                    self.neighbour_voxel_list[i][j][k] = neighbour_list
-        self.neighbour_voxel_list = self.neighbour_voxel_list.repeat([batch_size,1,1,1,1,1]).int()
+        if easy_neibor:
+            for i in range(voxel_size):
+                for j in range(voxel_size):
+                    for k in range(voxel_size):
+                        center_voxel_list = torch.from_numpy(np.array([[i,j,k]]).repeat(27,axis=0))
+                        neighbour_movement_list = torch.tensor([[-1,-1,-1],[-1,-1,0],[-1,-1,1],[-1,0,-1],[-1,0,0],[-1,0,1],[-1,1,-1],[-1,1,0],[-1,1,1],[0,-1,-1],[0,-1,0],[0,-1,1],[0,0,-1],[0,0,0],[0,0,1],[0,1,-1],[0,1,0],[0,1,1],[1,-1,-1],[1,-1,0],[1,-1,1],[1,0,-1],[1,0,0],[1,0,1],[1,1,-1],[1,1,0],[1,1,1]])
+                        neighbour_list = center_voxel_list + neighbour_movement_list
+                        neighbour_list = neighbour_list.int()
+                        self.neighbour_voxel_list[i][j][k] = neighbour_list
+            self.neighbour_voxel_list = self.neighbour_voxel_list.repeat([batch_size,1,1,1,1,1]).int()
 
     #@profile
     def set_voxel_value(self, index_voxels, current_list, index, mask):
