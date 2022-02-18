@@ -14,7 +14,7 @@ SAVE_COMPUTATION_TWO_AXIS = False
 VISUALIZE = True
 
 '''Dimsort Setting'''
-TEST_DIMSORT = False
+TEST_DIMSORT = True
 DIMSORT_RANGE = 4
 
 '''Grid-GCN Setting'''
