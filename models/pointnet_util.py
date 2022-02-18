@@ -8,6 +8,7 @@ from visualizer.pc_utils import point_cloud_three_views
 from .grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
+PRESORT_FLAG = True
 PARALLEL_OPTION = True
 SAVE_COMPUTATION_TWO_AXIS = False
 VISUALIZE = True
@@ -28,7 +29,6 @@ def normalization(points):
     for i in range(size[0]): # batch
         xyz_max = torch.max(points[i,:,:], 0)
         xyz_min = torch.min(points[i,:,:], 0)
-        
         xyz[i] = (points[i,:,:]-xyz_min.values)/(xyz_max.values-xyz_min.values)
         
     return xyz
@@ -579,7 +579,7 @@ class PointNetSetAbstractionMsg(nn.Module):
             K = self.nsample_list[i]
             
             if points is not None:
-                if TEST_DIMSORT:
+                if PRESORT_FLAG:
                     permu_list = torch.randperm(N)
                     permuted_xyz = xyz[:, permu_list, :]
                     permuted_points = points[:, permu_list, :]
@@ -595,7 +595,7 @@ class PointNetSetAbstractionMsg(nn.Module):
                     grouped_xyz -= new_xyz.view(B, S, 1, C)
                     grouped_points = torch.cat([grouped_points, grouped_xyz], dim=-1) 
             else:
-                if TEST_DIMSORT:
+                if PRESORT_FLAG:
                     grouped_xyz = index_points_query_ball(radius, K, xyz, new_xyz, centroid_index)
                 else:
                     group_idx = query_ball_point(radius, K, xyz, new_xyz)
