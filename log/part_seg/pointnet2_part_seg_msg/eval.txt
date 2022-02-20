@@ -1976,3 +1976,5 @@
 2022-02-18 10:52:44,484 - Model - INFO - Accuracy (10-time avg/std) is: 0.89965 (0.00343)
 2022-02-18 10:52:44,484 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.79155 (0.00772)
 2022-02-18 10:52:44,485 - Model - INFO - Time cost (10-time avg) is: 11.85241 (0.50313)
+2022-02-20 16:41:35,077 - Model - INFO - PARAMETER ...
+2022-02-20 16:41:35,077 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
