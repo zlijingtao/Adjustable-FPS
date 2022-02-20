@@ -51,7 +51,7 @@ def main(args):
         logger.info(str)
         print(str)
 
-    use_gpu = False
+    use_gpu = True
     one_fixed_batch = True
     '''HYPER PARAMETER'''
     if use_gpu:
