@@ -9,12 +9,12 @@ from .grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
 PRESORT_FLAG = True
-PARALLEL_OPTION = True
+PARALLEL_OPTION = False
 SAVE_COMPUTATION_TWO_AXIS = False
 VISUALIZE = True
 
 '''Dimsort Setting'''
-TEST_DIMSORT = True
+TEST_DIMSORT = False
 DIMSORT_RANGE = 4
 
 '''Grid-GCN Setting'''
@@ -243,7 +243,7 @@ def farthest_point_sample(xyz, npoint):
                         centroid = xyz[batch_indices, farthest[:, c], :].view(B, 1, 3)
                     else:
                         centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
-                    x_range = torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), local_region_l, local_region_u-1)
+                    x_range = torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long).to(device)), local_region_l, local_region_u-1).to(device)
                     dist = torch.ones(B, N).to(device) * 1e10
                     if not SAVE_COMPUTATION_TWO_AXIS:
                         dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
@@ -263,7 +263,7 @@ def farthest_point_sample(xyz, npoint):
                     centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
                 else:
                     centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
-                x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1)
+                x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1).to(device)
                 # print(x_range.size())
                 dist = torch.ones(B, N).to(device) * 1e10
                 if not SAVE_COMPUTATION_TWO_AXIS:
@@ -294,7 +294,7 @@ def farthest_point_sample(xyz, npoint):
                     else:
                         centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
                     
-                    x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1)
+                    x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
                     dist = torch.ones(B, N).to(device) * 1e10
                     if not SAVE_COMPUTATION_TWO_AXIS:
                         dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
@@ -571,7 +571,7 @@ class PointNetSetAbstractionMsg(nn.Module):
         print("Time cost for FPS is {}".format(time() - start_time))
         if VISUALIZE:
             print("save FPS sampled PD")
-            im_array = point_cloud_three_views(new_xyz.numpy()[0, :, :])
+            im_array = point_cloud_three_views(new_xyz.cpu().numpy()[0, :, :])
             img = Image.fromarray(np.uint8(im_array * 255.0))
             img.save('pd0-sample{}.jpg'.format(new_xyz.size(1)))
         new_points_list = []
