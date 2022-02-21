@@ -17,7 +17,7 @@ from visualizer.pc_utils import point_cloud_three_views
 from time import time
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
-SEGMENT_TO_16= True
+SEGMENT_TO_16= False
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
 seg_classes = {'Earphone': [16, 17, 18], 'Motorbike': [30, 31, 32, 33, 34, 35], 'Rocket': [41, 42, 43], 'Car': [8, 9, 10, 11], 'Laptop': [28, 29], 'Cap': [6, 7], 'Skateboard': [44, 45, 46], 'Mug': [36, 37], 'Guitar': [19, 20, 21], 'Bag': [4, 5], 'Lamp': [24, 25, 26, 27], 'Table': [47, 48, 49], 'Airplane': [0, 1, 2, 3], 'Pistol': [38, 39, 40], 'Chair': [12, 13, 14, 15], 'Knife': [22, 23]}
@@ -51,7 +51,7 @@ def main(args):
         logger.info(str)
         print(str)
 
-    use_gpu = False
+    use_gpu = True
     one_fixed_batch = True
     '''HYPER PARAMETER'''
     if use_gpu:
