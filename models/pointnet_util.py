@@ -8,14 +8,14 @@ from visualizer.pc_utils import point_cloud_three_views
 from .grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
-PRESORT_FLAG = True
-PARALLEL_OPTION = False
+PRESORT_FLAG = False
+PARALLEL_OPTION = True
 SAVE_COMPUTATION_TWO_AXIS = False
 VISUALIZE = True
 
 '''Dimsort Setting'''
 TEST_DIMSORT = False
-DIMSORT_RANGE = 4
+DIMSORT_RANGE = 8
 
 '''Grid-GCN Setting'''
 TEST_GRIDGCN = False
@@ -263,7 +263,7 @@ def farthest_point_sample(xyz, npoint):
                     centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
                 else:
                     centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
-                x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long)), 0, N-1).to(device)
+                x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long).to(device)), 0, N-1).to(device)
                 # print(x_range.size())
                 dist = torch.ones(B, N).to(device) * 1e10
                 if not SAVE_COMPUTATION_TWO_AXIS:
@@ -305,7 +305,33 @@ def farthest_point_sample(xyz, npoint):
                     mask = dist < distance
                     distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
                     farthest[:, c] = torch.max(distance[:, local_region_l: local_region_u], dim = -1)[1].long() + local_region_l
-        
+            #TODO: optimization
+            # local_region_l = (N // 16) * torch.arrange(16)
+            # local_region_u = N // 16 + local_region_l
+            # for c in range(16):
+            #     farthest[:, c] =  torch.randint(local_region_l[c], local_region_u[c], (B,), dtype=torch.long).to(device)
+
+            # for i in range(point_partition):
+            #     centroids[:, i + point_partition * torch.arrange(16)] = farthest
+            #     if not SAVE_COMPUTATION_TWO_AXIS:
+            #         centroid = xyz[batch_indices, farthest, :].view(B, 16, 3)
+            #     else:
+            #         centroid = xyz[batch_indices, farthest, 1:].view(B, 16, 2)
+                
+            #     x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
+            #     dist = torch.ones(B, N).to(device) * 1e10
+            #     if not SAVE_COMPUTATION_TWO_AXIS:
+            #         dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
+            #     else:
+            #         dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,2)) - centroid[batch_indices]) ** 2, -1)
+            #     dist = dist.scatter_(1, x_range, dist_val)
+                
+            #     mask = dist < distance
+            #     distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
+            #     farthest[:, c] = torch.max(distance[:, local_region_l: local_region_u], dim = -1)[1].long() + local_region_l
+
+
+
         else:
             distance = torch.ones(B, N).to(device) * 1e10
             farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
