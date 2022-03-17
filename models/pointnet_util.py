@@ -8,14 +8,19 @@ from visualizer.pc_utils import point_cloud_three_views
 from .grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
-PRESORT_FLAG = False
+PRESORT_FLAG = True
 PARALLEL_OPTION = True
-SAVE_COMPUTATION_TWO_AXIS = False
+SELECT_DIM = 2
+SAVE_COMPUTATION_TWO_AXIS = True
+
+'''Default Parpameter'''
 VISUALIZE = True
+USE_GPU = False
+BATCH_SIZE = 24 # control batch size of point cloud [1-24]
 
 '''Dimsort Setting'''
-TEST_DIMSORT = False
-DIMSORT_RANGE = 8
+TEST_DIMSORT = True
+DIMSORT_RANGE = 4
 
 '''Grid-GCN Setting'''
 TEST_GRIDGCN = False
@@ -242,7 +247,12 @@ def farthest_point_sample(xyz, npoint):
                     if not SAVE_COMPUTATION_TWO_AXIS:
                         centroid = xyz[batch_indices, farthest[:, c], :].view(B, 1, 3)
                     else:
-                        centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+                        if SELECT_DIM == 0:
+                            centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+                        elif SELECT_DIM == 1:
+                            centroid = xyz[batch_indices, farthest[:, c], ::2].view(B, 1, 2)
+                        elif SELECT_DIM == 2:
+                            centroid = xyz[batch_indices, farthest[:, c], :2].view(B, 1, 2)
                     x_range = torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long).to(device)), local_region_l, local_region_u-1).to(device)
                     dist = torch.ones(B, N).to(device) * 1e10
                     if not SAVE_COMPUTATION_TWO_AXIS:
@@ -262,7 +272,12 @@ def farthest_point_sample(xyz, npoint):
                 if not SAVE_COMPUTATION_TWO_AXIS:
                     centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
                 else:
-                    centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
+                    if SELECT_DIM == 0:
+                        centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
+                    elif SELECT_DIM == 1:
+                        centroid = xyz[batch_indices, farthest, ::2].view(B, 1, 2)
+                    elif SELECT_DIM == 2:
+                        centroid = xyz[batch_indices, farthest, :2].view(B, 1, 2)
                 x_range = torch.clip((farthest.view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long).to(device)), 0, N-1).to(device)
                 # print(x_range.size())
                 dist = torch.ones(B, N).to(device) * 1e10
@@ -292,7 +307,12 @@ def farthest_point_sample(xyz, npoint):
                     if not SAVE_COMPUTATION_TWO_AXIS:
                         centroid = xyz[batch_indices, farthest[:, c], :].view(B, 1, 3)
                     else:
-                        centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+                        if SELECT_DIM == 0:
+                            centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+                        elif SELECT_DIM == 1:
+                            centroid = xyz[batch_indices, farthest[:, c], ::2].view(B, 1, 2)
+                        elif SELECT_DIM == 2:
+                            centroid = xyz[batch_indices, farthest[:, c], :2].view(B, 1, 2)
                     
                     x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
                     dist = torch.ones(B, N).to(device) * 1e10
@@ -341,11 +361,21 @@ def farthest_point_sample(xyz, npoint):
                 if not SAVE_COMPUTATION_TWO_AXIS:
                     centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
                 else:
-                    centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
+                    if SELECT_DIM == 0:
+                        centroid = xyz[batch_indices, farthest, 1:].view(B, 1, 2)
+                    elif SELECT_DIM == 1:
+                        centroid = xyz[batch_indices, farthest, ::2].view(B, 1, 2)
+                    elif SELECT_DIM == 2:
+                        centroid = xyz[batch_indices, farthest, :2].view(B, 1, 2)
                 if not SAVE_COMPUTATION_TWO_AXIS:
                     dist = torch.sum((xyz - centroid) ** 2, -1)
                 else:
-                    dist = torch.sum((xyz[:, :, 1:] - centroid) ** 2, -1)
+                    if SELECT_DIM == 0:
+                        dist = torch.sum((xyz[:, :, 1:] - centroid) ** 2, -1)
+                    elif SELECT_DIM == 1:
+                        dist = torch.sum((xyz[:, :, ::2] - centroid) ** 2, -1)
+                    elif SELECT_DIM == 2:
+                        dist = torch.sum((xyz[:, :, :2] - centroid) ** 2, -1)
                 mask = dist < distance
                 distance[mask] = dist[mask]
                 farthest = torch.max(distance, -1)[1]

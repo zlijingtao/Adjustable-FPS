@@ -11,13 +11,12 @@ import sys
 import importlib
 from tqdm import tqdm
 import numpy as np
-from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE
+from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
 from time import time
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
-SEGMENT_TO_16= False
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
 seg_classes = {'Earphone': [16, 17, 18], 'Motorbike': [30, 31, 32, 33, 34, 35], 'Rocket': [41, 42, 43], 'Car': [8, 9, 10, 11], 'Laptop': [28, 29], 'Cap': [6, 7], 'Skateboard': [44, 45, 46], 'Mug': [36, 37], 'Guitar': [19, 20, 21], 'Bag': [4, 5], 'Lamp': [24, 25, 26, 27], 'Table': [47, 48, 49], 'Airplane': [0, 1, 2, 3], 'Pistol': [38, 39, 40], 'Chair': [12, 13, 14, 15], 'Knife': [22, 23]}
@@ -51,8 +50,8 @@ def main(args):
         logger.info(str)
         print(str)
 
-    use_gpu = True
-    one_fixed_batch = True
+    use_gpu = USE_GPU
+
     '''HYPER PARAMETER'''
     if use_gpu:
         os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu       
@@ -113,14 +112,15 @@ def main(args):
                 label = torch.load("./test_label_batch.pt", map_location=torch.device('cpu'))
                 target = torch.load("./test_target_batch.pt", map_location=torch.device('cpu'))
 
-            if SEGMENT_TO_16:
-                points = points[:16, :, :]
+            if BATCH_SIZE < 24:
+                points = points[:BATCH_SIZE, :, :]
                 # print(points.size())
-                label = label[:16]
+                label = label[:BATCH_SIZE]
                 # print(label.size())
-                target = target[:16, :]
+                target = target[:BATCH_SIZE, :]
+            
             if PRESORT_FLAG:
-                points, target = pcloud_sort(points, target, sel_dim = 0)
+                points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
             if VISUALIZE:
                 # print("save original PD")
                 im_array = point_cloud_three_views(points.numpy()[0, :, :])

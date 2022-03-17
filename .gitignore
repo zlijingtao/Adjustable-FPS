@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+pd0-sample128.jpg
+pd0-sample512.jpg
 # C extensions
 *.so
 
