@@ -41,8 +41,8 @@ def parse_args():
     parser.add_argument('--num_point', type=int, default=2048, help='Point Number [default: 2048]')
     parser.add_argument('--log_dir', type=str, default='pointnet2_part_seg_ssg', help='Experiment root')
     parser.add_argument('--normal', action='store_true', default=False, help='Whether to use normal information [default: False]')
-    # parser.add_argument('--num_votes', type=int, default=3, help='Aggregate segmentation scores with voting [default: 3]') # Default Option
     parser.add_argument('--num_votes', type=int, default=1, help='Aggregate segmentation scores with voting [default: 3]') # Simplify the process
+    parser.add_argument('--avg_time', type=int, default=10, help='avg time of experiments to get an average') # Simplify the process
     return parser.parse_args()
 
 def main(args):
@@ -86,12 +86,12 @@ def main(args):
         checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth', map_location=torch.device('cpu'))
     classifier.load_state_dict(checkpoint['model_state_dict'])
 
-    avg_time = 10
     accu_list = []
     mIoU_list = []
     timecost_list = []
 
-    for i in range(avg_time):
+    for i in range(args.avg_time):
+        log_string("\nperform {}-th inference:".format(i + 1))
         with torch.no_grad():
             test_metrics = {}
             total_correct = 0

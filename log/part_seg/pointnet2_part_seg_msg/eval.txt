@@ -2086,3 +2086,35 @@
 2022-02-21 12:36:50,998 - Model - INFO - Accuracy (10-time avg/std) is: 0.90965 (0.00261)
 2022-02-21 12:36:50,998 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.81600 (0.00640)
 2022-02-21 12:36:50,999 - Model - INFO - Time cost (10-time avg) is: 12.06656 (0.12355)
+2022-03-21 17:27:44,779 - Model - INFO - PARAMETER ...
+2022-03-21 17:27:44,779 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-03-21 17:30:26,660 - Model - INFO - PARAMETER ...
+2022-03-21 17:30:26,660 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-03-21 17:33:54,530 - Model - INFO - Accuracy (10-time avg/std) is: 0.91336 (0.00124)
+2022-03-21 17:33:54,530 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82777 (0.00521)
+2022-03-21 17:33:54,530 - Model - INFO - Time cost (10-time avg) is: 20.77050 (1.30587)
+2022-03-21 17:39:39,337 - Model - INFO - PARAMETER ...
+2022-03-21 17:39:39,337 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_point=2048, num_votes=1)
+2022-03-21 17:39:39,383 - Model - INFO - perform 1-th inference:
+
+2022-03-21 17:39:57,026 - Model - INFO - perform 2-th inference:
+
+2022-03-21 17:40:18,191 - Model - INFO - perform 3-th inference:
+
+2022-03-21 17:40:38,661 - Model - INFO - perform 4-th inference:
+
+2022-03-21 17:40:59,166 - Model - INFO - perform 5-th inference:
+
+2022-03-21 17:41:20,976 - Model - INFO - perform 6-th inference:
+
+2022-03-21 17:41:43,073 - Model - INFO - perform 7-th inference:
+
+2022-03-21 17:42:04,747 - Model - INFO - perform 8-th inference:
+
+2022-03-21 17:42:26,885 - Model - INFO - perform 9-th inference:
+
+2022-03-21 17:42:47,430 - Model - INFO - perform 10-th inference:
+
+2022-03-21 17:43:09,662 - Model - INFO - Accuracy (10-time avg/std) is: 0.91313 (0.00127)
+2022-03-21 17:43:09,662 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.82661 (0.00543)
+2022-03-21 17:43:09,663 - Model - INFO - Time cost (10-time avg) is: 20.91719 (1.31450)

@@ -8,23 +8,23 @@ from visualizer.pc_utils import point_cloud_three_views
 from .grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
-PRESORT_FLAG = True
-PARALLEL_OPTION = True
-SELECT_DIM = 2
-SAVE_COMPUTATION_TWO_AXIS = True
+PRESORT_FLAG = False
+PARALLEL_OPTION = False
+SELECT_DIM = 0
+SAVE_COMPUTATION_TWO_AXIS = False
 
 '''Default Parpameter'''
 VISUALIZE = True
 USE_GPU = False
-BATCH_SIZE = 24 # control batch size of point cloud [1-24]
+BATCH_SIZE = 24
 
 '''Dimsort Setting'''
-TEST_DIMSORT = True
+TEST_DIMSORT = False
 DIMSORT_RANGE = 4
 
 '''Grid-GCN Setting'''
 TEST_GRIDGCN = False
-GRIDGCN_SAMPLE_OPT = "cas" #rvs/cas
+GRIDGCN_SAMPLE_OPT = "rvs"
 VOXEL_SIZE = 40
 
 def normalization(points):
