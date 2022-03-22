@@ -492,12 +492,12 @@ def sample_and_group(npoint, radius, nsample, xyz, points, returnfps=False):
     """
     B, N, C = xyz.shape
     S = npoint
-    # start_time = time()
+    start_time = time()
     if not TEST_GRIDGCN:
         fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
     else:
         fps_idx = gridgcn_sample(xyz, npoint) # [B, npoint, C]
-    # print("Time cost for FPS is {}".format(time() - start_time))
+    print("Time cost for FPS is {}".format(time() - start_time))
     torch.cuda.empty_cache()
     new_xyz = index_points(xyz, fps_idx)
     torch.cuda.empty_cache()
@@ -617,14 +617,14 @@ class PointNetSetAbstractionMsg(nn.Module):
 
         B, N, C = xyz.shape
         S = self.npoint
-        # start_time = time()
+        start_time = time()
         if not TEST_GRIDGCN:
             centroid_index = farthest_point_sample(xyz, S)
             new_xyz = index_points(xyz, centroid_index)
         else:
             centroid_index = gridgcn_sample(xyz, S)
             new_xyz = index_points(xyz, centroid_index) # [B, npoint, C]
-        # print("Time cost for FPS is {}".format(time() - start_time))
+        print("Time cost for FPS is {}".format(time() - start_time))
         if VISUALIZE:
             print("save FPS sampled PD")
             im_array = point_cloud_three_views(new_xyz.cpu().numpy()[0, :, :])
