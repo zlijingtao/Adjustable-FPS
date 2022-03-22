@@ -109,6 +109,8 @@ def main(args):
 
             whole_scene_data = TEST_DATASET_WHOLE_SCENE.scene_points_list[batch_idx]
             whole_scene_label = TEST_DATASET_WHOLE_SCENE.semantic_labels_list[batch_idx]
+            torch.save(whole_scene_data, "semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
+            torch.save(whole_scene_label, "semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
             vote_label_pool = np.zeros((whole_scene_label.shape[0], NUM_CLASSES))
             for _ in tqdm(range(args.num_votes), total=args.num_votes):
                 scene_data, scene_label, scene_smpw, scene_point_index = TEST_DATASET_WHOLE_SCENE[batch_idx]
