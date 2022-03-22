@@ -5,7 +5,7 @@ from time import time
 import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
-from .grid_gcn_final import RVS, CAS, VoxelModule
+from grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
 PRESORT_FLAG = False
@@ -14,8 +14,8 @@ SELECT_DIM = 0
 SAVE_COMPUTATION_TWO_AXIS = False
 
 '''Default Parpameter'''
-VISUALIZE = True
-USE_GPU = False
+VISUALIZE = False
+USE_GPU = True
 BATCH_SIZE = 24
 
 '''Dimsort Setting'''
