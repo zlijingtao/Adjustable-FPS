@@ -5,7 +5,9 @@ from time import time
 import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
-from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
+import grid_gcn
+# print()
+# from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
 PRESORT_FLAG = False
@@ -395,9 +397,9 @@ def gridgcn_sample(xyz, npoint):
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
     if GRIDGCN_SAMPLE_OPT == "cas": ## Perform CAS   
-        selfvoxels = VoxelModule(VOXEL_SIZE,B)
+        selfvoxels = grid_gcn.grid_gcn_final.VoxelModule(VOXEL_SIZE,B)
     elif GRIDGCN_SAMPLE_OPT == "rvs": ## Perform RVS
-        selfvoxels = VoxelModule(VOXEL_SIZE,B, easy_neibor = False)
+        selfvoxels = grid_gcn.grid_gcn_final.VoxelModule(VOXEL_SIZE,B, easy_neibor = False)
 
     norm_xyz  = normalization(xyz)
     # print("Done normalization")
@@ -415,10 +417,10 @@ def gridgcn_sample(xyz, npoint):
     '''
 
     if GRIDGCN_SAMPLE_OPT == "cas": ## Perform CAS
-        cas = CAS(npoint)
+        cas = grid_gcn.grid_gcn_final.CAS(npoint)
         centroids = cas(norm_xyz, index_voxels, context_points)
     elif GRIDGCN_SAMPLE_OPT == "rvs": ## Perform RVS
-        rvs = RVS(npoint)
+        rvs = grid_gcn.grid_gcn_final.RVS(npoint)
         centroids, _ = rvs(xyz, index_voxels)
     
     return centroids

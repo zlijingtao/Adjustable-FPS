@@ -42,8 +42,9 @@ def parse_args():
     parser.add_argument('--log_dir', type=str, default='pointnet2_part_seg_ssg', help='Experiment root')
     parser.add_argument('--normal', action='store_true', default=False, help='Whether to use normal information [default: False]')
     parser.add_argument('--num_votes', type=int, default=1, help='Aggregate segmentation scores with voting [default: 3]') # Simplify the process
-    parser.add_argument('--avg_time', type=int, default=10, help='avg time of experiments to get an average') # Simplify the process
+    parser.add_argument('--num_batch', type=int, default=120, help='Number of batch to do the inference')
     return parser.parse_args()
+
 
 def main(args):
     def log_string(str):
@@ -51,7 +52,7 @@ def main(args):
         print(str)
 
     use_gpu = USE_GPU
-
+    global VISUALIZE
     '''HYPER PARAMETER'''
     if use_gpu:
         os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu       
@@ -89,28 +90,29 @@ def main(args):
     accu_list = []
     mIoU_list = []
     timecost_list = []
-
-    for i in range(args.avg_time):
-        log_string("\nperform {}-th inference:".format(i + 1))
-        with torch.no_grad():
-            test_metrics = {}
-            total_correct = 0
-            total_seen = 0
-            total_seen_class = [0 for _ in range(num_part)]
-            total_correct_class = [0 for _ in range(num_part)]
-            shape_ious = {cat: [] for cat in seg_classes.keys()}
-            seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
-            for cat in seg_classes.keys():
-                for label in seg_classes[cat]:
-                    seg_label_to_cat[label] = cat
-            if use_gpu:
-                points = torch.load("./test_point_batch.pt")
-                label = torch.load("./test_label_batch.pt")
-                target = torch.load("./test_target_batch.pt")
-            else:
-                points = torch.load("./test_point_batch.pt", map_location=torch.device('cpu'))
-                label = torch.load("./test_label_batch.pt", map_location=torch.device('cpu'))
-                target = torch.load("./test_target_batch.pt", map_location=torch.device('cpu'))
+    with torch.no_grad():
+        test_metrics = {}
+        total_correct = 0
+        total_seen = 0
+        total_seen_class = [0 for _ in range(num_part)]
+        total_correct_class = [0 for _ in range(num_part)]
+        shape_ious = {cat: [] for cat in seg_classes.keys()}
+        seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
+        for cat in seg_classes.keys():
+            for label in seg_classes[cat]:
+                seg_label_to_cat[label] = cat
+        classifier = classifier.eval()
+        if args.num_batch > 120:
+            args.num_batch = 120
+        for j in tqdm(range(args.num_batch), total=args.num_batch):
+            
+            points = torch.load("partseg_test_sample/partseg_point_batch_{}.pt".format(j))
+            label = torch.load("partseg_test_sample/partseg_label_batch_{}.pt".format(j))
+            target = torch.load("partseg_test_sample/partseg_target_batch_{}.pt".format(j))
+            # batchsize, num_point, _ = points.size()
+            cur_batch_size, NUM_POINT, _ = points.transpose(2, 1).size()
+            if USE_GPU:
+                points, label, target = points.cuda(), label.cuda(), target.cuda()
 
             if BATCH_SIZE < 24:
                 points = points[:BATCH_SIZE, :, :]
@@ -121,21 +123,15 @@ def main(args):
             
             if PRESORT_FLAG:
                 points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
-            if VISUALIZE:
+            if VISUALIZE and j == 0:
                 # print("save original PD")
                 im_array = point_cloud_three_views(points.numpy()[0, :, :])
                 img = Image.fromarray(np.uint8(im_array * 255.0))
                 img.save('pd0-orig.jpg')
+                VISUALIZE = False
 
-            batchsize, num_point, _ = points.size()
-            cur_batch_size, NUM_POINT, _ = points.size()
-            if use_gpu:
-                points, label, target = points.float().cuda(), label.long().cuda(), target.long().cuda()
-            else:
-                points, label, target = points.float(), label.long(), target.long()
+            
 
-            points = points.transpose(2, 1)
-            classifier = classifier.eval()
             if use_gpu:
                 vote_pool = torch.zeros(target.size()[0], target.size()[1], num_part).cuda()
             else:
@@ -144,6 +140,7 @@ def main(args):
             for _ in range(args.num_votes):
                 seg_pred, _ = classifier(points, to_categorical(label, num_classes))
                 vote_pool += seg_pred
+            
             time_cost = time() - start_time
             seg_pred = vote_pool / args.num_votes
             cur_pred_val = seg_pred.cpu().data.numpy()
@@ -175,26 +172,26 @@ def main(args):
                         part_ious[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                             np.sum((segl == l) | (segp == l)))
                 shape_ious[cat].append(np.mean(part_ious))
-            all_shape_ious = []
-            for cat in shape_ious.keys():
-                for iou in shape_ious[cat]:
-                    all_shape_ious.append(iou)
-                shape_ious[cat] = np.mean(shape_ious[cat])
-            mean_shape_ious = np.mean(list(shape_ious.values()))
-            test_metrics['accuracy'] = total_correct / float(total_seen)
-            test_metrics['class_avg_accuracy'] = np.mean(
-                np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
-            # for cat in sorted(shape_ious.keys()):
-            #     log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
-            test_metrics['class_avg_iou'] = mean_shape_ious
-            test_metrics['inctance_avg_iou'] = np.mean(all_shape_ious)
-            accu_list.append(test_metrics['accuracy'])
-            mIoU_list.append(test_metrics['inctance_avg_iou'])
-            timecost_list.append(time_cost)
+        all_shape_ious = []
+        for cat in shape_ious.keys():
+            for iou in shape_ious[cat]:
+                all_shape_ious.append(iou)
+            shape_ious[cat] = np.mean(shape_ious[cat])
+        mean_shape_ious = np.mean(list(shape_ious.values()))
+        test_metrics['accuracy'] = total_correct / float(total_seen)
+        test_metrics['class_avg_accuracy'] = np.mean(
+            np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
+        for cat in sorted(shape_ious.keys()):
+            log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
+        test_metrics['class_avg_iou'] = mean_shape_ious
+        test_metrics['inctance_avg_iou'] = np.mean(all_shape_ious)
+        accu_list.append(test_metrics['accuracy'])
+        mIoU_list.append(test_metrics['inctance_avg_iou'])
+        timecost_list.append(time_cost)
 
     log_string('Accuracy (10-time avg/std) is: %.5f (%.5f)'%(np.average(accu_list), np.std(accu_list)))
-    # log_string('Class avg accuracy is: %.5f'%test_metrics['class_avg_accuracy'])
-    # log_string('Class avg mIOU is: %.5f'%test_metrics['class_avg_iou'])
+    log_string('Class avg accuracy is: %.5f'%test_metrics['class_avg_accuracy'])
+    log_string('Class avg mIOU is: %.5f'%test_metrics['class_avg_iou'])
     log_string('Inctance avg mIOU (10-time avg) is: %.5f (%.5f)'%(np.average(mIoU_list), np.std(mIoU_list)))
     log_string('Time cost (10-time avg) is: %.5f (%.5f)'%(np.average(timecost_list), np.std(timecost_list)))
 
