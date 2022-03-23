@@ -29,6 +29,9 @@ TEST_GRIDGCN = False
 GRIDGCN_SAMPLE_OPT = "rvs"
 VOXEL_SIZE = 40
 
+'''RPS Setting'''
+TEST_RPS = False
+
 def normalization(points):
     
     size = points.size()
@@ -217,6 +220,24 @@ def index_points_query_ball(radius, nsample, xyz, new_xyz, centroid_index):
 #     new_points2 = index_points(xyz2, group_idx)
 
 #     return new_points, new_points2
+
+
+def random_point_sample(xyz, npoint):
+    """
+    Input:
+        xyz: pointcloud data, [B, N, 3]
+        npoint: number of samples
+    Return:
+        centroids: sampled pointcloud index, [B, npoint]
+    """
+    device = xyz.device
+    B, N, C = xyz.shape
+    centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
+
+    for b in range(B):
+        centroids[b, :, :] = xyz[b, np.random.choice(N, npoint, replace=False), :]
+
+    return centorids
 
 def farthest_point_sample(xyz, npoint):
     """
@@ -495,10 +516,12 @@ def sample_and_group(npoint, radius, nsample, xyz, points, returnfps=False):
     B, N, C = xyz.shape
     S = npoint
     # start_time = time()
-    if not TEST_GRIDGCN:
-        fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
-    else:
+    if TEST_GRIDGCN:
         fps_idx = gridgcn_sample(xyz, npoint) # [B, npoint, C]
+    elif TEST_RPS:
+        fps_idx = random_point_sample(xyz, npoint) # [B, npoint, C]
+    else:
+        fps_idx = farthest_point_sample(xyz, npoint) # [B, npoint, C]
     # print("Time cost for FPS is {}".format(time() - start_time))
     torch.cuda.empty_cache()
     new_xyz = index_points(xyz, fps_idx)
@@ -620,12 +643,15 @@ class PointNetSetAbstractionMsg(nn.Module):
         B, N, C = xyz.shape
         S = self.npoint
         # start_time = time()
-        if not TEST_GRIDGCN:
-            centroid_index = farthest_point_sample(xyz, S)
-            new_xyz = index_points(xyz, centroid_index)
-        else:
+        if TEST_GRIDGCN:
             centroid_index = gridgcn_sample(xyz, S)
-            new_xyz = index_points(xyz, centroid_index) # [B, npoint, C]
+        elif TEST_RPS:
+            centroid_index = random_point_sample(xyz, S)
+        else:
+            centroid_index = farthest_point_sample(xyz, S)
+
+        new_xyz = index_points(xyz, centroid_index)
+        
         # print("Time cost for FPS is {}".format(time() - start_time))
         if VISUALIZE:
             print("save FPS sampled PD")

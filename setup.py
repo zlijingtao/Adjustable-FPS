@@ -15,6 +15,7 @@ parser.add_argument('--dimsort_range', default=4, type=int, help='specify the di
 parser.add_argument('--test_grid_gcn', action='store_true', default=False, help='flag to enable grid gcn')
 parser.add_argument('--gridgcn_sample_opt', default='rvs', type=str, help='grid-gcn sample option, choose from cas or rvs')
 parser.add_argument('--voxel_size', default=40, type=int, help='voxel_size for grid-gcn')
+parser.add_argument('--test_rps', action='store_true', default=False, help='flag to enable rvs')
 args = parser.parse_args()
 
 
@@ -23,8 +24,11 @@ args = parser.parse_args()
 if args.gridgcn_sample_opt != "rvs" and args.gridgcn_sample_opt != "cas":
     raise("grid-gcn sample option is wrong, choose from cas or rvs!")
 
-if args.batch_size > 24:
-    print("batch size surpasses the maximum batch size of 24 (of fixed data input we are using)")
+if args.test_dimsort == True: # If multiple test are true (which should not happen) we prioritize dimsort > grid-gcn > rps
+    args.test_grid_gcn = False
+    args.test_rps = False
+elif args.test_grid_gcn == True:
+    args.test_rps = False
 
 #copy in-place to pointnet_util.py
 file_name = "./models/pointnet_util.py"
@@ -62,6 +66,9 @@ with open(file_name, "w") as out_file:
                 line = "GRIDGCN_SAMPLE_OPT = \"{}\"\n".format(args.gridgcn_sample_opt)
             elif "VOXEL_SIZE = " in line:
                 line = "VOXEL_SIZE = {}\n".format(args.voxel_size)
+
+            elif "TEST_RPS = " in line:
+                line = "TEST_RPS = True\n" if args.test_rps else "TEST_RPS = False\n"
 
             out_file.write(line)
         except:
