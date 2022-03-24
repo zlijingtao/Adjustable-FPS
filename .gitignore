@@ -115,3 +115,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 data/
+semseg_test_sample/
+log/sem_seg/pointnet2_sem_seg/visual

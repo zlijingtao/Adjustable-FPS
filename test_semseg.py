@@ -14,6 +14,7 @@ import importlib
 from tqdm import tqdm
 import provider
 import numpy as np
+from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
@@ -29,11 +30,9 @@ for i,cat in enumerate(seg_classes.keys()):
 def parse_args():
     '''PARAMETERS'''
     parser = argparse.ArgumentParser('Model')
-    parser.add_argument('--batch_size', type=int, default=32, help='batch size in testing [default: 32]')
     parser.add_argument('--gpu', type=str, default='0', help='specify gpu device')
     parser.add_argument('--num_point', type=int, default=4096, help='Point Number [default: 4096]')
     parser.add_argument('--log_dir', type=str, default='pointnet2_sem_seg', help='Experiment root')
-    parser.add_argument('--visual', action='store_true', default=False, help='Whether visualize result [default: False]')
     parser.add_argument('--test_area', type=int, default=5, help='Which area to use for test, option: 1-6 [default: 5]')
     parser.add_argument('--num_votes', type=int, default=5, help='Aggregate segmentation scores with voting [default: 5]')
     return parser.parse_args()
@@ -53,7 +52,8 @@ def main(args):
         print(str)
 
     '''HYPER PARAMETER'''
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+    if USE_GPU:
+        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
     experiment_dir = 'log/sem_seg/' + args.log_dir
     visual_dir = experiment_dir + '/visual/'
     visual_dir = Path(visual_dir)
@@ -72,7 +72,7 @@ def main(args):
     log_string(args)
 
     NUM_CLASSES = 13
-    BATCH_SIZE = args.batch_size
+    # BATCH_SIZE = args.batch_size
     NUM_POINT = args.num_point
 
     root = 'data/stanford_indoor3d/'
@@ -83,7 +83,10 @@ def main(args):
     '''MODEL LOADING'''
     model_name = os.listdir(experiment_dir+'/logs')[0].split('.')[0]
     MODEL = importlib.import_module(model_name)
-    classifier = MODEL.get_model(NUM_CLASSES).cuda()
+
+    classifier = MODEL.get_model(NUM_CLASSES)
+    if USE_GPU:
+        classifier = classifier.cuda()
     checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
     classifier.load_state_dict(checkpoint['model_state_dict'])
 
@@ -99,19 +102,41 @@ def main(args):
         log_string('---- EVALUATION WHOLE SCENE----')
 
         for batch_idx in range(num_batches):
-            print("visualize [%d/%d] %s ..." % (batch_idx+1, num_batches, scene_id[batch_idx]))
+            if VISUALIZE:
+                print("visualize [%d/%d] %s ..." % (batch_idx+1, num_batches, scene_id[batch_idx]))
             total_seen_class_tmp = [0 for _ in range(NUM_CLASSES)]
             total_correct_class_tmp = [0 for _ in range(NUM_CLASSES)]
             total_iou_deno_class_tmp = [0 for _ in range(NUM_CLASSES)]
-            if args.visual:
+            if VISUALIZE:
                 fout = open(os.path.join(visual_dir, scene_id[batch_idx] + '_pred.obj'), 'w')
                 fout_gt = open(os.path.join(visual_dir, scene_id[batch_idx] + '_gt.obj'), 'w')
 
-            whole_scene_data = TEST_DATASET_WHOLE_SCENE.scene_points_list[batch_idx]
-            whole_scene_label = TEST_DATASET_WHOLE_SCENE.semantic_labels_list[batch_idx]
-            torch.save(whole_scene_data, "semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
-            torch.save(whole_scene_label, "semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
-            vote_label_pool = np.zeros((whole_scene_label.shape[0], NUM_CLASSES))
+            # whole_scene_data = TEST_DATASET_WHOLE_SCENE.scene_points_list[batch_idx]
+            # whole_scene_label = TEST_DATASET_WHOLE_SCENE.semantic_labels_list[batch_idx]
+            # torch.save(whole_scene_data, "semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
+            # torch.save(whole_scene_label, "semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
+            
+            whole_scene_data = torch.load("semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
+            whole_scene_label = torch.load("semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
+
+            # print(whole_scene_data.shape)
+            # print(whole_scene_label.shape)
+            whole_scene_data = torch.Tensor(whole_scene_data)
+            whole_scene_label = torch.Tensor(whole_scene_label)
+
+            whole_scene_data = whole_scene_data.view(1, whole_scene_data.size(0), whole_scene_data.size(1))
+            whole_scene_label = whole_scene_label.view(1, whole_scene_label.size(0))
+
+            if PRESORT_FLAG:
+                whole_scene_data, whole_scene_label = pcloud_sort(whole_scene_data, whole_scene_label, sel_dim = SELECT_DIM)
+
+            whole_scene_data = whole_scene_data.view(whole_scene_data.size(1), whole_scene_data.size(2)).numpy()
+            whole_scene_label = whole_scene_label.view(whole_scene_label.size(1), ).numpy()
+
+
+            # print(whole_scene_data.size())
+            # print(whole_scene_label.size())
+            vote_label_pool = torch.zeros((whole_scene_label.shape[0], NUM_CLASSES))
             for _ in tqdm(range(args.num_votes), total=args.num_votes):
                 scene_data, scene_label, scene_smpw, scene_point_index = TEST_DATASET_WHOLE_SCENE[batch_idx]
                 num_blocks = scene_data.shape[0]
@@ -132,7 +157,10 @@ def main(args):
                     batch_data[:, :, 3:6] /= 1.0
 
                     torch_data = torch.Tensor(batch_data)
-                    torch_data= torch_data.float().cuda()
+                    if USE_GPU:
+                        torch_data= torch_data.float().cuda()
+                    else:
+                        torch_data= torch_data.float()
                     torch_data = torch_data.transpose(2, 1)
                     seg_pred, _ = classifier(torch_data)
                     batch_pred_label = seg_pred.contiguous().cpu().data.max(2)[1].numpy()
@@ -166,7 +194,7 @@ def main(args):
             for i in range(whole_scene_label.shape[0]):
                 color = g_label2color[pred_label[i]]
                 color_gt = g_label2color[whole_scene_label[i]]
-                if args.visual:
+                if VISUALIZE:
                     fout.write('v %f %f %f %d %d %d\n' % (
                     whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], color[0], color[1],
                     color[2]))
@@ -174,7 +202,7 @@ def main(args):
                         'v %f %f %f %d %d %d\n' % (
                         whole_scene_data[i, 0], whole_scene_data[i, 1], whole_scene_data[i, 2], color_gt[0],
                         color_gt[1], color_gt[2]))
-            if args.visual:
+            if VISUALIZE:
                 fout.close()
                 fout_gt.close()
 

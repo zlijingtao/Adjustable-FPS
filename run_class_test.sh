@@ -9,5 +9,5 @@ dimsort_range=4
 gridgcn_sample_opt=rvs
 voxel_size=40
 
-python setup.py --use_gpu --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+python setup.py --use_gpu --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
 python test_cls.py --normal --log_dir pointnet2_cls_msg
