@@ -495,7 +495,8 @@ def pcloud_sort(npoint, npoint2 = None, sel_dim = -1):
                 output2[i, :, :] = npoint2[i, idx, :]
             elif len(output2.size()) == 2:
                 output2[i, :] = npoint2[i, idx]
-            
+            elif len(output2.size()) == 1:
+                output2[i] = npoint2[i]
     if npoint2 is not None:
         return output, output2
     else:

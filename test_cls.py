@@ -64,6 +64,7 @@ def test(model, loader, num_class=40, vote_num=1):
     return instance_acc, class_acc
 
 def single_test(model, num_batch, num_class=40, vote_num=1):
+    global VISUALIZE
     mean_correct = []
     class_acc = np.zeros((num_class,3))
     if num_batch > 103:
@@ -79,9 +80,14 @@ def single_test(model, num_batch, num_class=40, vote_num=1):
         if USE_GPU:
             points, target = points.cuda(), target.cuda()
         
+
+        print(points.size())
+        print(target.size())
+
+        points = points.permute(0, 2, 1)
         if PRESORT_FLAG:
             points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
-
+        points = points.permute(0, 2, 1)
         if VISUALIZE and j == 0:
             # print("save original PD")
             im_array = point_cloud_three_views(points.numpy()[0, :, :])
