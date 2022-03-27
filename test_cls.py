@@ -79,18 +79,16 @@ def single_test(model, num_batch, num_class=40, vote_num=1):
 
         if USE_GPU:
             points, target = points.cuda(), target.cuda()
+    
+
         
-
-        print(points.size())
-        print(target.size())
-
-        points = points.permute(0, 2, 1)
         if PRESORT_FLAG:
+            points = points.permute(0, 2, 1)
             points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
-        points = points.permute(0, 2, 1)
+            points = points.permute(0, 2, 1)
         if VISUALIZE and j == 0:
             # print("save original PD")
-            im_array = point_cloud_three_views(points.numpy()[0, :, :])
+            im_array = point_cloud_three_views(points.permute(0, 2, 1).cpu().numpy()[0, :, :])
             img = Image.fromarray(np.uint8(im_array * 255.0))
             img.save('pd0-orig.jpg')
             VISUALIZE = False

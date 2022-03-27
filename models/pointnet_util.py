@@ -24,12 +24,12 @@ USE_GPU = True
 BATCH_SIZE = 24
 
 '''Dimsort Setting'''
-TEST_DIMSORT = False
-DIMSORT_RANGE = 4
+TEST_DIMSORT = True
+DIMSORT_RANGE = 16
 
 '''Grid-GCN Setting'''
-TEST_GRIDGCN = True
-GRIDGCN_SAMPLE_OPT = "cas"
+TEST_GRIDGCN = False
+GRIDGCN_SAMPLE_OPT = "rvs"
 VOXEL_SIZE = 40
 
 '''RPS Setting'''
@@ -238,9 +238,9 @@ def random_point_sample(xyz, npoint):
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
 
     for b in range(B):
-        centroids[b, :, :] = xyz[b, np.random.choice(N, npoint, replace=False), :]
+        centroids[b, :] = torch.Tensor(np.random.choice(N, npoint, replace=False)).to(device)
 
-    return centorids
+    return centroids
 
 def farthest_point_sample(xyz, npoint):
     """
