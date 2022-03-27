@@ -111,41 +111,34 @@ def main(args):
                 fout = open(os.path.join(visual_dir, scene_id[batch_idx] + '_pred.obj'), 'w')
                 fout_gt = open(os.path.join(visual_dir, scene_id[batch_idx] + '_gt.obj'), 'w')
 
-            # whole_scene_data = TEST_DATASET_WHOLE_SCENE.scene_points_list[batch_idx]
-            # whole_scene_label = TEST_DATASET_WHOLE_SCENE.semantic_labels_list[batch_idx]
-            # torch.save(whole_scene_data, "semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
-            # torch.save(whole_scene_label, "semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
+            whole_scene_data = TEST_DATASET_WHOLE_SCENE.scene_points_list[batch_idx]
+            whole_scene_label = TEST_DATASET_WHOLE_SCENE.semantic_labels_list[batch_idx]
             
-            whole_scene_data = torch.load("semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
-            whole_scene_label = torch.load("semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
+            
+            # whole_scene_data = torch.load("semseg_test_sample/semseg_data_batch_{}.pt".format(batch_idx))
+            # whole_scene_label = torch.load("semseg_test_sample/semseg_label_batch_{}.pt".format(batch_idx))
 
-            # print(whole_scene_data.shape)
-            # print(whole_scene_label.shape)
-            whole_scene_data = torch.Tensor(whole_scene_data)
-            whole_scene_label = torch.Tensor(whole_scene_label)
+            # whole_scene_data = torch.Tensor(whole_scene_data)
+            # whole_scene_label = torch.Tensor(whole_scene_label)
 
-            whole_scene_data = whole_scene_data.view(1, whole_scene_data.size(0), whole_scene_data.size(1))
-            whole_scene_label = whole_scene_label.view(1, whole_scene_label.size(0))
+            # whole_scene_data = whole_scene_data.view(1, whole_scene_data.size(0), whole_scene_data.size(1))
+            # whole_scene_label = whole_scene_label.view(1, whole_scene_label.size(0))
 
-            if PRESORT_FLAG:
-                whole_scene_data, whole_scene_label = pcloud_sort(whole_scene_data, whole_scene_label, sel_dim = SELECT_DIM)
+            
 
-            whole_scene_data = whole_scene_data.view(whole_scene_data.size(1), whole_scene_data.size(2)).numpy()
-            whole_scene_label = whole_scene_label.view(whole_scene_label.size(1), ).numpy()
+            # whole_scene_data = whole_scene_data.view(whole_scene_data.size(1), whole_scene_data.size(2)).numpy()
+            # whole_scene_label = whole_scene_label.view(whole_scene_label.size(1), ).numpy()
 
-
-            # print(whole_scene_data.size())
-            # print(whole_scene_label.size())
-            vote_label_pool = torch.zeros((whole_scene_label.shape[0], NUM_CLASSES))
+            vote_label_pool = np.zeros((whole_scene_label.shape[0], NUM_CLASSES))
             for _ in tqdm(range(args.num_votes), total=args.num_votes):
                 scene_data, scene_label, scene_smpw, scene_point_index = TEST_DATASET_WHOLE_SCENE[batch_idx]
                 num_blocks = scene_data.shape[0]
                 s_batch_num = (num_blocks + BATCH_SIZE - 1) // BATCH_SIZE
                 batch_data = np.zeros((BATCH_SIZE, NUM_POINT, 9))
-
                 batch_label = np.zeros((BATCH_SIZE, NUM_POINT))
                 batch_point_index = np.zeros((BATCH_SIZE, NUM_POINT))
                 batch_smpw = np.zeros((BATCH_SIZE, NUM_POINT))
+
                 for sbatch in range(s_batch_num):
                     start_idx = sbatch * BATCH_SIZE
                     end_idx = min((sbatch + 1) * BATCH_SIZE, num_blocks)
@@ -157,11 +150,23 @@ def main(args):
                     batch_data[:, :, 3:6] /= 1.0
 
                     torch_data = torch.Tensor(batch_data)
+
+                    
+
+                    # batch_point_index = torch.Tensor(batch_point_index)
+                    # batch_smpw = torch.Tensor(batch_smpw)
+                    # if PRESORT_FLAG:
+                    #     torch_data, batch_point_index, batch_smpw = pcloud_sort(torch_data, batch_point_index, batch_smpw, sel_dim = SELECT_DIM)
+                    
+                    # batch_point_index = batch_point_index.numpy()
+                    # batch_smpw = batch_smpw.numpy()
+
+                    torch_data = torch_data.transpose(2, 1)
                     if USE_GPU:
                         torch_data= torch_data.float().cuda()
                     else:
                         torch_data= torch_data.float()
-                    torch_data = torch_data.transpose(2, 1)
+                    
                     seg_pred, _ = classifier(torch_data)
                     batch_pred_label = seg_pred.contiguous().cpu().data.max(2)[1].numpy()
 
@@ -212,6 +217,7 @@ def main(args):
             iou_per_class_str += 'class %s, IoU: %.3f \n' % (
                 seg_label_to_cat[l] + ' ' * (14 - len(seg_label_to_cat[l])),
                 total_correct_class[l] / float(total_iou_deno_class[l]))
+        
         log_string(iou_per_class_str)
         log_string('eval point avg class IoU: %f' % np.mean(IoU))
         log_string('eval whole scene point avg class acc: %f' % (

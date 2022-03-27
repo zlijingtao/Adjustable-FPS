@@ -9,7 +9,32 @@ dimsort_range=4
 gridgcn_sample_opt=rvs
 voxel_size=40
 
+# #Run baseline
+# python setup.py --use_gpu --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+# python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5
 
-python setup.py --use_gpu --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
-# python train_semseg.py --model pointnet2_sem_seg --test_area 5 --log_dir pointnet2_sem_seg
+# #Run parallel baseline
+# python setup.py --use_gpu --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+# python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5
+
+# #Run sequential dimsort
+# dimsort_range=8
+# python setup.py --use_gpu --test_dimsort --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+# python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5
+
+# #Run parallel dimsort
+# dimsort_range=4
+# python setup.py --use_gpu --test_dimsort --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+# python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5
+
+#Run grid-gcn rvs
+gridgcn_sample_opt=rvs
+voxel_size=40
+python setup.py --use_gpu --test_grid_gcn --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5
+
+#Run grid-gcn cas
+gridgcn_sample_opt=cas
+voxel_size=40
+python setup.py --use_gpu --test_grid_gcn --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
 python test_semseg.py --log_dir pointnet2_sem_seg --test_area 5

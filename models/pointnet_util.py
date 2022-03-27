@@ -5,13 +5,16 @@ from time import time
 import numpy as np
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
-import grid_gcn
+import sys
+# sys.path.append('../grid_gcn')
+sys.path.append('../../Pointnet_API')
+# import grid_gcn
 # print()
-# from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
+from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
 PRESORT_FLAG = True
-PARALLEL_OPTION = False
+PARALLEL_OPTION = True
 SELECT_DIM = 0
 SAVE_COMPUTATION_TWO_AXIS = False
 
@@ -25,8 +28,8 @@ TEST_DIMSORT = False
 DIMSORT_RANGE = 4
 
 '''Grid-GCN Setting'''
-TEST_GRIDGCN = False
-GRIDGCN_SAMPLE_OPT = "rvs"
+TEST_GRIDGCN = True
+GRIDGCN_SAMPLE_OPT = "cas"
 VOXEL_SIZE = 40
 
 '''RPS Setting'''
@@ -418,9 +421,9 @@ def gridgcn_sample(xyz, npoint):
     B, N, C = xyz.shape
     centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
     if GRIDGCN_SAMPLE_OPT == "cas": ## Perform CAS   
-        selfvoxels = grid_gcn.grid_gcn_final.VoxelModule(VOXEL_SIZE,B)
+        selfvoxels = VoxelModule(VOXEL_SIZE,B)
     elif GRIDGCN_SAMPLE_OPT == "rvs": ## Perform RVS
-        selfvoxels = grid_gcn.grid_gcn_final.VoxelModule(VOXEL_SIZE,B, easy_neibor = False)
+        selfvoxels = VoxelModule(VOXEL_SIZE,B, easy_neibor = False)
 
     norm_xyz  = normalization(xyz)
     # print("Done normalization")
@@ -438,10 +441,10 @@ def gridgcn_sample(xyz, npoint):
     '''
 
     if GRIDGCN_SAMPLE_OPT == "cas": ## Perform CAS
-        cas = grid_gcn.grid_gcn_final.CAS(npoint)
+        cas = CAS(npoint)
         centroids = cas(norm_xyz, index_voxels, context_points)
     elif GRIDGCN_SAMPLE_OPT == "rvs": ## Perform RVS
-        rvs = grid_gcn.grid_gcn_final.RVS(npoint)
+        rvs = RVS(npoint)
         centroids, _ = rvs(xyz, index_voxels)
     
     return centroids
@@ -470,9 +473,9 @@ def query_ball_point(radius, nsample, xyz, new_xyz):
     group_idx[mask] = group_first[mask]
     return group_idx
 
-def pcloud_sort(npoint, npoint2 = None, sel_dim = -1):
+def pcloud_sort(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
     #firstly choose the longest dimension to sort
-    print("Doing sorting")
+    # print("Doing sorting")
     batch_size = npoint.size(0)
     if sel_dim == -1:
         range_x = torch.max(npoint[:, :, 0]) - torch.min(npoint[:, :, 0])
@@ -485,11 +488,15 @@ def pcloud_sort(npoint, npoint2 = None, sel_dim = -1):
         else:
             sel_dim = 2
     output = torch.zeros_like(npoint)
+
     if npoint2 is not None:
         output2 = torch.zeros_like(npoint2)
+    if npoint3 is not None:
+        output3 = torch.zeros_like(npoint3)
     for i in range(batch_size):
         _, idx = torch.sort(npoint[i, :, sel_dim])
         output[i, :, :] = npoint[i, idx, :]
+        
         if npoint2 is not None:
             if len(output2.size()) == 3:
                 output2[i, :, :] = npoint2[i, idx, :]
@@ -497,10 +504,67 @@ def pcloud_sort(npoint, npoint2 = None, sel_dim = -1):
                 output2[i, :] = npoint2[i, idx]
             elif len(output2.size()) == 1:
                 output2[i] = npoint2[i]
-    if npoint2 is not None:
+        if npoint3 is not None:
+            if len(npoint3.size()) == 3:
+                npoint3[i, :, :] = npoint3[i, idx, :]
+            elif len(npoint3.size()) == 2:
+                npoint3[i, :] = npoint3[i, idx]
+            elif len(npoint3.size()) == 1:
+                npoint3[i] = npoint3[i]
+    if npoint3 is not None:
+        return output, output2, output3
+    elif npoint2 is not None:
         return output, output2
     else:
         return output
+
+
+
+def pcloud_sort_np(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
+    #firstly choose the longest dimension to sort
+    # print("Doing sorting")
+    batch_size = npoint.shape[0]
+    if sel_dim == -1:
+        range_x = np.max(npoint[:, :, 0]) - np.min(npoint[:, :, 0])
+        range_y = np.max(npoint[:, :, 1]) - np.min(npoint[:, :, 1])
+        range_z = np.max(npoint[:, :, 2]) - np.min(npoint[:, :, 2])
+        if range_x >= range_y and range_x >= range_z:
+            sel_dim = 0
+        elif range_y >= range_z:
+            sel_dim = 1
+        else:
+            sel_dim = 2
+    output = np.zeros_like(npoint)
+
+    if npoint2 is not None:
+        output2 = np.zeros_like(npoint2)
+    if npoint3 is not None:
+        output3 = np.zeros_like(npoint3)
+    for i in range(batch_size):
+        idx = np.argsort(npoint[i, :, sel_dim])
+        output[i, :, :] = npoint[i, idx, :]
+        
+        if npoint2 is not None:
+            if len(output2.size()) == 3:
+                output2[i, :, :] = npoint2[i, idx, :]
+            elif len(output2.size()) == 2:
+                output2[i, :] = npoint2[i, idx]
+            elif len(output2.size()) == 1:
+                output2[i] = npoint2[i]
+        if npoint3 is not None:
+            if len(npoint3.size()) == 3:
+                npoint3[i, :, :] = npoint3[i, idx, :]
+            elif len(npoint3.size()) == 2:
+                npoint3[i, :] = npoint3[i, idx]
+            elif len(npoint3.size()) == 1:
+                npoint3[i] = npoint3[i]
+    if npoint3 is not None:
+        return output, output2, output3
+    elif npoint2 is not None:
+        return output, output2
+    else:
+        return output
+
 
 def sample_and_group(npoint, radius, nsample, xyz, points, returnfps=False):
     """
