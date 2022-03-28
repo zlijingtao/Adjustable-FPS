@@ -30,6 +30,7 @@ def parse_args():
     parser.add_argument('--normal', action='store_true', default=True, help='Whether to use normal information [default: False]')
     parser.add_argument('--num_votes', type=int, default=3, help='Aggregate classification scores with voting [default: 3]')
     parser.add_argument('--num_batch', type=int, default=103, help='Number of batch to do the inference')
+    parser.add_argument('--avg_time', type=int, default=10, help='Number of average to do the inference')
     return parser.parse_args()
 
 def test(model, loader, num_class=40, vote_num=1):
@@ -65,53 +66,58 @@ def test(model, loader, num_class=40, vote_num=1):
 
 def single_test(model, num_batch, num_class=40, vote_num=1):
     global VISUALIZE
-    mean_correct = []
-    class_acc = np.zeros((num_class,3))
-    if num_batch > 103:
-        num_batch = 103
-    for j in tqdm(range(num_batch), total=num_batch):
-        points = torch.load("class_test_sample//class_point_batch_{}.pt".format(j))
-        target = torch.load("class_test_sample//class_target_batch_{}.pt".format(j))
+    accu_list = []
+    class_acc_list = []
+    for _ in range(args.avg_time):
+        mean_correct = []
+        class_acc = np.zeros((num_class,3))
+        if num_batch > 103:
+            num_batch = 103
+        for j in tqdm(range(num_batch), total=num_batch):
+            points = torch.load("class_test_sample//class_point_batch_{}.pt".format(j))
+            target = torch.load("class_test_sample//class_target_batch_{}.pt".format(j))
+            
+            if BATCH_SIZE < 24:
+                points = points[:BATCH_SIZE, :, :]
+                target = target[:BATCH_SIZE, :]
+
+            if USE_GPU:
+                points, target = points.cuda(), target.cuda()
         
-        if BATCH_SIZE < 24:
-            points = points[:BATCH_SIZE, :, :]
-            target = target[:BATCH_SIZE, :]
 
-        if USE_GPU:
-            points, target = points.cuda(), target.cuda()
-    
+            
+            if PRESORT_FLAG:
+                points = points.permute(0, 2, 1)
+                points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
+                points = points.permute(0, 2, 1)
+            if VISUALIZE and j == 0:
+                # print("save original PD")
+                im_array = point_cloud_three_views(points.permute(0, 2, 1).cpu().numpy()[0, :, :])
+                img = Image.fromarray(np.uint8(im_array * 255.0))
+                img.save('pd0-orig.jpg')
+                VISUALIZE = False
+            classifier = model.eval()
+            vote_pool = torch.zeros(target.size()[0],num_class)
+            if USE_GPU:
+                vote_pool = vote_pool.cuda()
+            for _ in range(vote_num):
+                pred, _ = classifier(points)
+                vote_pool += pred
+            pred = vote_pool/vote_num
+            pred_choice = pred.data.max(1)[1]
+            for cat in np.unique(target.cpu()):
+                classacc = pred_choice[target==cat].eq(target[target==cat].long().data).cpu().sum()
+                class_acc[cat,0]+= classacc.item()/float(points[target==cat].size()[0])
+                class_acc[cat,1]+=1
+            correct = pred_choice.eq(target.long().data).cpu().sum()
+            mean_correct.append(correct.item()/float(points.size()[0]))
 
-        
-        if PRESORT_FLAG:
-            points = points.permute(0, 2, 1)
-            points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
-            points = points.permute(0, 2, 1)
-        if VISUALIZE and j == 0:
-            # print("save original PD")
-            im_array = point_cloud_three_views(points.permute(0, 2, 1).cpu().numpy()[0, :, :])
-            img = Image.fromarray(np.uint8(im_array * 255.0))
-            img.save('pd0-orig.jpg')
-            VISUALIZE = False
-        classifier = model.eval()
-        vote_pool = torch.zeros(target.size()[0],num_class)
-        if USE_GPU:
-            vote_pool = vote_pool.cuda()
-        for _ in range(vote_num):
-            pred, _ = classifier(points)
-            vote_pool += pred
-        pred = vote_pool/vote_num
-        pred_choice = pred.data.max(1)[1]
-        for cat in np.unique(target.cpu()):
-            classacc = pred_choice[target==cat].eq(target[target==cat].long().data).cpu().sum()
-            class_acc[cat,0]+= classacc.item()/float(points[target==cat].size()[0])
-            class_acc[cat,1]+=1
-        correct = pred_choice.eq(target.long().data).cpu().sum()
-        mean_correct.append(correct.item()/float(points.size()[0]))
-
-    class_acc[:,2] =  class_acc[:,0]/ class_acc[:,1]
-    class_acc = np.mean(class_acc[:,2])
-    instance_acc = np.mean(mean_correct)
-    return instance_acc, class_acc
+        class_acc[:,2] =  class_acc[:,0]/ class_acc[:,1]
+        class_acc = np.mean(class_acc[:,2])
+        instance_acc = np.mean(mean_correct)
+        accu_list.append(instance_acc)
+        class_acc_list.append(class_acc)
+    return np.average(accu_list), np.average(class_acc_list)
 
 
 def main(args):

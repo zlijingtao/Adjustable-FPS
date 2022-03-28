@@ -13,8 +13,8 @@ sys.path.append('../../Pointnet_API')
 from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
-PRESORT_FLAG = False
-PARALLEL_OPTION = False
+PRESORT_FLAG = True
+PARALLEL_OPTION = True
 SELECT_DIM = 0
 SAVE_COMPUTATION_TWO_AXIS = False
 
@@ -33,7 +33,7 @@ GRIDGCN_SAMPLE_OPT = "rvs"
 VOXEL_SIZE = 40
 
 '''RPS Setting'''
-TEST_RPS = True
+TEST_RPS = False
 
 def normalization(points):
     
