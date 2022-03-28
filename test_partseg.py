@@ -109,7 +109,7 @@ def main(args):
             points = torch.load("partseg_test_sample/partseg_point_batch_{}.pt".format(j))
             label = torch.load("partseg_test_sample/partseg_label_batch_{}.pt".format(j))
             target = torch.load("partseg_test_sample/partseg_target_batch_{}.pt".format(j))
-            # batchsize, num_point, _ = points.size()
+            
             cur_batch_size, NUM_POINT, _ = points.transpose(2, 1).size()
             if USE_GPU:
                 points, label, target = points.cuda(), label.cuda(), target.cuda()
@@ -122,7 +122,12 @@ def main(args):
                 target = target[:BATCH_SIZE, :]
             
             if PRESORT_FLAG:
-                points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
+                # print(points.size())
+                # print(target.size())
+                # points = points.transpose(2, 1)
+                points, target = pcloud_sort(points.transpose(2, 1), target, sel_dim = SELECT_DIM)
+                points = points.transpose(2, 1)
+            
             if VISUALIZE and j == 0:
                 # print("save original PD")
                 im_array = point_cloud_three_views(points.numpy()[0, :, :])
