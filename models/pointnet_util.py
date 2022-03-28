@@ -302,7 +302,8 @@ def farthest_point_sample(xyz, npoint):
                     #     print(distance[0,:128])
                     if DIMSORT_INTERPOLATE:
                         x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
-                        dist_val = torch.max(dist_val) + 0.01 * torch.abs(torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device) - farthest[:, c].view(B, 1)) #[3 2 1 0 1 2 3]
+                        # dist_val = torch.max(dist_val) + 0.01 * torch.abs(torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device) - farthest[:, c].view(B, 1)) #[3 2 1 0 1 2 3]
+                        dist_val = 0.01 * DIMSORT_RANGE + 0.01 * torch.abs(torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device) - farthest[:, c].view(B, 1)) #[3 2 1 0 1 2 3]
                         dist = dist.scatter_(1, x_range, dist_val)
                         mask = dist < distance
                         distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
@@ -341,7 +342,7 @@ def farthest_point_sample(xyz, npoint):
 
                 if DIMSORT_INTERPOLATE:
                     x_range = torch.arange(0, N, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
-                    dist_val = torch.max(dist_val) + 0.01 * torch.abs(torch.arange(0, N, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device) - farthest) #[3 2 1 0 1 2 3]
+                    dist_val = 0.01 * DIMSORT_RANGE + 0.01 * torch.abs(torch.arange(0, N, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device) - farthest.view(B, 1)) #[3 2 1 0 1 2 3]
                     dist = dist.scatter_(1, x_range, dist_val)
                     mask = dist < distance
                     distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
