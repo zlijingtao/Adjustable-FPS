@@ -233,3 +233,13 @@
 2022-03-27 18:23:50,668 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_cls_msg', normal=True, num_batch=103, num_point=1024, num_votes=3)
 2022-03-27 18:24:50,610 - Model - INFO - PARAMETER ...
 2022-03-27 18:24:50,610 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_cls_msg', normal=True, num_batch=103, num_point=1024, num_votes=3)
+2022-03-27 18:45:19,422 - Model - INFO - Test Instance Accuracy: 0.925324, Class Accuracy: 0.892050
+2022-03-27 18:45:20,678 - Model - INFO - PARAMETER ...
+2022-03-27 18:45:20,678 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_cls_msg', normal=True, num_batch=103, num_point=1024, num_votes=3)
+2022-03-27 19:05:08,615 - Model - INFO - Test Instance Accuracy: 0.924879, Class Accuracy: 0.893402
+2022-03-27 19:05:09,865 - Model - INFO - PARAMETER ...
+2022-03-27 19:05:09,865 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_cls_msg', normal=True, num_batch=103, num_point=1024, num_votes=3)
+2022-03-27 19:25:43,377 - Model - INFO - Test Instance Accuracy: 0.923827, Class Accuracy: 0.892197
+2022-03-27 19:25:44,645 - Model - INFO - PARAMETER ...
+2022-03-27 19:25:44,645 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_cls_msg', normal=True, num_batch=103, num_point=1024, num_votes=3)
+2022-03-27 19:46:21,531 - Model - INFO - Test Instance Accuracy: 0.926416, Class Accuracy: 0.895566

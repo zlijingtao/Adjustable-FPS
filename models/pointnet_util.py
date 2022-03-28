@@ -25,7 +25,7 @@ BATCH_SIZE = 24
 
 '''Dimsort Setting'''
 TEST_DIMSORT = True
-DIMSORT_RANGE = 16
+DIMSORT_RANGE = 32
 
 '''Grid-GCN Setting'''
 TEST_GRIDGCN = False
