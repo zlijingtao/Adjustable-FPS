@@ -672,3 +672,7 @@ class clutter       , IoU: 0.331
 2022-03-27 09:52:40,554 - Model - INFO - Mean IoU of Area_5_office_9: 0.5338
 2022-03-27 10:55:00,115 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7348
 2022-03-27 11:30:57,868 - Model - INFO - Mean IoU of Area_5_office_32: 0.4717
+2022-03-27 14:21:58,351 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5309
+2022-03-27 14:43:53,977 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6190
+2022-03-27 15:06:12,089 - Model - INFO - Mean IoU of Area_5_office_20: 0.5676
+2022-03-27 15:34:20,856 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6793

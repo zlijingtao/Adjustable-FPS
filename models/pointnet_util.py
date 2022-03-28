@@ -24,8 +24,8 @@ USE_GPU = True
 BATCH_SIZE = 24
 
 '''Dimsort Setting'''
-TEST_DIMSORT = False
-DIMSORT_RANGE = 4
+TEST_DIMSORT = True
+DIMSORT_RANGE = 32
 
 '''Grid-GCN Setting'''
 TEST_GRIDGCN = False
@@ -266,8 +266,10 @@ def farthest_point_sample(xyz, npoint):
             for c in range(16):
                 local_region_l = (N // 16) * c
                 local_region_u = N // 16 + local_region_l
+                if c == 15:
+                    local_region_u = N
                 
-                farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
+                farthest[:, c] =  torch.randint(local_region_l, local_region_u, (1,), dtype=torch.long).to(device).repeat(B)
                 for i in range(point_partition):
                     centroids[:, i + point_partition * c] = farthest[:, c]
                     if not SAVE_COMPUTATION_TWO_AXIS:
@@ -279,7 +281,20 @@ def farthest_point_sample(xyz, npoint):
                             centroid = xyz[batch_indices, farthest[:, c], ::2].view(B, 1, 2)
                         elif SELECT_DIM == 2:
                             centroid = xyz[batch_indices, farthest[:, c], :2].view(B, 1, 2)
-                    x_range = torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long).to(device)), local_region_l, local_region_u-1).to(device)
+                    
+                    if farthest[0, c] - DIMSORT_RANGE//2 < local_region_l:
+                        lower_b = local_region_l
+                    else:
+                        lower_b = farthest[0, c] - DIMSORT_RANGE//2
+                    if farthest[0, c] + DIMSORT_RANGE//2 > local_region_u:
+                        upper_b = local_region_u
+                    else:
+                        upper_b = farthest[0, c] + DIMSORT_RANGE//2
+
+                    x_range = torch.arange( lower_b, upper_b, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
+                    
+                    # torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2, dtype=torch.long).to(device)), local_region_l, local_region_u-1).to(device)
+                    
                     dist = torch.ones(B, N).to(device) * 1e10
                     if not SAVE_COMPUTATION_TWO_AXIS:
                         dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
@@ -289,6 +304,45 @@ def farthest_point_sample(xyz, npoint):
                     mask = dist < distance
                     distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
                     farthest[:, c] = torch.max(distance[:, local_region_l: local_region_u], dim = -1)[1].long() + local_region_l
+
+
+
+            # for c in range(16):
+            #     local_region_l = (N // 16) * c
+            #     local_region_u = N // 16 + local_region_l
+                
+            #     farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
+            #     for i in range(point_partition):
+            #         centroids[:, i + point_partition * c] = farthest[:, c]
+            #         if not SAVE_COMPUTATION_TWO_AXIS:
+            #             centroid = xyz[batch_indices, farthest[:, c], :].view(B, 1, 3)
+            #         else:
+            #             if SELECT_DIM == 0:
+            #                 centroid = xyz[batch_indices, farthest[:, c], 1:].view(B, 1, 2)
+            #             elif SELECT_DIM == 1:
+            #                 centroid = xyz[batch_indices, farthest[:, c], ::2].view(B, 1, 2)
+            #             elif SELECT_DIM == 2:
+            #                 centroid = xyz[batch_indices, farthest[:, c], :2].view(B, 1, 2)
+                    
+            #         x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
+            #         dist = torch.ones(B, N).to(device) * 1e10
+            #         if not SAVE_COMPUTATION_TWO_AXIS:
+            #             dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,3)) - centroid[batch_indices]) ** 2, -1)
+            #         else:
+            #             dist_val = torch.sum((xyz.gather(1, x_range.unsqueeze(2).repeat(1,1,2)) - centroid[batch_indices]) ** 2, -1)
+            #         dist = dist.scatter_(1, x_range, dist_val)
+                    
+            #         mask = dist < distance
+            #         distance[mask] = dist[mask] # if all GPE can modify and RAW does not happen.
+            #         farthest[:, c] = torch.max(distance[:, local_region_l: local_region_u], dim = -1)[1].long() + local_region_l
+
+
+
+
+
+
+
+
         else:
             distance = torch.ones(B, N).to(device) * 1e10
             farthest = torch.randint(0, N, (B,), dtype=torch.long).to(device)
@@ -326,7 +380,8 @@ def farthest_point_sample(xyz, npoint):
             for c in range(16):
                 local_region_l = (N // 16) * c
                 local_region_u = N // 16 + local_region_l
-                
+                if c == 15:
+                    local_region_u = N
                 farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
                 for i in range(point_partition):
                     centroids[:, i + point_partition * c] = farthest[:, c]
