@@ -40,5 +40,21 @@ voxel_size=40
 # python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
 
 #Run rps
-python setup.py --use_gpu --test_rps --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+# python setup.py --use_gpu --test_rps --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+# python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
+
+#Run parallel dimsort
+dimsort_range=4
+python setup.py --use_gpu --test_dimsort --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
+
+#Run parallel dimsort
+dimsort_range=8
+python setup.py --use_gpu --test_dimsort --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
+
+
+#Run parallel dimsort
+dimsort_range=16
+python setup.py --use_gpu --test_dimsort --parallel_option --presort --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
 python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
