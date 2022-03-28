@@ -189,8 +189,8 @@ def main(args):
             test_metrics['accuracy'] = total_correct / float(total_seen)
             test_metrics['class_avg_accuracy'] = np.mean(
                 np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
-            for cat in sorted(shape_ious.keys()):
-                log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
+            # for cat in sorted(shape_ious.keys()):
+            #     log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
             test_metrics['class_avg_iou'] = mean_shape_ious
             test_metrics['inctance_avg_iou'] = np.mean(all_shape_ious)
             
