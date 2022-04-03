@@ -14,8 +14,8 @@ from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
 PRESORT_FLAG = True
-PARALLEL_OPTION = False
-SELECT_DIM = 0
+PARALLEL_OPTION = True
+SELECT_DIM = 2
 SAVE_COMPUTATION_TWO_AXIS = False
 
 '''Default Parpameter'''
@@ -25,7 +25,7 @@ BATCH_SIZE = 24
 
 '''Dimsort Setting'''
 TEST_DIMSORT = True
-DIMSORT_RANGE = 4
+DIMSORT_RANGE = 2
 DIMSORT_INTERPOLATE = False
 
 '''Grid-GCN Setting'''
