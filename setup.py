@@ -17,7 +17,7 @@ parser.add_argument('--gridgcn_sample_opt', default='rvs', type=str, help='grid-
 parser.add_argument('--voxel_size', default=40, type=int, help='voxel_size for grid-gcn')
 parser.add_argument('--test_rps', action='store_true', default=False, help='flag to enable rvs')
 args = parser.parse_args()
-
+print(args)
 
 #Do sanity check
 

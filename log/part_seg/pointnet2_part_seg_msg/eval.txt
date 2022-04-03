@@ -2714,3 +2714,141 @@
 2022-03-28 11:11:46,027 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
 2022-03-28 11:12:30,529 - Model - INFO - PARAMETER ...
 2022-03-28 11:12:30,529 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 11:25:35,021 - Model - INFO - Accuracy (10-time avg/std) is: 0.94162 (0.00000)
+2022-03-28 11:25:35,021 - Model - INFO - Class avg accuracy is: 0.86737
+2022-03-28 11:25:35,021 - Model - INFO - Class avg mIOU is: 0.81883
+2022-03-28 11:25:35,021 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84800 (0.00000)
+2022-03-28 11:25:35,021 - Model - INFO - Time cost (10-time avg) is: 0.56869 (0.00000)
+2022-03-28 11:25:36,307 - Model - INFO - PARAMETER ...
+2022-03-28 11:25:36,307 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 11:38:40,770 - Model - INFO - Accuracy (10-time avg/std) is: 0.94180 (0.00000)
+2022-03-28 11:38:40,771 - Model - INFO - Class avg accuracy is: 0.86959
+2022-03-28 11:38:40,771 - Model - INFO - Class avg mIOU is: 0.81655
+2022-03-28 11:38:40,771 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84969 (0.00000)
+2022-03-28 11:38:40,771 - Model - INFO - Time cost (10-time avg) is: 0.56921 (0.00000)
+2022-03-28 11:38:42,062 - Model - INFO - PARAMETER ...
+2022-03-28 11:38:42,062 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 11:51:44,002 - Model - INFO - Accuracy (10-time avg/std) is: 0.94077 (0.00000)
+2022-03-28 11:51:44,002 - Model - INFO - Class avg accuracy is: 0.86856
+2022-03-28 11:51:44,002 - Model - INFO - Class avg mIOU is: 0.81785
+2022-03-28 11:51:44,003 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84804 (0.00000)
+2022-03-28 11:51:44,003 - Model - INFO - Time cost (10-time avg) is: 0.56735 (0.00000)
+2022-03-28 11:51:45,256 - Model - INFO - PARAMETER ...
+2022-03-28 11:51:45,256 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 12:04:35,123 - Model - INFO - Accuracy (10-time avg/std) is: 0.94111 (0.00000)
+2022-03-28 12:04:35,123 - Model - INFO - Class avg accuracy is: 0.87189
+2022-03-28 12:04:35,123 - Model - INFO - Class avg mIOU is: 0.81866
+2022-03-28 12:04:35,124 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84812 (0.00000)
+2022-03-28 12:04:35,124 - Model - INFO - Time cost (10-time avg) is: 0.56848 (0.00000)
+2022-03-28 12:04:36,301 - Model - INFO - PARAMETER ...
+2022-03-28 12:04:36,301 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 12:23:51,150 - Model - INFO - Accuracy (10-time avg/std) is: 0.94073 (0.00000)
+2022-03-28 12:23:51,150 - Model - INFO - Class avg accuracy is: 0.86307
+2022-03-28 12:23:51,150 - Model - INFO - Class avg mIOU is: 0.81412
+2022-03-28 12:23:51,150 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84649 (0.00000)
+2022-03-28 12:23:51,150 - Model - INFO - Time cost (10-time avg) is: 0.62356 (0.00000)
+2022-03-28 12:23:52,413 - Model - INFO - PARAMETER ...
+2022-03-28 12:23:52,413 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 12:38:09,065 - Model - INFO - Accuracy (10-time avg/std) is: 0.94096 (0.00000)
+2022-03-28 12:38:09,065 - Model - INFO - Class avg accuracy is: 0.87053
+2022-03-28 12:38:09,065 - Model - INFO - Class avg mIOU is: 0.81816
+2022-03-28 12:38:09,065 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84786 (0.00000)
+2022-03-28 12:38:09,065 - Model - INFO - Time cost (10-time avg) is: 0.60671 (0.00000)
+2022-03-28 12:38:10,291 - Model - INFO - PARAMETER ...
+2022-03-28 12:38:10,291 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 12:52:23,125 - Model - INFO - Accuracy (10-time avg/std) is: 0.94169 (0.00000)
+2022-03-28 12:52:23,125 - Model - INFO - Class avg accuracy is: 0.87218
+2022-03-28 12:52:23,125 - Model - INFO - Class avg mIOU is: 0.81979
+2022-03-28 12:52:23,125 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84906 (0.00000)
+2022-03-28 12:52:23,125 - Model - INFO - Time cost (10-time avg) is: 0.60851 (0.00000)
+2022-03-28 12:52:24,385 - Model - INFO - PARAMETER ...
+2022-03-28 12:52:24,385 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 13:06:29,023 - Model - INFO - Accuracy (10-time avg/std) is: 0.94178 (0.00000)
+2022-03-28 13:06:29,023 - Model - INFO - Class avg accuracy is: 0.87293
+2022-03-28 13:06:29,023 - Model - INFO - Class avg mIOU is: 0.82170
+2022-03-28 13:06:29,023 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84950 (0.00000)
+2022-03-28 13:06:29,023 - Model - INFO - Time cost (10-time avg) is: 0.60179 (0.00000)
+2022-03-28 13:11:08,982 - Model - INFO - PARAMETER ...
+2022-03-28 13:11:08,982 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 13:21:13,233 - Model - INFO - Accuracy (10-time avg/std) is: 0.94114 (0.00000)
+2022-03-28 13:21:13,233 - Model - INFO - Class avg accuracy is: 0.86747
+2022-03-28 13:21:13,233 - Model - INFO - Class avg mIOU is: 0.81814
+2022-03-28 13:21:13,234 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84766 (0.00000)
+2022-03-28 13:21:13,234 - Model - INFO - Time cost (10-time avg) is: 0.42050 (0.00000)
+2022-03-28 13:21:14,458 - Model - INFO - PARAMETER ...
+2022-03-28 13:21:14,458 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 13:31:18,404 - Model - INFO - Accuracy (10-time avg/std) is: 0.94183 (0.00000)
+2022-03-28 13:31:18,405 - Model - INFO - Class avg accuracy is: 0.87154
+2022-03-28 13:31:18,405 - Model - INFO - Class avg mIOU is: 0.81884
+2022-03-28 13:31:18,405 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84861 (0.00000)
+2022-03-28 13:31:18,405 - Model - INFO - Time cost (10-time avg) is: 0.42226 (0.00000)
+2022-03-28 13:31:19,617 - Model - INFO - PARAMETER ...
+2022-03-28 13:31:19,617 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 13:41:24,635 - Model - INFO - Accuracy (10-time avg/std) is: 0.94134 (0.00000)
+2022-03-28 13:41:24,635 - Model - INFO - Class avg accuracy is: 0.87255
+2022-03-28 13:41:24,635 - Model - INFO - Class avg mIOU is: 0.81896
+2022-03-28 13:41:24,635 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84809 (0.00000)
+2022-03-28 13:41:24,636 - Model - INFO - Time cost (10-time avg) is: 0.42231 (0.00000)
+2022-03-28 13:41:25,898 - Model - INFO - PARAMETER ...
+2022-03-28 13:41:25,898 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 13:51:30,875 - Model - INFO - Accuracy (10-time avg/std) is: 0.94123 (0.00000)
+2022-03-28 13:51:30,875 - Model - INFO - Class avg accuracy is: 0.87097
+2022-03-28 13:51:30,875 - Model - INFO - Class avg mIOU is: 0.81777
+2022-03-28 13:51:30,875 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84749 (0.00000)
+2022-03-28 13:51:30,875 - Model - INFO - Time cost (10-time avg) is: 0.42209 (0.00000)
+2022-03-28 13:51:32,079 - Model - INFO - PARAMETER ...
+2022-03-28 13:51:32,079 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 14:01:08,113 - Model - INFO - Accuracy (10-time avg/std) is: 0.91515 (0.00000)
+2022-03-28 14:01:08,114 - Model - INFO - Class avg accuracy is: 0.78281
+2022-03-28 14:01:08,114 - Model - INFO - Class avg mIOU is: 0.72820
+2022-03-28 14:01:08,114 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.78788 (0.00000)
+2022-03-28 14:01:08,114 - Model - INFO - Time cost (10-time avg) is: 0.39600 (0.00000)
+2022-03-28 14:01:09,335 - Model - INFO - PARAMETER ...
+2022-03-28 14:01:09,335 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 14:10:45,512 - Model - INFO - Accuracy (10-time avg/std) is: 0.94162 (0.00000)
+2022-03-28 14:10:45,512 - Model - INFO - Class avg accuracy is: 0.87027
+2022-03-28 14:10:45,512 - Model - INFO - Class avg mIOU is: 0.82109
+2022-03-28 14:10:45,512 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84985 (0.00000)
+2022-03-28 14:10:45,512 - Model - INFO - Time cost (10-time avg) is: 0.39609 (0.00000)
+2022-03-28 14:10:46,716 - Model - INFO - PARAMETER ...
+2022-03-28 14:10:46,716 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 14:20:23,387 - Model - INFO - Accuracy (10-time avg/std) is: 0.94133 (0.00000)
+2022-03-28 14:20:23,387 - Model - INFO - Class avg accuracy is: 0.87210
+2022-03-28 14:20:23,387 - Model - INFO - Class avg mIOU is: 0.81796
+2022-03-28 14:20:23,387 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84770 (0.00000)
+2022-03-28 14:20:23,387 - Model - INFO - Time cost (10-time avg) is: 0.39870 (0.00000)
+2022-03-28 14:20:24,624 - Model - INFO - PARAMETER ...
+2022-03-28 14:20:24,624 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 14:30:02,501 - Model - INFO - Accuracy (10-time avg/std) is: 0.94160 (0.00000)
+2022-03-28 14:30:02,501 - Model - INFO - Class avg accuracy is: 0.87285
+2022-03-28 14:30:02,501 - Model - INFO - Class avg mIOU is: 0.82152
+2022-03-28 14:30:02,501 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84919 (0.00000)
+2022-03-28 14:30:02,501 - Model - INFO - Time cost (10-time avg) is: 0.39873 (0.00000)
+2022-03-28 15:40:37,139 - Model - INFO - PARAMETER ...
+2022-03-28 15:40:37,139 - Model - INFO - Namespace(avg_time=40, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 16:20:52,846 - Model - INFO - Accuracy (10-time avg/std) is: 0.94094 (0.00000)
+2022-03-28 16:20:52,846 - Model - INFO - Class avg accuracy is: 0.86830
+2022-03-28 16:20:52,846 - Model - INFO - Class avg mIOU is: 0.81815
+2022-03-28 16:20:52,846 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84748 (0.00000)
+2022-03-28 16:20:52,846 - Model - INFO - Time cost (10-time avg) is: 0.42689 (0.00000)
+2022-03-28 16:20:54,094 - Model - INFO - PARAMETER ...
+2022-03-28 16:20:54,094 - Model - INFO - Namespace(avg_time=40, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 16:59:24,754 - Model - INFO - Accuracy (10-time avg/std) is: 0.91478 (0.00000)
+2022-03-28 16:59:24,754 - Model - INFO - Class avg accuracy is: 0.78306
+2022-03-28 16:59:24,754 - Model - INFO - Class avg mIOU is: 0.72541
+2022-03-28 16:59:24,754 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.78674 (0.00000)
+2022-03-28 16:59:24,754 - Model - INFO - Time cost (10-time avg) is: 0.39977 (0.00000)
+2022-03-28 18:15:49,969 - Model - INFO - PARAMETER ...
+2022-03-28 18:15:49,969 - Model - INFO - Namespace(avg_time=40, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 19:08:02,282 - Model - INFO - Accuracy (10-time avg/std) is: 0.94062 (0.00000)
+2022-03-28 19:08:02,282 - Model - INFO - Class avg accuracy is: 0.86880
+2022-03-28 19:08:02,282 - Model - INFO - Class avg mIOU is: 0.81579
+2022-03-28 19:08:02,282 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84699 (0.00000)
+2022-03-28 19:08:02,282 - Model - INFO - Time cost (10-time avg) is: 0.56950 (0.00000)
+2022-03-28 19:08:03,496 - Model - INFO - PARAMETER ...
+2022-03-28 19:08:03,496 - Model - INFO - Namespace(avg_time=40, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
+2022-03-28 20:05:20,703 - Model - INFO - Accuracy (10-time avg/std) is: 0.94094 (0.00000)
+2022-03-28 20:05:20,703 - Model - INFO - Class avg accuracy is: 0.86529
+2022-03-28 20:05:20,703 - Model - INFO - Class avg mIOU is: 0.81729
+2022-03-28 20:05:20,703 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84728 (0.00000)
+2022-03-28 20:05:20,703 - Model - INFO - Time cost (10-time avg) is: 0.61590 (0.00000)
