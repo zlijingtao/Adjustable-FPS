@@ -694,3 +694,1468 @@ class clutter       , IoU: 0.331
 2022-03-28 09:05:25,733 - Model - INFO - Mean IoU of Area_5_office_7: 0.5266
 2022-03-28 09:38:48,558 - Model - INFO - Mean IoU of Area_5_office_1: 0.4433
 2022-03-28 10:08:48,608 - Model - INFO - Mean IoU of Area_5_office_26: 0.4769
+2022-03-28 12:13:07,086 - Model - INFO - Mean IoU of Area_5_office_21: 0.5734
+2022-03-28 13:20:06,330 - Model - INFO - Mean IoU of Area_5_office_6: 0.5556
+2022-03-28 15:08:45,382 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5232
+2022-03-28 16:00:43,121 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3531
+2022-03-28 18:01:05,532 - Model - INFO - Mean IoU of Area_5_office_18: 0.5544
+2022-03-28 18:55:37,268 - Model - INFO - Mean IoU of Area_5_office_13: 0.5989
+2022-03-28 20:06:52,277 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7197
+2022-03-28 23:37:50,574 - Model - INFO - Mean IoU of Area_5_office_37: 0.4166
+2022-03-29 00:30:46,346 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6219
+2022-03-29 03:47:55,600 - Model - INFO - Mean IoU of Area_5_office_40: 0.3835
+2022-03-29 05:34:28,564 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3695
+2022-03-29 06:29:21,638 - Model - INFO - Mean IoU of Area_5_office_14: 0.5683
+2022-03-29 07:13:48,468 - Model - INFO - Mean IoU of Area_5_office_17: 0.5416
+2022-03-29 08:21:22,423 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8031
+2022-03-29 08:56:02,932 - Model - INFO - Mean IoU of Area_5_office_31: 0.5085
+2022-03-29 10:08:01,588 - Model - INFO - Mean IoU of Area_5_office_24: 0.4582
+2022-03-29 10:41:22,036 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5958
+2022-03-29 11:17:25,904 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3612
+2022-03-29 11:54:22,505 - Model - INFO - Mean IoU of Area_5_office_11: 0.4953
+2022-03-29 12:24:57,551 - Model - INFO - Mean IoU of Area_5_office_27: 0.5113
+2022-03-29 14:16:46,942 - Model - INFO - Mean IoU of Area_5_office_19: 0.6069
+2022-03-29 15:10:53,918 - Model - INFO - Mean IoU of Area_5_office_33: 0.4952
+2022-03-29 16:08:24,961 - Model - INFO - Mean IoU of Area_5_office_2: 0.4632
+2022-03-29 16:08:25,519 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.875 
+class floor         , IoU: 0.942 
+class wall          , IoU: 0.691 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.010 
+class window        , IoU: 0.321 
+class door          , IoU: 0.164 
+class table         , IoU: 0.543 
+class chair         , IoU: 0.609 
+class sofa          , IoU: 0.089 
+class bookcase      , IoU: 0.435 
+class board         , IoU: 0.396 
+class clutter       , IoU: 0.331 
+
+2022-03-29 16:08:25,520 - Model - INFO - eval point avg class IoU: 0.415740
+2022-03-29 16:08:25,520 - Model - INFO - eval whole scene point avg class acc: 0.500700
+2022-03-29 16:08:25,520 - Model - INFO - eval whole scene point accuracy: 0.772770
+2022-03-30 11:32:25,523 - Model - INFO - PARAMETER ...
+2022-03-30 11:32:25,523 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-30 11:32:30,762 - Model - INFO - The number of test data is: 67
+2022-03-30 11:32:33,015 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-30 11:37:45,650 - Model - INFO - Mean IoU of Area_5_office_36: 0.5650
+2022-03-30 11:43:52,868 - Model - INFO - Mean IoU of Area_5_office_15: 0.5106
+2022-03-30 11:47:40,747 - Model - INFO - Mean IoU of Area_5_office_42: 0.5307
+2022-03-30 11:51:32,324 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7651
+2022-03-30 11:55:11,376 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5938
+2022-03-30 11:59:08,509 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4739
+2022-03-30 12:01:20,470 - Model - INFO - Mean IoU of Area_5_office_35: 0.6390
+2022-03-30 12:03:23,570 - Model - INFO - Mean IoU of Area_5_office_23: 0.5120
+2022-03-30 12:07:23,621 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5498
+2022-03-30 12:09:05,093 - Model - INFO - Mean IoU of Area_5_office_5: 0.5514
+2022-03-30 12:11:44,791 - Model - INFO - Mean IoU of Area_5_office_39: 0.5596
+2022-03-30 12:12:56,040 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6396
+2022-03-30 12:18:46,712 - Model - INFO - Mean IoU of Area_5_office_41: 0.4867
+2022-03-30 12:22:26,224 - Model - INFO - Mean IoU of Area_5_office_34: 0.5020
+2022-03-30 12:25:56,218 - Model - INFO - Mean IoU of Area_5_office_3: 0.5559
+2022-03-30 12:33:22,773 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4600
+2022-03-30 12:41:07,469 - Model - INFO - Mean IoU of Area_5_office_29: 0.4680
+2022-03-30 12:43:21,439 - Model - INFO - Mean IoU of Area_5_office_8: 0.5266
+2022-03-30 12:45:24,510 - Model - INFO - Mean IoU of Area_5_office_16: 0.4738
+2022-03-30 12:47:10,506 - Model - INFO - Mean IoU of Area_5_office_9: 0.5361
+2022-03-30 12:50:49,189 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7358
+2022-03-30 12:52:54,055 - Model - INFO - Mean IoU of Area_5_office_32: 0.4654
+2022-03-30 13:04:02,899 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5222
+2022-03-30 13:05:23,967 - Model - INFO - Mean IoU of Area_5_storage_4: 0.5980
+2022-03-30 13:06:34,409 - Model - INFO - Mean IoU of Area_5_office_20: 0.5528
+2022-03-30 13:08:07,336 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6690
+2022-03-30 13:23:58,052 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6881
+2022-03-30 13:27:02,250 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7209
+2022-03-30 13:39:10,085 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2455
+2022-03-30 13:40:16,496 - Model - INFO - Mean IoU of Area_5_office_30: 0.7003
+2022-03-30 13:48:02,765 - Model - INFO - Mean IoU of Area_5_office_38: 0.3231
+2022-03-30 13:49:36,200 - Model - INFO - Mean IoU of Area_5_office_25: 0.5759
+2022-03-30 13:52:26,188 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4840
+2022-03-30 13:54:16,862 - Model - INFO - Mean IoU of Area_5_office_28: 0.6159
+2022-03-30 13:56:13,016 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5197
+2022-03-30 13:56:29,764 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5219
+2022-03-30 13:58:36,219 - Model - INFO - Mean IoU of Area_5_office_12: 0.5062
+2022-03-30 14:00:31,170 - Model - INFO - Mean IoU of Area_5_office_22: 0.5332
+2022-03-30 14:02:31,428 - Model - INFO - Mean IoU of Area_5_office_4: 0.4979
+2022-03-30 14:03:54,775 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6743
+2022-03-30 14:05:59,013 - Model - INFO - Mean IoU of Area_5_office_10: 0.5178
+2022-03-30 14:08:07,915 - Model - INFO - Mean IoU of Area_5_office_7: 0.5343
+2022-03-30 14:10:03,697 - Model - INFO - Mean IoU of Area_5_office_1: 0.4375
+2022-03-30 14:11:44,381 - Model - INFO - Mean IoU of Area_5_office_26: 0.4667
+2022-03-30 14:17:39,509 - Model - INFO - Mean IoU of Area_5_office_21: 0.5496
+2022-03-30 14:19:31,552 - Model - INFO - Mean IoU of Area_5_office_6: 0.5709
+2022-03-30 14:22:51,363 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5386
+2022-03-30 14:24:33,123 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3528
+2022-03-30 14:27:44,435 - Model - INFO - Mean IoU of Area_5_office_18: 0.5341
+2022-03-30 14:30:13,857 - Model - INFO - Mean IoU of Area_5_office_13: 0.5858
+2022-03-30 14:32:22,968 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7135
+2022-03-30 14:39:52,225 - Model - INFO - Mean IoU of Area_5_office_37: 0.4018
+2022-03-30 14:41:36,074 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6117
+2022-03-30 14:49:24,855 - Model - INFO - Mean IoU of Area_5_office_40: 0.3783
+2022-03-30 14:55:15,576 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3530
+2022-03-30 14:58:21,435 - Model - INFO - Mean IoU of Area_5_office_14: 0.5668
+2022-03-30 15:00:47,450 - Model - INFO - Mean IoU of Area_5_office_17: 0.5407
+2022-03-30 15:04:46,437 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7936
+2022-03-30 15:06:42,267 - Model - INFO - Mean IoU of Area_5_office_31: 0.5163
+2022-03-30 15:11:03,688 - Model - INFO - Mean IoU of Area_5_office_24: 0.4663
+2022-03-30 15:12:59,461 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5864
+2022-03-30 15:15:11,676 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3505
+2022-03-30 15:17:16,195 - Model - INFO - Mean IoU of Area_5_office_11: 0.4959
+2022-03-30 15:19:02,200 - Model - INFO - Mean IoU of Area_5_office_27: 0.5167
+2022-03-30 15:23:52,204 - Model - INFO - Mean IoU of Area_5_office_19: 0.6009
+2022-03-30 15:26:01,138 - Model - INFO - Mean IoU of Area_5_office_33: 0.4955
+2022-03-30 15:28:13,694 - Model - INFO - Mean IoU of Area_5_office_2: 0.4692
+2022-03-30 15:28:14,189 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.879 
+class floor         , IoU: 0.942 
+class wall          , IoU: 0.682 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.004 
+class window        , IoU: 0.302 
+class door          , IoU: 0.158 
+class table         , IoU: 0.571 
+class chair         , IoU: 0.580 
+class sofa          , IoU: 0.078 
+class bookcase      , IoU: 0.432 
+class board         , IoU: 0.397 
+class clutter       , IoU: 0.334 
+
+2022-03-30 15:28:14,189 - Model - INFO - eval point avg class IoU: 0.412262
+2022-03-30 15:28:14,189 - Model - INFO - eval whole scene point avg class acc: 0.490198
+2022-03-30 15:28:14,189 - Model - INFO - eval whole scene point accuracy: 0.773598
+2022-03-30 15:28:15,463 - Model - INFO - PARAMETER ...
+2022-03-30 15:28:15,463 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-30 15:28:27,657 - Model - INFO - The number of test data is: 67
+2022-03-30 15:28:29,585 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-30 15:31:14,369 - Model - INFO - Mean IoU of Area_5_office_36: 0.5564
+2022-03-30 15:34:32,156 - Model - INFO - Mean IoU of Area_5_office_15: 0.4835
+2022-03-30 15:36:36,800 - Model - INFO - Mean IoU of Area_5_office_42: 0.5135
+2022-03-30 15:38:40,498 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7650
+2022-03-30 15:42:08,940 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5905
+2022-03-30 15:45:56,986 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4687
+2022-03-30 15:48:06,052 - Model - INFO - Mean IoU of Area_5_office_35: 0.6207
+2022-03-30 15:50:08,708 - Model - INFO - Mean IoU of Area_5_office_23: 0.5319
+2022-03-30 15:54:05,538 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5419
+2022-03-30 15:55:47,204 - Model - INFO - Mean IoU of Area_5_office_5: 0.5306
+2022-03-30 15:58:25,316 - Model - INFO - Mean IoU of Area_5_office_39: 0.5272
+2022-03-30 15:59:35,744 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6259
+2022-03-30 16:03:35,535 - Model - INFO - Mean IoU of Area_5_office_41: 0.4818
+2022-03-30 16:05:35,541 - Model - INFO - Mean IoU of Area_5_office_34: 0.4942
+2022-03-30 16:07:30,277 - Model - INFO - Mean IoU of Area_5_office_3: 0.5569
+2022-03-30 16:11:40,996 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4662
+2022-03-30 16:16:10,248 - Model - INFO - Mean IoU of Area_5_office_29: 0.4444
+2022-03-30 16:18:18,486 - Model - INFO - Mean IoU of Area_5_office_8: 0.5373
+2022-03-30 16:20:16,645 - Model - INFO - Mean IoU of Area_5_office_16: 0.4823
+2022-03-30 16:21:57,865 - Model - INFO - Mean IoU of Area_5_office_9: 0.5396
+2022-03-30 16:25:27,027 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7307
+2022-03-30 16:27:26,224 - Model - INFO - Mean IoU of Area_5_office_32: 0.4547
+2022-03-30 16:41:51,237 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5225
+2022-03-30 16:44:17,712 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6058
+2022-03-30 16:46:27,240 - Model - INFO - Mean IoU of Area_5_office_20: 0.5482
+2022-03-30 16:49:17,861 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6886
+2022-03-30 17:14:47,371 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6871
+2022-03-30 17:20:11,291 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7440
+2022-03-30 17:39:49,019 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2329
+2022-03-30 17:41:39,706 - Model - INFO - Mean IoU of Area_5_office_30: 0.6990
+2022-03-30 17:55:02,490 - Model - INFO - Mean IoU of Area_5_office_38: 0.3264
+2022-03-30 17:57:53,212 - Model - INFO - Mean IoU of Area_5_office_25: 0.5739
+2022-03-30 18:02:57,290 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4792
+2022-03-30 18:06:15,908 - Model - INFO - Mean IoU of Area_5_office_28: 0.5911
+2022-03-30 18:09:43,772 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.4953
+2022-03-30 18:10:14,165 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5042
+2022-03-30 18:13:58,113 - Model - INFO - Mean IoU of Area_5_office_12: 0.5160
+2022-03-30 18:17:20,166 - Model - INFO - Mean IoU of Area_5_office_22: 0.5264
+2022-03-30 18:20:49,001 - Model - INFO - Mean IoU of Area_5_office_4: 0.4756
+2022-03-30 18:23:15,128 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6789
+2022-03-30 18:26:50,541 - Model - INFO - Mean IoU of Area_5_office_10: 0.5253
+2022-03-30 18:30:35,598 - Model - INFO - Mean IoU of Area_5_office_7: 0.5298
+2022-03-30 18:33:54,914 - Model - INFO - Mean IoU of Area_5_office_1: 0.4305
+2022-03-30 18:36:51,123 - Model - INFO - Mean IoU of Area_5_office_26: 0.4851
+2022-03-30 18:47:00,694 - Model - INFO - Mean IoU of Area_5_office_21: 0.5349
+2022-03-30 18:50:20,675 - Model - INFO - Mean IoU of Area_5_office_6: 0.5830
+2022-03-30 18:56:11,385 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5208
+2022-03-30 18:59:15,985 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3648
+2022-03-30 19:04:56,797 - Model - INFO - Mean IoU of Area_5_office_18: 0.5474
+2022-03-30 19:09:26,117 - Model - INFO - Mean IoU of Area_5_office_13: 0.5894
+2022-03-30 19:13:19,461 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7109
+2022-03-30 19:26:03,812 - Model - INFO - Mean IoU of Area_5_office_37: 0.4306
+2022-03-30 19:29:13,433 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6294
+2022-03-30 19:42:25,072 - Model - INFO - Mean IoU of Area_5_office_40: 0.3796
+2022-03-30 19:52:31,349 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.4050
+2022-03-30 19:58:04,617 - Model - INFO - Mean IoU of Area_5_office_14: 0.5628
+2022-03-30 20:02:28,413 - Model - INFO - Mean IoU of Area_5_office_17: 0.5284
+2022-03-30 20:09:32,038 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7889
+2022-03-30 20:13:03,244 - Model - INFO - Mean IoU of Area_5_office_31: 0.4938
+2022-03-30 20:20:44,249 - Model - INFO - Mean IoU of Area_5_office_24: 0.4557
+2022-03-30 20:24:07,377 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5964
+2022-03-30 20:27:58,535 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3531
+2022-03-30 20:31:38,623 - Model - INFO - Mean IoU of Area_5_office_11: 0.5019
+2022-03-30 20:34:44,424 - Model - INFO - Mean IoU of Area_5_office_27: 0.5000
+2022-03-30 20:43:00,240 - Model - INFO - Mean IoU of Area_5_office_19: 0.5909
+2022-03-30 20:46:44,449 - Model - INFO - Mean IoU of Area_5_office_33: 0.4884
+2022-03-30 20:50:39,498 - Model - INFO - Mean IoU of Area_5_office_2: 0.4502
+2022-03-30 20:50:40,078 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.948 
+class wall          , IoU: 0.689 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.007 
+class window        , IoU: 0.299 
+class door          , IoU: 0.146 
+class table         , IoU: 0.571 
+class chair         , IoU: 0.582 
+class sofa          , IoU: 0.084 
+class bookcase      , IoU: 0.411 
+class board         , IoU: 0.368 
+class clutter       , IoU: 0.327 
+
+2022-03-30 20:50:40,078 - Model - INFO - eval point avg class IoU: 0.408495
+2022-03-30 20:50:40,078 - Model - INFO - eval whole scene point avg class acc: 0.495770
+2022-03-30 20:50:40,078 - Model - INFO - eval whole scene point accuracy: 0.770286
+2022-03-30 20:50:41,506 - Model - INFO - PARAMETER ...
+2022-03-30 20:50:41,506 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-30 20:50:55,218 - Model - INFO - The number of test data is: 67
+2022-03-30 20:50:57,617 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-30 20:56:11,393 - Model - INFO - Mean IoU of Area_5_office_36: 0.5604
+2022-03-30 21:02:15,943 - Model - INFO - Mean IoU of Area_5_office_15: 0.5032
+2022-03-30 21:06:04,535 - Model - INFO - Mean IoU of Area_5_office_42: 0.5378
+2022-03-30 21:09:51,053 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7838
+2022-03-30 21:14:22,538 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5885
+2022-03-30 21:18:24,056 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4681
+2022-03-30 21:20:41,516 - Model - INFO - Mean IoU of Area_5_office_35: 0.6178
+2022-03-30 21:22:52,456 - Model - INFO - Mean IoU of Area_5_office_23: 0.5298
+2022-03-30 21:27:04,246 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5433
+2022-03-30 21:28:52,246 - Model - INFO - Mean IoU of Area_5_office_5: 0.5442
+2022-03-30 21:31:40,822 - Model - INFO - Mean IoU of Area_5_office_39: 0.5529
+2022-03-30 21:32:56,203 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6377
+2022-03-30 21:37:11,821 - Model - INFO - Mean IoU of Area_5_office_41: 0.4944
+2022-03-30 21:39:19,946 - Model - INFO - Mean IoU of Area_5_office_34: 0.5153
+2022-03-30 21:41:22,354 - Model - INFO - Mean IoU of Area_5_office_3: 0.5405
+2022-03-30 21:45:47,121 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4757
+2022-03-30 21:50:31,332 - Model - INFO - Mean IoU of Area_5_office_29: 0.4637
+2022-03-30 21:52:48,140 - Model - INFO - Mean IoU of Area_5_office_8: 0.5213
+2022-03-30 21:54:53,377 - Model - INFO - Mean IoU of Area_5_office_16: 0.4874
+2022-03-30 21:56:41,288 - Model - INFO - Mean IoU of Area_5_office_9: 0.5345
+2022-03-30 22:00:23,416 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7212
+2022-03-30 22:02:30,933 - Model - INFO - Mean IoU of Area_5_office_32: 0.4713
+2022-03-30 22:13:51,634 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5323
+2022-03-30 22:15:14,997 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6225
+2022-03-30 22:16:27,606 - Model - INFO - Mean IoU of Area_5_office_20: 0.5607
+2022-03-30 22:18:03,203 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6930
+2022-03-30 22:34:15,685 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6949
+2022-03-30 22:37:31,173 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7299
+2022-03-30 22:49:51,056 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2511
+2022-03-30 22:50:55,728 - Model - INFO - Mean IoU of Area_5_office_30: 0.7064
+2022-03-30 22:58:53,746 - Model - INFO - Mean IoU of Area_5_office_38: 0.3332
+2022-03-30 23:00:29,406 - Model - INFO - Mean IoU of Area_5_office_25: 0.5765
+2022-03-30 23:03:23,652 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4817
+2022-03-30 23:05:17,143 - Model - INFO - Mean IoU of Area_5_office_28: 0.5908
+2022-03-30 23:07:16,138 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5083
+2022-03-30 23:07:33,211 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5202
+2022-03-30 23:09:40,797 - Model - INFO - Mean IoU of Area_5_office_12: 0.5063
+2022-03-30 23:11:34,513 - Model - INFO - Mean IoU of Area_5_office_22: 0.5270
+2022-03-30 23:13:33,165 - Model - INFO - Mean IoU of Area_5_office_4: 0.4789
+2022-03-30 23:14:55,698 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6812
+2022-03-30 23:16:58,606 - Model - INFO - Mean IoU of Area_5_office_10: 0.4822
+2022-03-30 23:19:06,246 - Model - INFO - Mean IoU of Area_5_office_7: 0.5157
+2022-03-30 23:21:05,167 - Model - INFO - Mean IoU of Area_5_office_1: 0.4435
+2022-03-30 23:22:48,264 - Model - INFO - Mean IoU of Area_5_office_26: 0.4705
+2022-03-30 23:28:59,376 - Model - INFO - Mean IoU of Area_5_office_21: 0.5523
+2022-03-30 23:30:57,823 - Model - INFO - Mean IoU of Area_5_office_6: 0.5388
+2022-03-30 23:34:29,259 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5325
+2022-03-30 23:36:17,365 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3571
+2022-03-30 23:39:39,080 - Model - INFO - Mean IoU of Area_5_office_18: 0.5488
+2022-03-30 23:42:15,675 - Model - INFO - Mean IoU of Area_5_office_13: 0.5880
+2022-03-30 23:44:27,380 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7289
+2022-03-30 23:52:02,032 - Model - INFO - Mean IoU of Area_5_office_37: 0.4209
+2022-03-30 23:53:52,056 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6129
+2022-03-31 00:01:49,737 - Model - INFO - Mean IoU of Area_5_office_40: 0.3841
+2022-03-31 00:07:49,303 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3663
+2022-03-31 00:10:59,712 - Model - INFO - Mean IoU of Area_5_office_14: 0.5669
+2022-03-31 00:13:29,880 - Model - INFO - Mean IoU of Area_5_office_17: 0.5406
+2022-03-31 00:17:34,826 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8053
+2022-03-31 00:19:33,743 - Model - INFO - Mean IoU of Area_5_office_31: 0.5067
+2022-03-31 00:23:59,628 - Model - INFO - Mean IoU of Area_5_office_24: 0.4573
+2022-03-31 00:25:54,271 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5903
+2022-03-31 00:28:08,478 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3544
+2022-03-31 00:30:16,017 - Model - INFO - Mean IoU of Area_5_office_11: 0.4896
+2022-03-31 00:32:04,176 - Model - INFO - Mean IoU of Area_5_office_27: 0.5054
+2022-03-31 00:36:51,218 - Model - INFO - Mean IoU of Area_5_office_19: 0.6016
+2022-03-31 00:39:03,268 - Model - INFO - Mean IoU of Area_5_office_33: 0.4944
+2022-03-31 00:41:18,896 - Model - INFO - Mean IoU of Area_5_office_2: 0.4537
+2022-03-31 00:41:19,428 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.944 
+class wall          , IoU: 0.686 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.009 
+class window        , IoU: 0.291 
+class door          , IoU: 0.145 
+class table         , IoU: 0.544 
+class chair         , IoU: 0.612 
+class sofa          , IoU: 0.096 
+class bookcase      , IoU: 0.431 
+class board         , IoU: 0.386 
+class clutter       , IoU: 0.343 
+
+2022-03-31 00:41:19,428 - Model - INFO - eval point avg class IoU: 0.412704
+2022-03-31 00:41:19,428 - Model - INFO - eval whole scene point avg class acc: 0.491718
+2022-03-31 00:41:19,428 - Model - INFO - eval whole scene point accuracy: 0.774078
+2022-03-31 10:42:00,786 - Model - INFO - PARAMETER ...
+2022-03-31 10:42:00,787 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-31 10:42:05,898 - Model - INFO - The number of test data is: 67
+2022-03-31 10:42:07,820 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-31 10:44:44,761 - Model - INFO - Mean IoU of Area_5_office_36: 0.5644
+2022-03-31 10:47:59,238 - Model - INFO - Mean IoU of Area_5_office_15: 0.5076
+2022-03-31 10:50:03,727 - Model - INFO - Mean IoU of Area_5_office_42: 0.5283
+2022-03-31 10:52:08,168 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7657
+2022-03-31 10:55:36,038 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5887
+2022-03-31 10:59:24,597 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4745
+2022-03-31 11:01:33,691 - Model - INFO - Mean IoU of Area_5_office_35: 0.6398
+2022-03-31 11:03:37,231 - Model - INFO - Mean IoU of Area_5_office_23: 0.5153
+2022-03-31 11:07:35,448 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5547
+2022-03-31 11:09:16,911 - Model - INFO - Mean IoU of Area_5_office_5: 0.5542
+2022-03-31 11:11:55,930 - Model - INFO - Mean IoU of Area_5_office_39: 0.5613
+2022-03-31 11:13:06,690 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6383
+2022-03-31 11:17:07,396 - Model - INFO - Mean IoU of Area_5_office_41: 0.4889
+2022-03-31 11:19:08,212 - Model - INFO - Mean IoU of Area_5_office_34: 0.4994
+2022-03-31 11:21:06,678 - Model - INFO - Mean IoU of Area_5_office_3: 0.5543
+2022-03-31 11:25:25,970 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4622
+2022-03-31 11:29:54,658 - Model - INFO - Mean IoU of Area_5_office_29: 0.4696
+2022-03-31 11:32:03,653 - Model - INFO - Mean IoU of Area_5_office_8: 0.5255
+2022-03-31 11:34:02,175 - Model - INFO - Mean IoU of Area_5_office_16: 0.4753
+2022-03-31 11:35:44,445 - Model - INFO - Mean IoU of Area_5_office_9: 0.5353
+2022-03-31 11:39:15,676 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7393
+2022-03-31 11:41:16,808 - Model - INFO - Mean IoU of Area_5_office_32: 0.4727
+2022-03-31 11:52:29,699 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5241
+2022-03-31 11:53:50,408 - Model - INFO - Mean IoU of Area_5_storage_4: 0.5955
+2022-03-31 11:55:01,184 - Model - INFO - Mean IoU of Area_5_office_20: 0.5545
+2022-03-31 11:56:34,481 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6771
+2022-03-31 12:12:24,008 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6887
+2022-03-31 12:15:27,899 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7205
+2022-03-31 12:27:32,875 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2447
+2022-03-31 12:28:35,948 - Model - INFO - Mean IoU of Area_5_office_30: 0.7082
+2022-03-31 12:36:26,376 - Model - INFO - Mean IoU of Area_5_office_38: 0.3252
+2022-03-31 12:38:02,867 - Model - INFO - Mean IoU of Area_5_office_25: 0.5686
+2022-03-31 12:40:58,048 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4850
+2022-03-31 12:42:52,165 - Model - INFO - Mean IoU of Area_5_office_28: 0.6208
+2022-03-31 12:44:51,777 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5268
+2022-03-31 12:45:08,901 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5116
+2022-03-31 12:47:17,019 - Model - INFO - Mean IoU of Area_5_office_12: 0.5067
+2022-03-31 12:49:11,458 - Model - INFO - Mean IoU of Area_5_office_22: 0.5300
+2022-03-31 12:51:10,606 - Model - INFO - Mean IoU of Area_5_office_4: 0.4962
+2022-03-31 12:52:33,781 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6744
+2022-03-31 12:54:37,385 - Model - INFO - Mean IoU of Area_5_office_10: 0.4999
+2022-03-31 12:56:45,882 - Model - INFO - Mean IoU of Area_5_office_7: 0.5291
+2022-03-31 12:58:41,154 - Model - INFO - Mean IoU of Area_5_office_1: 0.4414
+2022-03-31 13:00:21,714 - Model - INFO - Mean IoU of Area_5_office_26: 0.4687
+2022-03-31 13:06:18,279 - Model - INFO - Mean IoU of Area_5_office_21: 0.5508
+2022-03-31 13:08:09,897 - Model - INFO - Mean IoU of Area_5_office_6: 0.5737
+2022-03-31 13:11:28,345 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5349
+2022-03-31 13:13:10,873 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3560
+2022-03-31 13:16:26,991 - Model - INFO - Mean IoU of Area_5_office_18: 0.5350
+2022-03-31 13:19:01,507 - Model - INFO - Mean IoU of Area_5_office_13: 0.5818
+2022-03-31 13:21:14,070 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7170
+2022-03-31 13:28:51,795 - Model - INFO - Mean IoU of Area_5_office_37: 0.4038
+2022-03-31 13:30:38,866 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6168
+2022-03-31 13:38:26,476 - Model - INFO - Mean IoU of Area_5_office_40: 0.3785
+2022-03-31 13:44:17,518 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3577
+2022-03-31 13:47:23,336 - Model - INFO - Mean IoU of Area_5_office_14: 0.5647
+2022-03-31 13:49:49,705 - Model - INFO - Mean IoU of Area_5_office_17: 0.5395
+2022-03-31 13:53:48,323 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7930
+2022-03-31 13:55:43,787 - Model - INFO - Mean IoU of Area_5_office_31: 0.5149
+2022-03-31 14:00:02,078 - Model - INFO - Mean IoU of Area_5_office_24: 0.4682
+2022-03-31 14:01:53,760 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5911
+2022-03-31 14:04:01,185 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3497
+2022-03-31 14:06:02,794 - Model - INFO - Mean IoU of Area_5_office_11: 0.4919
+2022-03-31 14:07:48,148 - Model - INFO - Mean IoU of Area_5_office_27: 0.5169
+2022-03-31 14:12:37,324 - Model - INFO - Mean IoU of Area_5_office_19: 0.5897
+2022-03-31 14:14:45,052 - Model - INFO - Mean IoU of Area_5_office_33: 0.5009
+2022-03-31 14:16:56,783 - Model - INFO - Mean IoU of Area_5_office_2: 0.4687
+2022-03-31 14:16:57,279 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.879 
+class floor         , IoU: 0.942 
+class wall          , IoU: 0.683 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.004 
+class window        , IoU: 0.299 
+class door          , IoU: 0.158 
+class table         , IoU: 0.571 
+class chair         , IoU: 0.583 
+class sofa          , IoU: 0.084 
+class bookcase      , IoU: 0.431 
+class board         , IoU: 0.398 
+class clutter       , IoU: 0.333 
+
+2022-03-31 14:16:57,279 - Model - INFO - eval point avg class IoU: 0.412691
+2022-03-31 14:16:57,279 - Model - INFO - eval whole scene point avg class acc: 0.490797
+2022-03-31 14:16:57,279 - Model - INFO - eval whole scene point accuracy: 0.773465
+2022-03-31 14:16:58,497 - Model - INFO - PARAMETER ...
+2022-03-31 14:16:58,497 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-31 14:17:11,092 - Model - INFO - The number of test data is: 67
+2022-03-31 14:17:12,969 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-31 14:19:56,610 - Model - INFO - Mean IoU of Area_5_office_36: 0.5672
+2022-03-31 14:23:11,003 - Model - INFO - Mean IoU of Area_5_office_15: 0.5061
+2022-03-31 14:25:11,371 - Model - INFO - Mean IoU of Area_5_office_42: 0.5420
+2022-03-31 14:27:13,269 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7772
+2022-03-31 14:30:40,946 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5908
+2022-03-31 14:34:28,338 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4687
+2022-03-31 14:36:37,250 - Model - INFO - Mean IoU of Area_5_office_35: 0.6181
+2022-03-31 14:38:39,807 - Model - INFO - Mean IoU of Area_5_office_23: 0.5235
+2022-03-31 14:42:36,340 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5457
+2022-03-31 14:44:17,142 - Model - INFO - Mean IoU of Area_5_office_5: 0.5448
+2022-03-31 14:46:54,224 - Model - INFO - Mean IoU of Area_5_office_39: 0.5542
+2022-03-31 14:48:04,532 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6398
+2022-03-31 14:52:04,549 - Model - INFO - Mean IoU of Area_5_office_41: 0.4951
+2022-03-31 14:54:04,220 - Model - INFO - Mean IoU of Area_5_office_34: 0.5152
+2022-03-31 14:55:58,467 - Model - INFO - Mean IoU of Area_5_office_3: 0.5423
+2022-03-31 15:00:07,821 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4796
+2022-03-31 15:04:35,108 - Model - INFO - Mean IoU of Area_5_office_29: 0.4655
+2022-03-31 15:06:43,844 - Model - INFO - Mean IoU of Area_5_office_8: 0.5163
+2022-03-31 15:08:41,526 - Model - INFO - Mean IoU of Area_5_office_16: 0.4874
+2022-03-31 15:10:22,909 - Model - INFO - Mean IoU of Area_5_office_9: 0.5344
+2022-03-31 15:13:51,575 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7216
+2022-03-31 15:15:50,673 - Model - INFO - Mean IoU of Area_5_office_32: 0.4699
+2022-03-31 15:26:41,173 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5316
+2022-03-31 15:27:58,923 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6323
+2022-03-31 15:29:06,618 - Model - INFO - Mean IoU of Area_5_office_20: 0.5614
+2022-03-31 15:30:38,685 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6919
+2022-03-31 15:46:03,935 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6967
+2022-03-31 15:49:01,351 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7309
+2022-03-31 16:00:47,776 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2516
+2022-03-31 16:01:48,301 - Model - INFO - Mean IoU of Area_5_office_30: 0.7030
+2022-03-31 16:09:28,906 - Model - INFO - Mean IoU of Area_5_office_38: 0.3363
+2022-03-31 16:11:01,905 - Model - INFO - Mean IoU of Area_5_office_25: 0.5796
+2022-03-31 16:13:50,224 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4812
+2022-03-31 16:15:39,508 - Model - INFO - Mean IoU of Area_5_office_28: 0.5910
+2022-03-31 16:17:34,318 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5109
+2022-03-31 16:17:50,973 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5222
+2022-03-31 16:19:54,433 - Model - INFO - Mean IoU of Area_5_office_12: 0.5030
+2022-03-31 16:21:44,274 - Model - INFO - Mean IoU of Area_5_office_22: 0.5304
+2022-03-31 16:23:39,092 - Model - INFO - Mean IoU of Area_5_office_4: 0.4832
+2022-03-31 16:24:59,292 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6852
+2022-03-31 16:26:57,561 - Model - INFO - Mean IoU of Area_5_office_10: 0.4900
+2022-03-31 16:29:00,815 - Model - INFO - Mean IoU of Area_5_office_7: 0.5111
+2022-03-31 16:30:51,583 - Model - INFO - Mean IoU of Area_5_office_1: 0.4403
+2022-03-31 16:32:27,761 - Model - INFO - Mean IoU of Area_5_office_26: 0.4738
+2022-03-31 16:38:18,422 - Model - INFO - Mean IoU of Area_5_office_21: 0.5539
+2022-03-31 16:40:08,716 - Model - INFO - Mean IoU of Area_5_office_6: 0.5400
+2022-03-31 16:43:26,353 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5310
+2022-03-31 16:45:06,712 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3561
+2022-03-31 16:48:15,231 - Model - INFO - Mean IoU of Area_5_office_18: 0.5541
+2022-03-31 16:50:43,506 - Model - INFO - Mean IoU of Area_5_office_13: 0.5863
+2022-03-31 16:52:50,862 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7313
+2022-03-31 17:00:06,368 - Model - INFO - Mean IoU of Area_5_office_37: 0.4216
+2022-03-31 17:01:45,572 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6130
+2022-03-31 17:09:21,150 - Model - INFO - Mean IoU of Area_5_office_40: 0.3841
+2022-03-31 17:14:59,957 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3705
+2022-03-31 17:17:58,236 - Model - INFO - Mean IoU of Area_5_office_14: 0.5656
+2022-03-31 17:20:21,884 - Model - INFO - Mean IoU of Area_5_office_17: 0.5406
+2022-03-31 17:24:18,507 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8050
+2022-03-31 17:26:13,676 - Model - INFO - Mean IoU of Area_5_office_31: 0.5044
+2022-03-31 17:30:30,994 - Model - INFO - Mean IoU of Area_5_office_24: 0.4579
+2022-03-31 17:32:21,712 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5908
+2022-03-31 17:34:28,596 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3541
+2022-03-31 17:36:28,070 - Model - INFO - Mean IoU of Area_5_office_11: 0.4896
+2022-03-31 17:38:09,000 - Model - INFO - Mean IoU of Area_5_office_27: 0.5068
+2022-03-31 17:42:47,682 - Model - INFO - Mean IoU of Area_5_office_19: 0.6030
+2022-03-31 17:44:50,911 - Model - INFO - Mean IoU of Area_5_office_33: 0.4866
+2022-03-31 17:46:57,746 - Model - INFO - Mean IoU of Area_5_office_2: 0.4547
+2022-03-31 17:46:58,251 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.879 
+class floor         , IoU: 0.944 
+class wall          , IoU: 0.686 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.008 
+class window        , IoU: 0.290 
+class door          , IoU: 0.145 
+class table         , IoU: 0.546 
+class chair         , IoU: 0.615 
+class sofa          , IoU: 0.101 
+class bookcase      , IoU: 0.432 
+class board         , IoU: 0.390 
+class clutter       , IoU: 0.343 
+
+2022-03-31 17:46:58,251 - Model - INFO - eval point avg class IoU: 0.413835
+2022-03-31 17:46:58,251 - Model - INFO - eval whole scene point avg class acc: 0.492730
+2022-03-31 17:46:58,251 - Model - INFO - eval whole scene point accuracy: 0.774416
+2022-03-31 17:46:59,496 - Model - INFO - PARAMETER ...
+2022-03-31 17:46:59,496 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-31 17:47:12,278 - Model - INFO - The number of test data is: 67
+2022-03-31 17:47:14,198 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-31 17:49:56,559 - Model - INFO - Mean IoU of Area_5_office_36: 0.5711
+2022-03-31 17:53:09,474 - Model - INFO - Mean IoU of Area_5_office_15: 0.5085
+2022-03-31 17:55:08,191 - Model - INFO - Mean IoU of Area_5_office_42: 0.5411
+2022-03-31 17:57:06,853 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7679
+2022-03-31 18:00:25,905 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.6054
+2022-03-31 18:04:09,674 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4699
+2022-03-31 18:06:17,381 - Model - INFO - Mean IoU of Area_5_office_35: 0.6345
+2022-03-31 18:08:19,301 - Model - INFO - Mean IoU of Area_5_office_23: 0.5286
+2022-03-31 18:12:13,863 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5484
+2022-03-31 18:13:53,797 - Model - INFO - Mean IoU of Area_5_office_5: 0.5592
+2022-03-31 18:16:30,093 - Model - INFO - Mean IoU of Area_5_office_39: 0.5430
+2022-03-31 18:17:39,618 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6486
+2022-03-31 18:21:36,762 - Model - INFO - Mean IoU of Area_5_office_41: 0.4979
+2022-03-31 18:23:30,988 - Model - INFO - Mean IoU of Area_5_office_34: 0.5020
+2022-03-31 18:25:21,589 - Model - INFO - Mean IoU of Area_5_office_3: 0.5786
+2022-03-31 18:29:29,557 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4676
+2022-03-31 18:33:54,462 - Model - INFO - Mean IoU of Area_5_office_29: 0.4723
+2022-03-31 18:36:00,801 - Model - INFO - Mean IoU of Area_5_office_8: 0.5593
+2022-03-31 18:37:56,930 - Model - INFO - Mean IoU of Area_5_office_16: 0.4772
+2022-03-31 18:39:36,792 - Model - INFO - Mean IoU of Area_5_office_9: 0.5415
+2022-03-31 18:43:03,809 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7440
+2022-03-31 18:45:02,298 - Model - INFO - Mean IoU of Area_5_office_32: 0.4559
+2022-03-31 18:55:45,570 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5261
+2022-03-31 18:57:02,782 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6021
+2022-03-31 18:58:10,023 - Model - INFO - Mean IoU of Area_5_office_20: 0.5509
+2022-03-31 18:59:41,736 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6871
+2022-03-31 19:15:00,158 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6869
+2022-03-31 19:17:56,198 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7274
+2022-03-31 19:29:31,269 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2414
+2022-03-31 19:30:31,179 - Model - INFO - Mean IoU of Area_5_office_30: 0.7100
+2022-03-31 19:38:00,139 - Model - INFO - Mean IoU of Area_5_office_38: 0.3310
+2022-03-31 19:39:29,398 - Model - INFO - Mean IoU of Area_5_office_25: 0.5763
+2022-03-31 19:42:11,074 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4901
+2022-03-31 19:43:56,572 - Model - INFO - Mean IoU of Area_5_office_28: 0.6182
+2022-03-31 19:45:47,170 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5091
+2022-03-31 19:46:03,034 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5024
+2022-03-31 19:48:05,473 - Model - INFO - Mean IoU of Area_5_office_12: 0.5121
+2022-03-31 19:49:54,508 - Model - INFO - Mean IoU of Area_5_office_22: 0.5472
+2022-03-31 19:51:48,722 - Model - INFO - Mean IoU of Area_5_office_4: 0.4989
+2022-03-31 19:53:07,975 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6831
+2022-03-31 19:55:05,641 - Model - INFO - Mean IoU of Area_5_office_10: 0.5241
+2022-03-31 19:57:08,481 - Model - INFO - Mean IoU of Area_5_office_7: 0.5496
+2022-03-31 19:58:58,054 - Model - INFO - Mean IoU of Area_5_office_1: 0.4489
+2022-03-31 20:00:34,020 - Model - INFO - Mean IoU of Area_5_office_26: 0.4844
+2022-03-31 20:06:12,377 - Model - INFO - Mean IoU of Area_5_office_21: 0.5492
+2022-03-31 20:07:59,343 - Model - INFO - Mean IoU of Area_5_office_6: 0.5963
+2022-03-31 20:11:09,763 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5316
+2022-03-31 20:12:49,436 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3633
+2022-03-31 20:15:56,468 - Model - INFO - Mean IoU of Area_5_office_18: 0.5298
+2022-03-31 20:18:23,770 - Model - INFO - Mean IoU of Area_5_office_13: 0.5963
+2022-03-31 20:20:25,454 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7119
+2022-03-31 20:27:31,698 - Model - INFO - Mean IoU of Area_5_office_37: 0.4105
+2022-03-31 20:29:12,653 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6189
+2022-03-31 20:36:43,605 - Model - INFO - Mean IoU of Area_5_office_40: 0.3782
+2022-03-31 20:42:19,614 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3653
+2022-03-31 20:45:15,889 - Model - INFO - Mean IoU of Area_5_office_14: 0.5705
+2022-03-31 20:47:39,895 - Model - INFO - Mean IoU of Area_5_office_17: 0.5338
+2022-03-31 20:51:33,819 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7987
+2022-03-31 20:53:28,109 - Model - INFO - Mean IoU of Area_5_office_31: 0.5104
+2022-03-31 20:57:43,453 - Model - INFO - Mean IoU of Area_5_office_24: 0.4770
+2022-03-31 20:59:33,415 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5863
+2022-03-31 21:01:38,364 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3510
+2022-03-31 21:03:36,156 - Model - INFO - Mean IoU of Area_5_office_11: 0.5118
+2022-03-31 21:05:16,683 - Model - INFO - Mean IoU of Area_5_office_27: 0.5193
+2022-03-31 21:09:52,820 - Model - INFO - Mean IoU of Area_5_office_19: 0.5973
+2022-03-31 21:11:55,472 - Model - INFO - Mean IoU of Area_5_office_33: 0.5089
+2022-03-31 21:14:01,452 - Model - INFO - Mean IoU of Area_5_office_2: 0.4774
+2022-03-31 21:14:01,943 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.877 
+class floor         , IoU: 0.946 
+class wall          , IoU: 0.689 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.005 
+class window        , IoU: 0.324 
+class door          , IoU: 0.161 
+class table         , IoU: 0.569 
+class chair         , IoU: 0.593 
+class sofa          , IoU: 0.093 
+class bookcase      , IoU: 0.428 
+class board         , IoU: 0.411 
+class clutter       , IoU: 0.329 
+
+2022-03-31 21:14:01,944 - Model - INFO - eval point avg class IoU: 0.417333
+2022-03-31 21:14:01,944 - Model - INFO - eval whole scene point avg class acc: 0.500768
+2022-03-31 21:14:01,944 - Model - INFO - eval whole scene point accuracy: 0.773499
+2022-03-31 21:14:03,261 - Model - INFO - PARAMETER ...
+2022-03-31 21:14:03,261 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-03-31 21:14:16,033 - Model - INFO - The number of test data is: 67
+2022-03-31 21:14:17,923 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-03-31 21:17:01,594 - Model - INFO - Mean IoU of Area_5_office_36: 0.5740
+2022-03-31 21:20:15,830 - Model - INFO - Mean IoU of Area_5_office_15: 0.5082
+2022-03-31 21:22:16,380 - Model - INFO - Mean IoU of Area_5_office_42: 0.5547
+2022-03-31 21:24:15,741 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7710
+2022-03-31 21:27:36,467 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5975
+2022-03-31 21:31:17,100 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4820
+2022-03-31 21:33:21,858 - Model - INFO - Mean IoU of Area_5_office_35: 0.6364
+2022-03-31 21:35:24,184 - Model - INFO - Mean IoU of Area_5_office_23: 0.5334
+2022-03-31 21:39:20,689 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5497
+2022-03-31 21:41:02,275 - Model - INFO - Mean IoU of Area_5_office_5: 0.5615
+2022-03-31 21:43:39,856 - Model - INFO - Mean IoU of Area_5_office_39: 0.5547
+2022-03-31 21:44:50,040 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6441
+2022-03-31 21:48:49,669 - Model - INFO - Mean IoU of Area_5_office_41: 0.5052
+2022-03-31 21:50:49,057 - Model - INFO - Mean IoU of Area_5_office_34: 0.5128
+2022-03-31 21:52:43,143 - Model - INFO - Mean IoU of Area_5_office_3: 0.5709
+2022-03-31 21:56:51,900 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4598
+2022-03-31 22:01:19,058 - Model - INFO - Mean IoU of Area_5_office_29: 0.4817
+2022-03-31 22:03:27,364 - Model - INFO - Mean IoU of Area_5_office_8: 0.5549
+2022-03-31 22:05:25,353 - Model - INFO - Mean IoU of Area_5_office_16: 0.4698
+2022-03-31 22:07:06,326 - Model - INFO - Mean IoU of Area_5_office_9: 0.5484
+2022-03-31 22:10:34,464 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7387
+2022-03-31 22:12:32,856 - Model - INFO - Mean IoU of Area_5_office_32: 0.4830
+2022-03-31 22:23:18,115 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5259
+2022-03-31 22:24:36,069 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6126
+2022-03-31 22:25:44,073 - Model - INFO - Mean IoU of Area_5_office_20: 0.5537
+2022-03-31 22:27:13,580 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6764
+2022-03-31 22:42:36,207 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6881
+2022-03-31 22:45:38,557 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7265
+2022-03-31 22:57:25,105 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2463
+2022-03-31 22:58:26,135 - Model - INFO - Mean IoU of Area_5_office_30: 0.7251
+2022-03-31 23:05:58,408 - Model - INFO - Mean IoU of Area_5_office_38: 0.3266
+2022-03-31 23:07:28,115 - Model - INFO - Mean IoU of Area_5_office_25: 0.5852
+2022-03-31 23:10:11,490 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4902
+2022-03-31 23:11:57,748 - Model - INFO - Mean IoU of Area_5_office_28: 0.6196
+2022-03-31 23:13:50,010 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5115
+2022-03-31 23:14:05,903 - Model - INFO - Mean IoU of Area_5_storage_3: 0.4953
+2022-03-31 23:16:04,650 - Model - INFO - Mean IoU of Area_5_office_12: 0.5234
+2022-03-31 23:17:54,557 - Model - INFO - Mean IoU of Area_5_office_22: 0.5511
+2022-03-31 23:19:49,788 - Model - INFO - Mean IoU of Area_5_office_4: 0.5039
+2022-03-31 23:21:08,545 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6940
+2022-03-31 23:23:07,709 - Model - INFO - Mean IoU of Area_5_office_10: 0.5182
+2022-03-31 23:25:11,090 - Model - INFO - Mean IoU of Area_5_office_7: 0.5508
+2022-03-31 23:27:02,080 - Model - INFO - Mean IoU of Area_5_office_1: 0.4528
+2022-03-31 23:28:38,349 - Model - INFO - Mean IoU of Area_5_office_26: 0.4836
+2022-03-31 23:34:28,035 - Model - INFO - Mean IoU of Area_5_office_21: 0.5587
+2022-03-31 23:36:19,322 - Model - INFO - Mean IoU of Area_5_office_6: 0.5891
+2022-03-31 23:39:36,938 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5335
+2022-03-31 23:41:16,826 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3596
+2022-03-31 23:44:25,102 - Model - INFO - Mean IoU of Area_5_office_18: 0.5400
+2022-03-31 23:46:53,041 - Model - INFO - Mean IoU of Area_5_office_13: 0.5974
+2022-03-31 23:49:00,419 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7182
+2022-03-31 23:56:21,640 - Model - INFO - Mean IoU of Area_5_office_37: 0.4059
+2022-03-31 23:58:03,847 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6191
+2022-04-01 00:05:38,926 - Model - INFO - Mean IoU of Area_5_office_40: 0.3821
+2022-04-01 00:11:16,959 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3745
+2022-04-01 00:14:15,973 - Model - INFO - Mean IoU of Area_5_office_14: 0.5799
+2022-04-01 00:16:36,302 - Model - INFO - Mean IoU of Area_5_office_17: 0.5471
+2022-04-01 00:20:25,018 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8084
+2022-04-01 00:22:17,213 - Model - INFO - Mean IoU of Area_5_office_31: 0.5236
+2022-04-01 00:26:26,774 - Model - INFO - Mean IoU of Area_5_office_24: 0.4794
+2022-04-01 00:28:15,272 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5826
+2022-04-01 00:30:22,806 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3552
+2022-04-01 00:32:22,118 - Model - INFO - Mean IoU of Area_5_office_11: 0.5230
+2022-04-01 00:34:03,331 - Model - INFO - Mean IoU of Area_5_office_27: 0.5233
+2022-04-01 00:38:42,146 - Model - INFO - Mean IoU of Area_5_office_19: 0.6096
+2022-04-01 00:40:45,926 - Model - INFO - Mean IoU of Area_5_office_33: 0.5235
+2022-04-01 00:42:53,076 - Model - INFO - Mean IoU of Area_5_office_2: 0.4756
+2022-04-01 00:42:53,613 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.945 
+class wall          , IoU: 0.690 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.008 
+class window        , IoU: 0.335 
+class door          , IoU: 0.168 
+class table         , IoU: 0.568 
+class chair         , IoU: 0.595 
+class sofa          , IoU: 0.092 
+class bookcase      , IoU: 0.442 
+class board         , IoU: 0.409 
+class clutter       , IoU: 0.332 
+
+2022-04-01 00:42:53,613 - Model - INFO - eval point avg class IoU: 0.420263
+2022-04-01 00:42:53,613 - Model - INFO - eval whole scene point avg class acc: 0.501454
+2022-04-01 00:42:53,613 - Model - INFO - eval whole scene point accuracy: 0.775907
+2022-04-01 00:42:54,921 - Model - INFO - PARAMETER ...
+2022-04-01 00:42:54,921 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-01 00:43:07,127 - Model - INFO - The number of test data is: 67
+2022-04-01 00:43:09,031 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-01 00:45:53,406 - Model - INFO - Mean IoU of Area_5_office_36: 0.5812
+2022-04-01 00:49:07,204 - Model - INFO - Mean IoU of Area_5_office_15: 0.5121
+2022-04-01 00:51:07,282 - Model - INFO - Mean IoU of Area_5_office_42: 0.5595
+2022-04-01 00:53:09,735 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7769
+2022-04-01 00:56:36,504 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.6070
+2022-04-01 01:00:23,534 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4823
+2022-04-01 01:02:32,046 - Model - INFO - Mean IoU of Area_5_office_35: 0.6421
+2022-04-01 01:04:33,972 - Model - INFO - Mean IoU of Area_5_office_23: 0.5411
+2022-04-01 01:08:30,586 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5581
+2022-04-01 01:10:10,821 - Model - INFO - Mean IoU of Area_5_office_5: 0.5743
+2022-04-01 01:12:47,803 - Model - INFO - Mean IoU of Area_5_office_39: 0.5788
+2022-04-01 01:13:58,141 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6431
+2022-04-01 01:17:48,569 - Model - INFO - Mean IoU of Area_5_office_41: 0.5053
+2022-04-01 01:19:44,436 - Model - INFO - Mean IoU of Area_5_office_34: 0.5211
+2022-04-01 01:21:38,693 - Model - INFO - Mean IoU of Area_5_office_3: 0.5731
+2022-04-01 01:25:47,719 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4766
+2022-04-01 01:30:11,886 - Model - INFO - Mean IoU of Area_5_office_29: 0.4848
+2022-04-01 01:32:15,374 - Model - INFO - Mean IoU of Area_5_office_8: 0.5460
+2022-04-01 01:34:13,093 - Model - INFO - Mean IoU of Area_5_office_16: 0.4778
+2022-04-01 01:35:54,147 - Model - INFO - Mean IoU of Area_5_office_9: 0.5540
+2022-04-01 01:39:22,259 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7362
+2022-04-01 01:41:20,702 - Model - INFO - Mean IoU of Area_5_office_32: 0.4888
+2022-04-01 01:52:07,377 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5301
+2022-04-01 01:53:24,749 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6198
+2022-04-01 01:54:32,213 - Model - INFO - Mean IoU of Area_5_office_20: 0.5658
+2022-04-01 01:56:00,958 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6726
+2022-04-01 02:11:18,701 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6912
+2022-04-01 02:14:20,764 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7340
+2022-04-01 02:25:55,200 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2514
+2022-04-01 02:26:57,904 - Model - INFO - Mean IoU of Area_5_office_30: 0.7346
+2022-04-01 02:34:29,473 - Model - INFO - Mean IoU of Area_5_office_38: 0.3312
+2022-04-01 02:35:58,890 - Model - INFO - Mean IoU of Area_5_office_25: 0.5900
+2022-04-01 02:38:41,843 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4998
+2022-04-01 02:40:27,460 - Model - INFO - Mean IoU of Area_5_office_28: 0.6285
+2022-04-01 02:42:18,645 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5161
+2022-04-01 02:42:34,449 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5134
+2022-04-01 02:44:37,589 - Model - INFO - Mean IoU of Area_5_office_12: 0.5254
+2022-04-01 02:46:27,340 - Model - INFO - Mean IoU of Area_5_office_22: 0.5468
+2022-04-01 02:48:16,520 - Model - INFO - Mean IoU of Area_5_office_4: 0.5044
+2022-04-01 02:49:33,533 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6898
+2022-04-01 02:51:27,436 - Model - INFO - Mean IoU of Area_5_office_10: 0.5169
+2022-04-01 02:53:26,269 - Model - INFO - Mean IoU of Area_5_office_7: 0.5401
+2022-04-01 02:55:13,137 - Model - INFO - Mean IoU of Area_5_office_1: 0.4462
+2022-04-01 02:56:46,164 - Model - INFO - Mean IoU of Area_5_office_26: 0.4871
+2022-04-01 03:02:24,371 - Model - INFO - Mean IoU of Area_5_office_21: 0.5564
+2022-04-01 03:04:11,110 - Model - INFO - Mean IoU of Area_5_office_6: 0.5909
+2022-04-01 03:07:22,512 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5411
+2022-04-01 03:09:02,979 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3550
+2022-04-01 03:12:11,779 - Model - INFO - Mean IoU of Area_5_office_18: 0.5611
+2022-04-01 03:14:39,468 - Model - INFO - Mean IoU of Area_5_office_13: 0.5998
+2022-04-01 03:16:46,232 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7277
+2022-04-01 03:23:55,161 - Model - INFO - Mean IoU of Area_5_office_37: 0.4122
+2022-04-01 03:25:34,129 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6194
+2022-04-01 03:33:06,609 - Model - INFO - Mean IoU of Area_5_office_40: 0.3940
+2022-04-01 03:38:44,763 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3960
+2022-04-01 03:41:43,064 - Model - INFO - Mean IoU of Area_5_office_14: 0.5774
+2022-04-01 03:44:02,963 - Model - INFO - Mean IoU of Area_5_office_17: 0.5474
+2022-04-01 03:47:51,598 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8101
+2022-04-01 03:49:42,709 - Model - INFO - Mean IoU of Area_5_office_31: 0.5247
+2022-04-01 03:53:51,686 - Model - INFO - Mean IoU of Area_5_office_24: 0.4807
+2022-04-01 03:55:38,329 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5883
+2022-04-01 03:57:40,566 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3621
+2022-04-01 03:59:35,297 - Model - INFO - Mean IoU of Area_5_office_11: 0.5164
+2022-04-01 04:01:13,243 - Model - INFO - Mean IoU of Area_5_office_27: 0.5296
+2022-04-01 04:05:42,468 - Model - INFO - Mean IoU of Area_5_office_19: 0.6054
+2022-04-01 04:07:43,237 - Model - INFO - Mean IoU of Area_5_office_33: 0.5217
+2022-04-01 04:09:49,295 - Model - INFO - Mean IoU of Area_5_office_2: 0.4711
+2022-04-01 04:09:49,799 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.880 
+class floor         , IoU: 0.945 
+class wall          , IoU: 0.691 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.011 
+class window        , IoU: 0.334 
+class door          , IoU: 0.178 
+class table         , IoU: 0.577 
+class chair         , IoU: 0.620 
+class sofa          , IoU: 0.103 
+class bookcase      , IoU: 0.446 
+class board         , IoU: 0.405 
+class clutter       , IoU: 0.338 
+
+2022-04-01 04:09:49,799 - Model - INFO - eval point avg class IoU: 0.425119
+2022-04-01 04:09:49,799 - Model - INFO - eval whole scene point avg class acc: 0.506245
+2022-04-01 04:09:49,799 - Model - INFO - eval whole scene point accuracy: 0.778251
+2022-04-01 04:09:51,020 - Model - INFO - PARAMETER ...
+2022-04-01 04:09:51,020 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-01 04:10:03,661 - Model - INFO - The number of test data is: 67
+2022-04-01 04:10:05,547 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-01 04:12:49,859 - Model - INFO - Mean IoU of Area_5_office_36: 0.5739
+2022-04-01 04:16:04,548 - Model - INFO - Mean IoU of Area_5_office_15: 0.5226
+2022-04-01 04:18:05,452 - Model - INFO - Mean IoU of Area_5_office_42: 0.5569
+2022-04-01 04:20:07,798 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7799
+2022-04-01 04:23:35,917 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.6084
+2022-04-01 04:27:24,623 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4831
+2022-04-01 04:29:30,193 - Model - INFO - Mean IoU of Area_5_office_35: 0.6407
+2022-04-01 04:31:33,380 - Model - INFO - Mean IoU of Area_5_office_23: 0.5478
+2022-04-01 04:35:33,394 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5568
+2022-04-01 04:37:14,563 - Model - INFO - Mean IoU of Area_5_office_5: 0.5692
+2022-04-01 04:39:53,235 - Model - INFO - Mean IoU of Area_5_office_39: 0.5747
+2022-04-01 04:41:03,899 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6511
+2022-04-01 04:45:04,480 - Model - INFO - Mean IoU of Area_5_office_41: 0.5048
+2022-04-01 04:47:04,837 - Model - INFO - Mean IoU of Area_5_office_34: 0.5287
+2022-04-01 04:49:00,153 - Model - INFO - Mean IoU of Area_5_office_3: 0.5842
+2022-04-01 04:53:10,760 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4850
+2022-04-01 04:57:30,287 - Model - INFO - Mean IoU of Area_5_office_29: 0.4908
+2022-04-01 04:59:36,992 - Model - INFO - Mean IoU of Area_5_office_8: 0.5457
+2022-04-01 05:01:35,443 - Model - INFO - Mean IoU of Area_5_office_16: 0.4875
+2022-04-01 05:03:16,870 - Model - INFO - Mean IoU of Area_5_office_9: 0.5543
+2022-04-01 05:06:46,685 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7386
+2022-04-01 05:08:46,516 - Model - INFO - Mean IoU of Area_5_office_32: 0.4910
+2022-04-01 05:19:31,825 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5376
+2022-04-01 05:20:49,562 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6175
+2022-04-01 05:21:57,815 - Model - INFO - Mean IoU of Area_5_office_20: 0.5718
+2022-04-01 05:23:27,552 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6795
+2022-04-01 05:38:55,538 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6985
+2022-04-01 05:41:53,475 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7326
+2022-04-01 05:53:38,638 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2558
+2022-04-01 05:54:39,327 - Model - INFO - Mean IoU of Area_5_office_30: 0.7361
+2022-04-01 06:02:12,108 - Model - INFO - Mean IoU of Area_5_office_38: 0.3408
+2022-04-01 06:03:41,375 - Model - INFO - Mean IoU of Area_5_office_25: 0.5902
+2022-04-01 06:06:26,784 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.5009
+2022-04-01 06:08:16,914 - Model - INFO - Mean IoU of Area_5_office_28: 0.6293
+2022-04-01 06:10:12,680 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5181
+2022-04-01 06:10:29,181 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5327
+2022-04-01 06:12:32,524 - Model - INFO - Mean IoU of Area_5_office_12: 0.5307
+2022-04-01 06:14:22,673 - Model - INFO - Mean IoU of Area_5_office_22: 0.5495
+2022-04-01 06:16:18,117 - Model - INFO - Mean IoU of Area_5_office_4: 0.5072
+2022-04-01 06:17:38,410 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6826
+2022-04-01 06:19:37,388 - Model - INFO - Mean IoU of Area_5_office_10: 0.5283
+2022-04-01 06:21:41,069 - Model - INFO - Mean IoU of Area_5_office_7: 0.5435
+2022-04-01 06:23:32,908 - Model - INFO - Mean IoU of Area_5_office_1: 0.4488
+2022-04-01 06:25:09,495 - Model - INFO - Mean IoU of Area_5_office_26: 0.4932
+2022-04-01 06:30:55,079 - Model - INFO - Mean IoU of Area_5_office_21: 0.5612
+2022-04-01 06:32:43,134 - Model - INFO - Mean IoU of Area_5_office_6: 0.5918
+2022-04-01 06:35:55,754 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5500
+2022-04-01 06:37:33,629 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3577
+2022-04-01 06:40:37,086 - Model - INFO - Mean IoU of Area_5_office_18: 0.5679
+2022-04-01 06:43:00,903 - Model - INFO - Mean IoU of Area_5_office_13: 0.6062
+2022-04-01 06:45:04,943 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7286
+2022-04-01 06:52:16,249 - Model - INFO - Mean IoU of Area_5_office_37: 0.4231
+2022-04-01 06:53:55,620 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6175
+2022-04-01 07:01:30,984 - Model - INFO - Mean IoU of Area_5_office_40: 0.3955
+2022-04-01 07:07:10,649 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3981
+2022-04-01 07:10:10,121 - Model - INFO - Mean IoU of Area_5_office_14: 0.5804
+2022-04-01 07:12:30,793 - Model - INFO - Mean IoU of Area_5_office_17: 0.5496
+2022-04-01 07:16:20,424 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8172
+2022-04-01 07:18:12,736 - Model - INFO - Mean IoU of Area_5_office_31: 0.5271
+2022-04-01 07:22:24,549 - Model - INFO - Mean IoU of Area_5_office_24: 0.4858
+2022-04-01 07:24:12,411 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5896
+2022-04-01 07:26:15,676 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3629
+2022-04-01 07:28:11,541 - Model - INFO - Mean IoU of Area_5_office_11: 0.5107
+2022-04-01 07:29:50,179 - Model - INFO - Mean IoU of Area_5_office_27: 0.5347
+2022-04-01 07:34:21,167 - Model - INFO - Mean IoU of Area_5_office_19: 0.5997
+2022-04-01 07:36:21,165 - Model - INFO - Mean IoU of Area_5_office_33: 0.5190
+2022-04-01 07:38:25,314 - Model - INFO - Mean IoU of Area_5_office_2: 0.4825
+2022-04-01 07:38:25,803 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.880 
+class floor         , IoU: 0.946 
+class wall          , IoU: 0.692 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.010 
+class window        , IoU: 0.340 
+class door          , IoU: 0.183 
+class table         , IoU: 0.575 
+class chair         , IoU: 0.627 
+class sofa          , IoU: 0.108 
+class bookcase      , IoU: 0.450 
+class board         , IoU: 0.418 
+class clutter       , IoU: 0.345 
+
+2022-04-01 07:38:25,803 - Model - INFO - eval point avg class IoU: 0.428806
+2022-04-01 07:38:25,803 - Model - INFO - eval whole scene point avg class acc: 0.510485
+2022-04-01 07:38:25,803 - Model - INFO - eval whole scene point accuracy: 0.780479
+2022-04-01 07:38:27,069 - Model - INFO - PARAMETER ...
+2022-04-01 07:38:27,069 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-01 07:38:39,309 - Model - INFO - The number of test data is: 67
+2022-04-01 07:38:41,218 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-01 07:41:43,472 - Model - INFO - Mean IoU of Area_5_office_36: 0.5672
+2022-04-01 07:45:15,803 - Model - INFO - Mean IoU of Area_5_office_15: 0.5058
+2022-04-01 07:47:26,892 - Model - INFO - Mean IoU of Area_5_office_42: 0.5381
+2022-04-01 07:49:38,144 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7796
+2022-04-01 07:53:16,885 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5904
+2022-04-01 07:57:16,077 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4665
+2022-04-01 07:59:32,046 - Model - INFO - Mean IoU of Area_5_office_35: 0.6170
+2022-04-01 08:01:41,509 - Model - INFO - Mean IoU of Area_5_office_23: 0.5288
+2022-04-01 08:05:51,847 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5437
+2022-04-01 08:07:38,904 - Model - INFO - Mean IoU of Area_5_office_5: 0.5421
+2022-04-01 08:10:26,006 - Model - INFO - Mean IoU of Area_5_office_39: 0.5511
+2022-04-01 08:11:40,198 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6414
+2022-04-01 08:15:53,314 - Model - INFO - Mean IoU of Area_5_office_41: 0.4935
+2022-04-01 08:18:00,294 - Model - INFO - Mean IoU of Area_5_office_34: 0.5101
+2022-04-01 08:20:01,234 - Model - INFO - Mean IoU of Area_5_office_3: 0.5418
+2022-04-01 08:24:21,987 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4756
+2022-04-01 08:28:55,842 - Model - INFO - Mean IoU of Area_5_office_29: 0.4636
+2022-04-01 08:31:07,182 - Model - INFO - Mean IoU of Area_5_office_8: 0.5198
+2022-04-01 08:33:08,532 - Model - INFO - Mean IoU of Area_5_office_16: 0.4864
+2022-04-01 08:34:55,859 - Model - INFO - Mean IoU of Area_5_office_9: 0.5391
+2022-04-01 08:38:36,992 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7251
+2022-04-01 08:40:43,084 - Model - INFO - Mean IoU of Area_5_office_32: 0.4686
+2022-04-01 08:52:00,754 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5339
+2022-04-01 08:53:22,946 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6314
+2022-04-01 08:54:35,046 - Model - INFO - Mean IoU of Area_5_office_20: 0.5610
+2022-04-01 08:56:09,804 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6915
+2022-04-01 09:12:10,080 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6962
+2022-04-01 09:15:22,968 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7304
+2022-04-01 09:27:32,036 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2487
+2022-04-01 09:28:36,068 - Model - INFO - Mean IoU of Area_5_office_30: 0.7044
+2022-04-01 09:36:30,040 - Model - INFO - Mean IoU of Area_5_office_38: 0.3330
+2022-04-01 09:38:08,235 - Model - INFO - Mean IoU of Area_5_office_25: 0.5763
+2022-04-01 09:41:07,234 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4816
+2022-04-01 09:43:03,160 - Model - INFO - Mean IoU of Area_5_office_28: 0.5895
+2022-04-01 09:45:05,339 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5076
+2022-04-01 09:45:22,866 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5159
+2022-04-01 09:47:32,822 - Model - INFO - Mean IoU of Area_5_office_12: 0.5060
+2022-04-01 09:49:29,131 - Model - INFO - Mean IoU of Area_5_office_22: 0.5239
+2022-04-01 09:51:30,878 - Model - INFO - Mean IoU of Area_5_office_4: 0.4834
+2022-04-01 09:52:55,364 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6817
+2022-04-01 09:55:01,341 - Model - INFO - Mean IoU of Area_5_office_10: 0.4859
+2022-04-01 09:57:11,820 - Model - INFO - Mean IoU of Area_5_office_7: 0.5155
+2022-04-01 09:59:08,538 - Model - INFO - Mean IoU of Area_5_office_1: 0.4426
+2022-04-01 10:00:50,196 - Model - INFO - Mean IoU of Area_5_office_26: 0.4747
+2022-04-01 10:06:56,061 - Model - INFO - Mean IoU of Area_5_office_21: 0.5555
+2022-04-01 10:08:53,177 - Model - INFO - Mean IoU of Area_5_office_6: 0.5440
+2022-04-01 10:12:21,187 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5324
+2022-04-01 10:14:07,343 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3569
+2022-04-01 10:17:26,387 - Model - INFO - Mean IoU of Area_5_office_18: 0.5538
+2022-04-01 10:20:02,616 - Model - INFO - Mean IoU of Area_5_office_13: 0.5879
+2022-04-01 10:22:17,525 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7247
+2022-04-01 10:29:48,688 - Model - INFO - Mean IoU of Area_5_office_37: 0.4202
+2022-04-01 10:31:33,047 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6159
+2022-04-01 10:39:27,644 - Model - INFO - Mean IoU of Area_5_office_40: 0.3861
+2022-04-01 10:45:21,229 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3675
+2022-04-01 10:48:29,571 - Model - INFO - Mean IoU of Area_5_office_14: 0.5671
+2022-04-01 10:50:57,480 - Model - INFO - Mean IoU of Area_5_office_17: 0.5424
+2022-04-01 10:54:58,061 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8063
+2022-04-01 10:56:55,726 - Model - INFO - Mean IoU of Area_5_office_31: 0.5053
+2022-04-01 11:01:19,079 - Model - INFO - Mean IoU of Area_5_office_24: 0.4579
+2022-04-01 11:03:12,287 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5902
+2022-04-01 11:05:22,392 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3538
+2022-04-01 11:07:24,192 - Model - INFO - Mean IoU of Area_5_office_11: 0.4871
+2022-04-01 11:09:08,205 - Model - INFO - Mean IoU of Area_5_office_27: 0.5043
+2022-04-01 11:13:53,129 - Model - INFO - Mean IoU of Area_5_office_19: 0.6026
+2022-04-01 11:15:58,879 - Model - INFO - Mean IoU of Area_5_office_33: 0.4945
+2022-04-01 11:18:08,502 - Model - INFO - Mean IoU of Area_5_office_2: 0.4558
+2022-04-01 11:18:09,051 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.943 
+class wall          , IoU: 0.686 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.008 
+class window        , IoU: 0.289 
+class door          , IoU: 0.145 
+class table         , IoU: 0.545 
+class chair         , IoU: 0.615 
+class sofa          , IoU: 0.099 
+class bookcase      , IoU: 0.431 
+class board         , IoU: 0.390 
+class clutter       , IoU: 0.343 
+
+2022-04-01 11:18:09,052 - Model - INFO - eval point avg class IoU: 0.413350
+2022-04-01 11:18:09,052 - Model - INFO - eval whole scene point avg class acc: 0.492428
+2022-04-01 11:18:09,052 - Model - INFO - eval whole scene point accuracy: 0.774101
+2022-04-01 11:18:10,236 - Model - INFO - PARAMETER ...
+2022-04-01 11:18:10,236 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-01 11:18:23,006 - Model - INFO - The number of test data is: 67
+2022-04-01 11:18:24,900 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-01 11:21:23,881 - Model - INFO - Mean IoU of Area_5_office_36: 0.5564
+2022-04-01 11:24:54,274 - Model - INFO - Mean IoU of Area_5_office_15: 0.4832
+2022-04-01 11:27:04,177 - Model - INFO - Mean IoU of Area_5_office_42: 0.5122
+2022-04-01 11:29:13,815 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7717
+2022-04-01 11:32:51,407 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5936
+2022-04-01 11:36:47,123 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4669
+2022-04-01 11:38:58,063 - Model - INFO - Mean IoU of Area_5_office_35: 0.6251
+2022-04-01 11:41:02,383 - Model - INFO - Mean IoU of Area_5_office_23: 0.5309
+2022-04-01 11:45:01,920 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5344
+2022-04-01 11:46:44,263 - Model - INFO - Mean IoU of Area_5_office_5: 0.5361
+2022-04-01 11:49:24,324 - Model - INFO - Mean IoU of Area_5_office_39: 0.5288
+2022-04-01 11:50:38,690 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6311
+2022-04-01 11:54:48,870 - Model - INFO - Mean IoU of Area_5_office_41: 0.4866
+2022-04-01 11:56:54,435 - Model - INFO - Mean IoU of Area_5_office_34: 0.4946
+2022-04-01 11:58:54,770 - Model - INFO - Mean IoU of Area_5_office_3: 0.5508
+2022-04-01 12:03:17,000 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4687
+2022-04-01 12:07:57,092 - Model - INFO - Mean IoU of Area_5_office_29: 0.4419
+2022-04-01 12:10:11,199 - Model - INFO - Mean IoU of Area_5_office_8: 0.5340
+2022-04-01 12:12:14,692 - Model - INFO - Mean IoU of Area_5_office_16: 0.4857
+2022-04-01 12:14:00,686 - Model - INFO - Mean IoU of Area_5_office_9: 0.5400
+2022-04-01 12:17:40,276 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7398
+2022-04-01 12:19:44,575 - Model - INFO - Mean IoU of Area_5_office_32: 0.4537
+2022-04-01 12:30:58,391 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5243
+2022-04-01 12:32:19,804 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6007
+2022-04-01 12:33:33,327 - Model - INFO - Mean IoU of Area_5_office_20: 0.5487
+2022-04-01 12:35:10,486 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6882
+2022-04-01 12:51:10,713 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6865
+2022-04-01 12:54:22,068 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7414
+2022-04-01 13:06:34,888 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2357
+2022-04-01 13:07:38,610 - Model - INFO - Mean IoU of Area_5_office_30: 0.6976
+2022-04-01 13:15:31,401 - Model - INFO - Mean IoU of Area_5_office_38: 0.3304
+2022-04-01 13:17:06,164 - Model - INFO - Mean IoU of Area_5_office_25: 0.5736
+2022-04-01 13:20:02,245 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4799
+2022-04-01 13:21:57,486 - Model - INFO - Mean IoU of Area_5_office_28: 0.5958
+2022-04-01 13:23:58,434 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.4978
+2022-04-01 13:24:15,755 - Model - INFO - Mean IoU of Area_5_storage_3: 0.4987
+2022-04-01 13:26:24,568 - Model - INFO - Mean IoU of Area_5_office_12: 0.5117
+2022-04-01 13:28:20,559 - Model - INFO - Mean IoU of Area_5_office_22: 0.5324
+2022-04-01 13:30:21,257 - Model - INFO - Mean IoU of Area_5_office_4: 0.4789
+2022-04-01 13:31:45,481 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6820
+2022-04-01 13:33:50,707 - Model - INFO - Mean IoU of Area_5_office_10: 0.5188
+2022-04-01 13:36:00,624 - Model - INFO - Mean IoU of Area_5_office_7: 0.5344
+2022-04-01 13:37:57,085 - Model - INFO - Mean IoU of Area_5_office_1: 0.4353
+2022-04-01 13:39:38,297 - Model - INFO - Mean IoU of Area_5_office_26: 0.4875
+2022-04-01 13:45:39,933 - Model - INFO - Mean IoU of Area_5_office_21: 0.5364
+2022-04-01 13:47:32,836 - Model - INFO - Mean IoU of Area_5_office_6: 0.5881
+2022-04-01 13:50:53,099 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5237
+2022-04-01 13:52:35,120 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3652
+2022-04-01 13:55:46,704 - Model - INFO - Mean IoU of Area_5_office_18: 0.5480
+2022-04-01 13:58:18,152 - Model - INFO - Mean IoU of Area_5_office_13: 0.5935
+2022-04-01 14:00:27,522 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7157
+2022-04-01 14:07:57,077 - Model - INFO - Mean IoU of Area_5_office_37: 0.4364
+2022-04-01 14:09:41,789 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6295
+2022-04-01 14:17:33,996 - Model - INFO - Mean IoU of Area_5_office_40: 0.3814
+2022-04-01 14:23:37,851 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.4109
+2022-04-01 14:26:51,480 - Model - INFO - Mean IoU of Area_5_office_14: 0.5645
+2022-04-01 14:29:23,914 - Model - INFO - Mean IoU of Area_5_office_17: 0.5268
+2022-04-01 14:33:32,161 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7947
+2022-04-01 14:35:33,459 - Model - INFO - Mean IoU of Area_5_office_31: 0.4932
+2022-04-01 14:40:03,163 - Model - INFO - Mean IoU of Area_5_office_24: 0.4533
+2022-04-01 14:41:59,547 - Model - INFO - Mean IoU of Area_5_WC_1: 0.6000
+2022-04-01 14:44:12,586 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3526
+2022-04-01 14:46:17,314 - Model - INFO - Mean IoU of Area_5_office_11: 0.5046
+2022-04-01 14:48:03,794 - Model - INFO - Mean IoU of Area_5_office_27: 0.4995
+2022-04-01 14:52:54,602 - Model - INFO - Mean IoU of Area_5_office_19: 0.5937
+2022-04-01 14:55:03,914 - Model - INFO - Mean IoU of Area_5_office_33: 0.4879
+2022-04-01 14:57:17,377 - Model - INFO - Mean IoU of Area_5_office_2: 0.4519
+2022-04-01 14:57:17,890 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.948 
+class wall          , IoU: 0.689 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.006 
+class window        , IoU: 0.297 
+class door          , IoU: 0.146 
+class table         , IoU: 0.574 
+class chair         , IoU: 0.586 
+class sofa          , IoU: 0.093 
+class bookcase      , IoU: 0.413 
+class board         , IoU: 0.379 
+class clutter       , IoU: 0.328 
+
+2022-04-01 14:57:17,890 - Model - INFO - eval point avg class IoU: 0.410497
+2022-04-01 14:57:17,891 - Model - INFO - eval whole scene point avg class acc: 0.497841
+2022-04-01 14:57:17,891 - Model - INFO - eval whole scene point accuracy: 0.770683
+2022-04-01 14:57:19,130 - Model - INFO - PARAMETER ...
+2022-04-01 14:57:19,130 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-01 14:57:31,420 - Model - INFO - The number of test data is: 67
+2022-04-01 14:57:33,718 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-01 15:00:26,386 - Model - INFO - Mean IoU of Area_5_office_36: 0.5654
+2022-04-01 15:03:50,541 - Model - INFO - Mean IoU of Area_5_office_15: 0.5100
+2022-04-01 15:06:01,993 - Model - INFO - Mean IoU of Area_5_office_42: 0.5340
+2022-04-01 15:08:11,658 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7653
+2022-04-01 15:11:49,717 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.6113
+2022-04-01 15:15:48,059 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4701
+2022-04-01 15:18:02,867 - Model - INFO - Mean IoU of Area_5_office_35: 0.6332
+2022-04-01 15:20:12,031 - Model - INFO - Mean IoU of Area_5_office_23: 0.5197
+2022-04-01 15:24:20,628 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5489
+2022-04-01 15:26:06,986 - Model - INFO - Mean IoU of Area_5_office_5: 0.5587
+2022-04-01 15:28:52,735 - Model - INFO - Mean IoU of Area_5_office_39: 0.5479
+2022-04-01 15:30:06,628 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6425
+2022-04-01 15:34:17,127 - Model - INFO - Mean IoU of Area_5_office_41: 0.4985
+2022-04-01 15:36:23,332 - Model - INFO - Mean IoU of Area_5_office_34: 0.4951
+2022-04-01 15:38:23,877 - Model - INFO - Mean IoU of Area_5_office_3: 0.5668
+2022-04-01 15:42:45,429 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4635
+2022-04-01 15:47:25,953 - Model - INFO - Mean IoU of Area_5_office_29: 0.4701
+2022-04-01 15:49:40,067 - Model - INFO - Mean IoU of Area_5_office_8: 0.5501
+2022-04-01 15:51:43,626 - Model - INFO - Mean IoU of Area_5_office_16: 0.4805
+2022-04-01 15:53:29,925 - Model - INFO - Mean IoU of Area_5_office_9: 0.5409
+2022-04-01 15:57:09,663 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7447
+2022-04-01 15:59:15,027 - Model - INFO - Mean IoU of Area_5_office_32: 0.4470
+2022-04-01 16:10:29,787 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5252
+2022-04-01 16:11:51,689 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6017
+2022-04-01 16:13:03,300 - Model - INFO - Mean IoU of Area_5_office_20: 0.5510
+2022-04-01 16:14:37,249 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6801
+2022-04-01 16:30:32,070 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6843
+2022-04-01 16:33:43,462 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7231
+2022-04-01 16:45:51,901 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2426
+2022-04-01 16:46:55,816 - Model - INFO - Mean IoU of Area_5_office_30: 0.7075
+2022-04-01 16:54:46,939 - Model - INFO - Mean IoU of Area_5_office_38: 0.3325
+2022-04-01 16:56:20,882 - Model - INFO - Mean IoU of Area_5_office_25: 0.5692
+2022-04-01 16:59:12,001 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4894
+2022-04-01 17:01:03,804 - Model - INFO - Mean IoU of Area_5_office_28: 0.6135
+2022-04-01 17:03:01,336 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5053
+2022-04-01 17:03:17,981 - Model - INFO - Mean IoU of Area_5_storage_3: 0.4933
+2022-04-01 17:05:27,066 - Model - INFO - Mean IoU of Area_5_office_12: 0.5028
+2022-04-01 17:07:22,751 - Model - INFO - Mean IoU of Area_5_office_22: 0.5352
+2022-04-01 17:09:24,049 - Model - INFO - Mean IoU of Area_5_office_4: 0.5016
+2022-04-01 17:10:48,179 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6814
+2022-04-01 17:12:52,855 - Model - INFO - Mean IoU of Area_5_office_10: 0.5225
+2022-04-01 17:15:01,677 - Model - INFO - Mean IoU of Area_5_office_7: 0.5423
+2022-04-01 17:16:58,298 - Model - INFO - Mean IoU of Area_5_office_1: 0.4538
+2022-04-01 17:18:39,808 - Model - INFO - Mean IoU of Area_5_office_26: 0.4807
+2022-04-01 17:24:45,046 - Model - INFO - Mean IoU of Area_5_office_21: 0.5460
+2022-04-01 17:26:41,246 - Model - INFO - Mean IoU of Area_5_office_6: 0.5906
+2022-04-01 17:30:08,606 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5332
+2022-04-01 17:31:54,066 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3643
+2022-04-01 17:35:13,226 - Model - INFO - Mean IoU of Area_5_office_18: 0.5327
+2022-04-01 17:37:48,582 - Model - INFO - Mean IoU of Area_5_office_13: 0.5924
+2022-04-01 17:39:58,083 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7080
+2022-04-01 17:47:26,560 - Model - INFO - Mean IoU of Area_5_office_37: 0.4119
+2022-04-01 17:49:14,309 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6182
+2022-04-01 17:57:06,194 - Model - INFO - Mean IoU of Area_5_office_40: 0.3787
+2022-04-01 18:02:59,138 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3727
+2022-04-01 18:06:06,581 - Model - INFO - Mean IoU of Area_5_office_14: 0.5749
+2022-04-01 18:08:34,932 - Model - INFO - Mean IoU of Area_5_office_17: 0.5334
+2022-04-01 18:12:44,061 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7979
+2022-04-01 18:14:45,340 - Model - INFO - Mean IoU of Area_5_office_31: 0.5035
+2022-04-01 18:19:14,644 - Model - INFO - Mean IoU of Area_5_office_24: 0.4691
+2022-04-01 18:21:06,696 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5865
+2022-04-01 18:23:15,847 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3490
+2022-04-01 18:25:20,639 - Model - INFO - Mean IoU of Area_5_office_11: 0.5033
+2022-04-01 18:27:06,626 - Model - INFO - Mean IoU of Area_5_office_27: 0.5123
+2022-04-01 18:31:57,827 - Model - INFO - Mean IoU of Area_5_office_19: 0.5980
+2022-04-01 18:34:07,996 - Model - INFO - Mean IoU of Area_5_office_33: 0.5054
+2022-04-01 18:36:21,826 - Model - INFO - Mean IoU of Area_5_office_2: 0.4584
+2022-04-01 18:36:22,317 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.947 
+class wall          , IoU: 0.687 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.005 
+class window        , IoU: 0.309 
+class door          , IoU: 0.154 
+class table         , IoU: 0.574 
+class chair         , IoU: 0.588 
+class sofa          , IoU: 0.096 
+class bookcase      , IoU: 0.425 
+class board         , IoU: 0.406 
+class clutter       , IoU: 0.329 
+
+2022-04-01 18:36:22,317 - Model - INFO - eval point avg class IoU: 0.415142
+2022-04-01 18:36:22,318 - Model - INFO - eval whole scene point avg class acc: 0.499456
+2022-04-01 18:36:22,318 - Model - INFO - eval whole scene point accuracy: 0.772691
+2022-04-01 18:36:23,556 - Model - INFO - PARAMETER ...
+2022-04-01 18:36:23,556 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-01 18:36:36,216 - Model - INFO - The number of test data is: 67
+2022-04-01 18:36:38,111 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-01 18:39:34,115 - Model - INFO - Mean IoU of Area_5_office_36: 0.5646
+2022-04-01 18:43:05,724 - Model - INFO - Mean IoU of Area_5_office_15: 0.5041
+2022-04-01 18:45:16,907 - Model - INFO - Mean IoU of Area_5_office_42: 0.5395
+2022-04-01 18:47:26,992 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7666
+2022-04-01 18:51:04,454 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5919
+2022-04-01 18:55:02,295 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4771
+2022-04-01 18:57:17,796 - Model - INFO - Mean IoU of Area_5_office_35: 0.6314
+2022-04-01 18:59:27,699 - Model - INFO - Mean IoU of Area_5_office_23: 0.5182
+2022-04-01 19:03:36,709 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5525
+2022-04-01 19:05:19,300 - Model - INFO - Mean IoU of Area_5_office_5: 0.5568
+2022-04-01 19:08:01,461 - Model - INFO - Mean IoU of Area_5_office_39: 0.5525
+2022-04-01 19:09:16,357 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6418
+2022-04-01 19:13:22,236 - Model - INFO - Mean IoU of Area_5_office_41: 0.4998
+2022-04-01 19:15:24,579 - Model - INFO - Mean IoU of Area_5_office_34: 0.4992
+2022-04-01 19:17:25,302 - Model - INFO - Mean IoU of Area_5_office_3: 0.5661
+2022-04-01 19:21:48,471 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4565
+2022-04-01 19:26:29,831 - Model - INFO - Mean IoU of Area_5_office_29: 0.4696
+2022-04-01 19:28:44,958 - Model - INFO - Mean IoU of Area_5_office_8: 0.5506
+2022-04-01 19:30:49,019 - Model - INFO - Mean IoU of Area_5_office_16: 0.4689
+2022-04-01 19:32:35,407 - Model - INFO - Mean IoU of Area_5_office_9: 0.5388
+2022-04-01 19:36:15,923 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7417
+2022-04-01 19:38:21,575 - Model - INFO - Mean IoU of Area_5_office_32: 0.4566
+2022-04-01 19:49:38,904 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5213
+2022-04-01 19:51:03,677 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6002
+2022-04-01 19:52:17,825 - Model - INFO - Mean IoU of Area_5_office_20: 0.5467
+2022-04-01 19:53:55,212 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6831
+2022-04-01 20:09:46,127 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6873
+2022-04-01 20:12:52,114 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7234
+2022-04-01 20:25:06,351 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2456
+2022-04-01 20:26:10,509 - Model - INFO - Mean IoU of Area_5_office_30: 0.7121
+2022-04-01 20:34:03,426 - Model - INFO - Mean IoU of Area_5_office_38: 0.3170
+2022-04-01 20:35:38,373 - Model - INFO - Mean IoU of Area_5_office_25: 0.5686
+2022-04-01 20:38:30,263 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4852
+2022-04-01 20:40:24,579 - Model - INFO - Mean IoU of Area_5_office_28: 0.6190
+2022-04-01 20:42:25,783 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5065
+2022-04-01 20:42:43,170 - Model - INFO - Mean IoU of Area_5_storage_3: 0.4996
+2022-04-01 20:44:52,959 - Model - INFO - Mean IoU of Area_5_office_12: 0.5056
+2022-04-01 20:46:48,779 - Model - INFO - Mean IoU of Area_5_office_22: 0.5433
+2022-04-01 20:48:50,547 - Model - INFO - Mean IoU of Area_5_office_4: 0.5004
+2022-04-01 20:50:15,027 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6850
+2022-04-01 20:52:20,101 - Model - INFO - Mean IoU of Area_5_office_10: 0.5191
+2022-04-01 20:54:29,844 - Model - INFO - Mean IoU of Area_5_office_7: 0.5462
+2022-04-01 20:56:27,804 - Model - INFO - Mean IoU of Area_5_office_1: 0.4400
+2022-04-01 20:58:09,662 - Model - INFO - Mean IoU of Area_5_office_26: 0.4666
+2022-04-01 21:04:11,635 - Model - INFO - Mean IoU of Area_5_office_21: 0.5510
+2022-04-01 21:06:09,139 - Model - INFO - Mean IoU of Area_5_office_6: 0.5822
+2022-04-01 21:09:36,451 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5297
+2022-04-01 21:11:22,402 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3567
+2022-04-01 21:14:40,913 - Model - INFO - Mean IoU of Area_5_office_18: 0.5294
+2022-04-01 21:17:17,187 - Model - INFO - Mean IoU of Area_5_office_13: 0.5874
+2022-04-01 21:19:31,626 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7181
+2022-04-01 21:27:16,256 - Model - INFO - Mean IoU of Area_5_office_37: 0.4012
+2022-04-01 21:29:04,585 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6151
+2022-04-01 21:37:00,122 - Model - INFO - Mean IoU of Area_5_office_40: 0.3778
+2022-04-01 21:42:55,441 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3647
+2022-04-01 21:46:03,646 - Model - INFO - Mean IoU of Area_5_office_14: 0.5745
+2022-04-01 21:48:32,419 - Model - INFO - Mean IoU of Area_5_office_17: 0.5428
+2022-04-01 21:52:33,817 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7993
+2022-04-01 21:54:31,600 - Model - INFO - Mean IoU of Area_5_office_31: 0.5148
+2022-04-01 21:58:54,239 - Model - INFO - Mean IoU of Area_5_office_24: 0.4680
+2022-04-01 22:00:47,207 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5912
+2022-04-01 22:02:56,404 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3495
+2022-04-01 22:05:01,191 - Model - INFO - Mean IoU of Area_5_office_11: 0.5159
+2022-04-01 22:06:48,238 - Model - INFO - Mean IoU of Area_5_office_27: 0.5142
+2022-04-01 22:11:40,559 - Model - INFO - Mean IoU of Area_5_office_19: 0.5941
+2022-04-01 22:13:50,597 - Model - INFO - Mean IoU of Area_5_office_33: 0.5098
+2022-04-01 22:16:04,516 - Model - INFO - Mean IoU of Area_5_office_2: 0.4662
+2022-04-01 22:16:05,016 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.946 
+class wall          , IoU: 0.687 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.004 
+class window        , IoU: 0.312 
+class door          , IoU: 0.156 
+class table         , IoU: 0.567 
+class chair         , IoU: 0.575 
+class sofa          , IoU: 0.077 
+class bookcase      , IoU: 0.432 
+class board         , IoU: 0.408 
+class clutter       , IoU: 0.330 
+
+2022-04-01 22:16:05,016 - Model - INFO - eval point avg class IoU: 0.413088
+2022-04-01 22:16:05,016 - Model - INFO - eval whole scene point avg class acc: 0.492757
+2022-04-01 22:16:05,016 - Model - INFO - eval whole scene point accuracy: 0.773404
+2022-04-02 12:57:11,450 - Model - INFO - PARAMETER ...
+2022-04-02 12:57:11,450 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-02 12:57:16,590 - Model - INFO - The number of test data is: 67
+2022-04-02 12:57:18,514 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-02 12:58:30,257 - Model - INFO - Mean IoU of Area_5_office_36: 0.5621
+2022-04-02 12:59:54,646 - Model - INFO - Mean IoU of Area_5_office_15: 0.5060
+2022-04-02 13:00:45,331 - Model - INFO - Mean IoU of Area_5_office_42: 0.5402
+2022-04-02 13:01:36,545 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7827
+2022-04-02 13:03:10,494 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5893
+2022-04-02 13:04:57,202 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4723
+2022-04-02 13:05:51,673 - Model - INFO - Mean IoU of Area_5_office_35: 0.6198
+2022-04-02 13:06:42,369 - Model - INFO - Mean IoU of Area_5_office_23: 0.5234
+2022-04-02 13:08:33,653 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5473
+2022-04-02 13:09:15,154 - Model - INFO - Mean IoU of Area_5_office_5: 0.5383
+2022-04-02 13:10:23,358 - Model - INFO - Mean IoU of Area_5_office_39: 0.5501
+2022-04-02 13:10:51,789 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6371
+2022-04-02 13:12:40,081 - Model - INFO - Mean IoU of Area_5_office_41: 0.4910
+2022-04-02 13:13:30,405 - Model - INFO - Mean IoU of Area_5_office_34: 0.5132
+2022-04-02 13:14:17,709 - Model - INFO - Mean IoU of Area_5_office_3: 0.5392
+2022-04-02 13:16:14,234 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4773
+2022-04-02 13:18:18,258 - Model - INFO - Mean IoU of Area_5_office_29: 0.4638
+2022-04-02 13:19:12,353 - Model - INFO - Mean IoU of Area_5_office_8: 0.5183
+2022-04-02 13:20:00,418 - Model - INFO - Mean IoU of Area_5_office_16: 0.4868
+2022-04-02 13:20:41,815 - Model - INFO - Mean IoU of Area_5_office_9: 0.5330
+2022-04-02 13:22:12,813 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7224
+2022-04-02 13:23:02,139 - Model - INFO - Mean IoU of Area_5_office_32: 0.4685
+2022-04-02 13:28:49,783 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5337
+2022-04-02 13:29:22,914 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6280
+2022-04-02 13:29:50,833 - Model - INFO - Mean IoU of Area_5_office_20: 0.5632
+2022-04-02 13:30:27,902 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6912
+2022-04-02 13:39:48,989 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6954
+2022-04-02 13:41:09,268 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7312
+2022-04-02 13:48:00,676 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2494
+2022-04-02 13:48:25,894 - Model - INFO - Mean IoU of Area_5_office_30: 0.7086
+2022-04-02 13:52:10,039 - Model - INFO - Mean IoU of Area_5_office_38: 0.3343
+2022-04-02 13:52:47,611 - Model - INFO - Mean IoU of Area_5_office_25: 0.5767
+2022-04-02 13:53:58,527 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4815
+2022-04-02 13:54:44,077 - Model - INFO - Mean IoU of Area_5_office_28: 0.5901
+2022-04-02 13:55:32,653 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5104
+2022-04-02 13:55:39,189 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5210
+2022-04-02 13:56:30,056 - Model - INFO - Mean IoU of Area_5_office_12: 0.5031
+2022-04-02 13:57:16,000 - Model - INFO - Mean IoU of Area_5_office_22: 0.5261
+2022-04-02 13:58:03,894 - Model - INFO - Mean IoU of Area_5_office_4: 0.4848
+2022-04-02 13:58:36,848 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6867
+2022-04-02 13:59:25,572 - Model - INFO - Mean IoU of Area_5_office_10: 0.4880
+2022-04-02 14:00:17,111 - Model - INFO - Mean IoU of Area_5_office_7: 0.5128
+2022-04-02 14:01:03,462 - Model - INFO - Mean IoU of Area_5_office_1: 0.4419
+2022-04-02 14:01:42,727 - Model - INFO - Mean IoU of Area_5_office_26: 0.4708
+2022-04-02 14:04:31,616 - Model - INFO - Mean IoU of Area_5_office_21: 0.5478
+2022-04-02 14:05:18,490 - Model - INFO - Mean IoU of Area_5_office_6: 0.5440
+2022-04-02 14:06:46,755 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5334
+2022-04-02 14:07:27,942 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3555
+2022-04-02 14:08:50,102 - Model - INFO - Mean IoU of Area_5_office_18: 0.5487
+2022-04-02 14:09:53,960 - Model - INFO - Mean IoU of Area_5_office_13: 0.5868
+2022-04-02 14:10:47,231 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7344
+2022-04-02 14:14:19,830 - Model - INFO - Mean IoU of Area_5_office_37: 0.4208
+2022-04-02 14:15:02,316 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6117
+2022-04-02 14:19:01,547 - Model - INFO - Mean IoU of Area_5_office_40: 0.3837
+2022-04-02 14:21:51,040 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3695
+2022-04-02 14:23:10,717 - Model - INFO - Mean IoU of Area_5_office_14: 0.5650
+2022-04-02 14:24:10,830 - Model - INFO - Mean IoU of Area_5_office_17: 0.5412
+2022-04-02 14:25:54,975 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8067
+2022-04-02 14:26:43,243 - Model - INFO - Mean IoU of Area_5_office_31: 0.5062
+2022-04-02 14:28:42,652 - Model - INFO - Mean IoU of Area_5_office_24: 0.4567
+2022-04-02 14:29:29,553 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5908
+2022-04-02 14:30:24,773 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3543
+2022-04-02 14:31:14,382 - Model - INFO - Mean IoU of Area_5_office_11: 0.4885
+2022-04-02 14:31:56,043 - Model - INFO - Mean IoU of Area_5_office_27: 0.5048
+2022-04-02 14:34:06,189 - Model - INFO - Mean IoU of Area_5_office_19: 0.5974
+2022-04-02 14:34:58,356 - Model - INFO - Mean IoU of Area_5_office_33: 0.4940
+2022-04-02 14:35:50,646 - Model - INFO - Mean IoU of Area_5_office_2: 0.4524
+2022-04-02 14:35:51,133 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.944 
+class wall          , IoU: 0.687 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.008 
+class window        , IoU: 0.289 
+class door          , IoU: 0.144 
+class table         , IoU: 0.545 
+class chair         , IoU: 0.614 
+class sofa          , IoU: 0.100 
+class bookcase      , IoU: 0.430 
+class board         , IoU: 0.385 
+class clutter       , IoU: 0.342 
+
+2022-04-02 14:35:51,133 - Model - INFO - eval point avg class IoU: 0.412853
+2022-04-02 14:35:51,133 - Model - INFO - eval whole scene point avg class acc: 0.491863
+2022-04-02 14:35:51,133 - Model - INFO - eval whole scene point accuracy: 0.773988
+2022-04-02 14:35:52,390 - Model - INFO - PARAMETER ...
+2022-04-02 14:35:52,390 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-02 14:36:04,678 - Model - INFO - The number of test data is: 67
+2022-04-02 14:36:06,586 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-02 14:38:52,808 - Model - INFO - Mean IoU of Area_5_office_36: 0.5561
+2022-04-02 14:42:06,551 - Model - INFO - Mean IoU of Area_5_office_15: 0.4828
+2022-04-02 14:44:06,512 - Model - INFO - Mean IoU of Area_5_office_42: 0.5165
+2022-04-02 14:46:06,486 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7684
+2022-04-02 14:49:27,094 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5880
+2022-04-02 14:53:07,244 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4649
+2022-04-02 14:55:13,462 - Model - INFO - Mean IoU of Area_5_office_35: 0.6223
+2022-04-02 14:57:15,715 - Model - INFO - Mean IoU of Area_5_office_23: 0.5352
+2022-04-02 15:01:11,675 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5382
+2022-04-02 15:02:51,996 - Model - INFO - Mean IoU of Area_5_office_5: 0.5321
+2022-04-02 15:05:29,882 - Model - INFO - Mean IoU of Area_5_office_39: 0.5254
+2022-04-02 15:06:40,043 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6285
+2022-04-02 15:10:39,076 - Model - INFO - Mean IoU of Area_5_office_41: 0.4836
+2022-04-02 15:12:38,700 - Model - INFO - Mean IoU of Area_5_office_34: 0.4892
+2022-04-02 15:14:33,103 - Model - INFO - Mean IoU of Area_5_office_3: 0.5497
+2022-04-02 15:18:42,842 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4689
+2022-04-02 15:23:05,487 - Model - INFO - Mean IoU of Area_5_office_29: 0.4481
+2022-04-02 15:25:13,720 - Model - INFO - Mean IoU of Area_5_office_8: 0.5291
+2022-04-02 15:27:11,562 - Model - INFO - Mean IoU of Area_5_office_16: 0.4818
+2022-04-02 15:28:52,470 - Model - INFO - Mean IoU of Area_5_office_9: 0.5378
+2022-04-02 15:32:21,175 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7309
+2022-04-02 15:34:19,993 - Model - INFO - Mean IoU of Area_5_office_32: 0.4523
+2022-04-02 15:45:07,401 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5239
+2022-04-02 15:46:25,210 - Model - INFO - Mean IoU of Area_5_storage_4: 0.5958
+2022-04-02 15:47:32,596 - Model - INFO - Mean IoU of Area_5_office_20: 0.5450
+2022-04-02 15:49:01,417 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6869
+2022-04-02 16:04:22,067 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6843
+2022-04-02 16:07:25,069 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7436
+2022-04-02 16:19:05,595 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2325
+2022-04-02 16:20:08,342 - Model - INFO - Mean IoU of Area_5_office_30: 0.6895
+2022-04-02 16:27:41,878 - Model - INFO - Mean IoU of Area_5_office_38: 0.3287
+2022-04-02 16:29:11,188 - Model - INFO - Mean IoU of Area_5_office_25: 0.5708
+2022-04-02 16:31:54,615 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4762
+2022-04-02 16:33:44,302 - Model - INFO - Mean IoU of Area_5_office_28: 0.5906
+2022-04-02 16:35:39,443 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.4909
+2022-04-02 16:35:56,196 - Model - INFO - Mean IoU of Area_5_storage_3: 0.4977
+2022-04-02 16:37:55,245 - Model - INFO - Mean IoU of Area_5_office_12: 0.5101
+2022-04-02 16:39:41,699 - Model - INFO - Mean IoU of Area_5_office_22: 0.5275
+2022-04-02 16:41:32,793 - Model - INFO - Mean IoU of Area_5_office_4: 0.4750
+2022-04-02 16:42:50,333 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6784
+2022-04-02 16:44:45,142 - Model - INFO - Mean IoU of Area_5_office_10: 0.5232
+2022-04-02 16:46:43,762 - Model - INFO - Mean IoU of Area_5_office_7: 0.5274
+2022-04-02 16:48:30,921 - Model - INFO - Mean IoU of Area_5_office_1: 0.4332
+2022-04-02 16:50:03,393 - Model - INFO - Mean IoU of Area_5_office_26: 0.4886
+2022-04-02 16:55:41,718 - Model - INFO - Mean IoU of Area_5_office_21: 0.5352
+2022-04-02 16:57:28,573 - Model - INFO - Mean IoU of Area_5_office_6: 0.5856
+2022-04-02 17:00:40,432 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5225
+2022-04-02 17:02:17,151 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3617
+2022-04-02 17:05:20,334 - Model - INFO - Mean IoU of Area_5_office_18: 0.5459
+2022-04-02 17:07:43,424 - Model - INFO - Mean IoU of Area_5_office_13: 0.5940
+2022-04-02 17:09:46,708 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7127
+2022-04-02 17:16:56,017 - Model - INFO - Mean IoU of Area_5_office_37: 0.4259
+2022-04-02 17:18:35,136 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6285
+2022-04-02 17:26:07,742 - Model - INFO - Mean IoU of Area_5_office_40: 0.3826
+2022-04-02 17:31:44,785 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.4042
+2022-04-02 17:34:43,651 - Model - INFO - Mean IoU of Area_5_office_14: 0.5635
+2022-04-02 17:37:03,827 - Model - INFO - Mean IoU of Area_5_office_17: 0.5305
+2022-04-02 17:40:52,049 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.7904
+2022-04-02 17:42:43,706 - Model - INFO - Mean IoU of Area_5_office_31: 0.4964
+2022-04-02 17:46:53,313 - Model - INFO - Mean IoU of Area_5_office_24: 0.4555
+2022-04-02 17:48:40,758 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5966
+2022-04-02 17:50:47,891 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3522
+2022-04-02 17:52:46,575 - Model - INFO - Mean IoU of Area_5_office_11: 0.4984
+2022-04-02 17:54:27,788 - Model - INFO - Mean IoU of Area_5_office_27: 0.4997
+2022-04-02 17:59:08,369 - Model - INFO - Mean IoU of Area_5_office_19: 0.5853
+2022-04-02 18:01:11,957 - Model - INFO - Mean IoU of Area_5_office_33: 0.4858
+2022-04-02 18:03:18,242 - Model - INFO - Mean IoU of Area_5_office_2: 0.4499
+2022-04-02 18:03:18,738 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.947 
+class wall          , IoU: 0.689 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.007 
+class window        , IoU: 0.299 
+class door          , IoU: 0.144 
+class table         , IoU: 0.571 
+class chair         , IoU: 0.582 
+class sofa          , IoU: 0.090 
+class bookcase      , IoU: 0.411 
+class board         , IoU: 0.366 
+class clutter       , IoU: 0.327 
+
+2022-04-02 18:03:18,738 - Model - INFO - eval point avg class IoU: 0.408442
+2022-04-02 18:03:18,738 - Model - INFO - eval whole scene point avg class acc: 0.495624
+2022-04-02 18:03:18,738 - Model - INFO - eval whole scene point accuracy: 0.769928
+2022-04-02 18:03:20,046 - Model - INFO - PARAMETER ...
+2022-04-02 18:03:20,046 - Model - INFO - Namespace(gpu='0', log_dir='pointnet2_sem_seg', num_point=4096, num_votes=5, test_area=5)
+2022-04-02 18:03:32,495 - Model - INFO - The number of test data is: 67
+2022-04-02 18:03:34,403 - Model - INFO - ---- EVALUATION WHOLE SCENE----
+2022-04-02 18:06:29,000 - Model - INFO - Mean IoU of Area_5_office_36: 0.5663
+2022-04-02 18:09:52,999 - Model - INFO - Mean IoU of Area_5_office_15: 0.5019
+2022-04-02 18:11:59,130 - Model - INFO - Mean IoU of Area_5_office_42: 0.5404
+2022-04-02 18:14:05,226 - Model - INFO - Mean IoU of Area_5_hallway_11: 0.7788
+2022-04-02 18:17:43,705 - Model - INFO - Mean IoU of Area_5_lobby_1: 0.5891
+2022-04-02 18:21:41,368 - Model - INFO - Mean IoU of Area_5_hallway_15: 0.4677
+2022-04-02 18:23:56,911 - Model - INFO - Mean IoU of Area_5_office_35: 0.6179
+2022-04-02 18:26:06,228 - Model - INFO - Mean IoU of Area_5_office_23: 0.5270
+2022-04-02 18:30:10,261 - Model - INFO - Mean IoU of Area_5_hallway_13: 0.5454
+2022-04-02 18:31:52,468 - Model - INFO - Mean IoU of Area_5_office_5: 0.5413
+2022-04-02 18:34:32,818 - Model - INFO - Mean IoU of Area_5_office_39: 0.5512
+2022-04-02 18:35:44,721 - Model - INFO - Mean IoU of Area_5_hallway_8: 0.6396
+2022-04-02 18:39:48,240 - Model - INFO - Mean IoU of Area_5_office_41: 0.4921
+2022-04-02 18:41:49,851 - Model - INFO - Mean IoU of Area_5_office_34: 0.5145
+2022-04-02 18:43:46,617 - Model - INFO - Mean IoU of Area_5_office_3: 0.5378
+2022-04-02 18:48:00,905 - Model - INFO - Mean IoU of Area_5_conferenceRoom_3: 0.4751
+2022-04-02 18:52:33,046 - Model - INFO - Mean IoU of Area_5_office_29: 0.4635
+2022-04-02 18:54:43,397 - Model - INFO - Mean IoU of Area_5_office_8: 0.5224
+2022-04-02 18:56:42,467 - Model - INFO - Mean IoU of Area_5_office_16: 0.4853
+2022-04-02 18:58:25,068 - Model - INFO - Mean IoU of Area_5_office_9: 0.5355
+2022-04-02 19:01:56,265 - Model - INFO - Mean IoU of Area_5_hallway_7: 0.7233
+2022-04-02 19:04:00,531 - Model - INFO - Mean IoU of Area_5_office_32: 0.4658
+2022-04-02 19:15:17,982 - Model - INFO - Mean IoU of Area_5_hallway_5: 0.5333
+2022-04-02 19:16:43,182 - Model - INFO - Mean IoU of Area_5_storage_4: 0.6291
+2022-04-02 19:17:56,994 - Model - INFO - Mean IoU of Area_5_office_20: 0.5621
+2022-04-02 19:19:34,146 - Model - INFO - Mean IoU of Area_5_pantry_1: 0.6902
+2022-04-02 19:35:26,619 - Model - INFO - Mean IoU of Area_5_hallway_2: 0.6975
+2022-04-02 19:38:38,452 - Model - INFO - Mean IoU of Area_5_hallway_3: 0.7287
+2022-04-02 19:50:49,236 - Model - INFO - Mean IoU of Area_5_hallway_1: 0.2507
+2022-04-02 19:51:53,198 - Model - INFO - Mean IoU of Area_5_office_30: 0.7074
+2022-04-02 19:59:52,409 - Model - INFO - Mean IoU of Area_5_office_38: 0.3339
+2022-04-02 20:01:30,543 - Model - INFO - Mean IoU of Area_5_office_25: 0.5743
+2022-04-02 20:04:27,994 - Model - INFO - Mean IoU of Area_5_conferenceRoom_1: 0.4781
+2022-04-02 20:06:23,435 - Model - INFO - Mean IoU of Area_5_office_28: 0.5917
+2022-04-02 20:08:24,832 - Model - INFO - Mean IoU of Area_5_hallway_4: 0.5107
+2022-04-02 20:08:42,168 - Model - INFO - Mean IoU of Area_5_storage_3: 0.5150
+2022-04-02 20:10:51,172 - Model - INFO - Mean IoU of Area_5_office_12: 0.5048
+2022-04-02 20:12:47,368 - Model - INFO - Mean IoU of Area_5_office_22: 0.5264
+2022-04-02 20:14:48,989 - Model - INFO - Mean IoU of Area_5_office_4: 0.4816
+2022-04-02 20:16:12,831 - Model - INFO - Mean IoU of Area_5_hallway_14: 0.6851
+2022-04-02 20:18:17,237 - Model - INFO - Mean IoU of Area_5_office_10: 0.4907
+2022-04-02 20:20:26,785 - Model - INFO - Mean IoU of Area_5_office_7: 0.5114
+2022-04-02 20:22:23,106 - Model - INFO - Mean IoU of Area_5_office_1: 0.4442
+2022-04-02 20:24:04,346 - Model - INFO - Mean IoU of Area_5_office_26: 0.4722
+2022-04-02 20:30:00,663 - Model - INFO - Mean IoU of Area_5_office_21: 0.5531
+2022-04-02 20:31:53,596 - Model - INFO - Mean IoU of Area_5_office_6: 0.5414
+2022-04-02 20:35:15,185 - Model - INFO - Mean IoU of Area_5_hallway_9: 0.5322
+2022-04-02 20:36:57,581 - Model - INFO - Mean IoU of Area_5_storage_1: 0.3566
+2022-04-02 20:40:15,247 - Model - INFO - Mean IoU of Area_5_office_18: 0.5518
+2022-04-02 20:42:50,869 - Model - INFO - Mean IoU of Area_5_office_13: 0.5859
+2022-04-02 20:45:04,611 - Model - INFO - Mean IoU of Area_5_hallway_12: 0.7324
+2022-04-02 20:52:43,814 - Model - INFO - Mean IoU of Area_5_office_37: 0.4240
+2022-04-02 20:54:28,656 - Model - INFO - Mean IoU of Area_5_WC_2: 0.6135
+2022-04-02 21:02:22,600 - Model - INFO - Mean IoU of Area_5_office_40: 0.3835
+2022-04-02 21:08:16,909 - Model - INFO - Mean IoU of Area_5_conferenceRoom_2: 0.3661
+2022-04-02 21:11:24,312 - Model - INFO - Mean IoU of Area_5_office_14: 0.5670
+2022-04-02 21:13:51,703 - Model - INFO - Mean IoU of Area_5_office_17: 0.5423
+2022-04-02 21:17:52,717 - Model - INFO - Mean IoU of Area_5_hallway_10: 0.8093
+2022-04-02 21:19:50,343 - Model - INFO - Mean IoU of Area_5_office_31: 0.5082
+2022-04-02 21:24:12,159 - Model - INFO - Mean IoU of Area_5_office_24: 0.4553
+2022-04-02 21:26:05,020 - Model - INFO - Mean IoU of Area_5_WC_1: 0.5884
+2022-04-02 21:28:14,339 - Model - INFO - Mean IoU of Area_5_storage_2: 0.3540
+2022-04-02 21:30:17,034 - Model - INFO - Mean IoU of Area_5_office_11: 0.4875
+2022-04-02 21:32:03,957 - Model - INFO - Mean IoU of Area_5_office_27: 0.5059
+2022-04-02 21:36:54,233 - Model - INFO - Mean IoU of Area_5_office_19: 0.5983
+2022-04-02 21:39:00,279 - Model - INFO - Mean IoU of Area_5_office_33: 0.4910
+2022-04-02 21:41:10,467 - Model - INFO - Mean IoU of Area_5_office_2: 0.4513
+2022-04-02 21:41:10,959 - Model - INFO - ------- IoU --------
+class ceiling       , IoU: 0.878 
+class floor         , IoU: 0.944 
+class wall          , IoU: 0.687 
+class beam          , IoU: 0.000 
+class column        , IoU: 0.007 
+class window        , IoU: 0.289 
+class door          , IoU: 0.145 
+class table         , IoU: 0.545 
+class chair         , IoU: 0.615 
+class sofa          , IoU: 0.096 
+class bookcase      , IoU: 0.431 
+class board         , IoU: 0.385 
+class clutter       , IoU: 0.343 
+
+2022-04-02 21:41:10,959 - Model - INFO - eval point avg class IoU: 0.412735
+2022-04-02 21:41:10,959 - Model - INFO - eval whole scene point avg class acc: 0.491810
+2022-04-02 21:41:10,959 - Model - INFO - eval whole scene point accuracy: 0.774202
