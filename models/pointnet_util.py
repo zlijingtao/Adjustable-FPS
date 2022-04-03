@@ -15,7 +15,7 @@ from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 '''Universal Setting'''
 PRESORT_FLAG = True
 PARALLEL_OPTION = True
-SELECT_DIM = 2
+SELECT_DIM = 0
 SAVE_COMPUTATION_TWO_AXIS = False
 
 '''Default Parpameter'''
