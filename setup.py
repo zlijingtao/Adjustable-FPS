@@ -5,6 +5,7 @@ import argparse
 parser = argparse.ArgumentParser(description='PyTorch Dimsort Sampling Test')
 parser.add_argument('--presort', action='store_true', default=False, help='set to true if PD data is presorted')
 parser.add_argument('--parallel_option', action='store_true', default=False, help='set to true to enable parallel FPS')
+parser.add_argument('--parallel_m', default=0, type=int, help='set the PARALLEL_M, number of partitions to divide the point cloud into sub-point clouds')
 parser.add_argument('--sort_dim', default=0, type=int, help='which axis the presorting is on?')
 parser.add_argument('--save_computation_two_axis', action='store_true', default=False, help='set to true to only compute distnace on only two unsorted axises')
 parser.add_argument('--visualize', action='store_true', default=False, help='set to true if you want visualization of a PD data of the sampling')
@@ -43,6 +44,9 @@ with open(file_name, "w") as out_file:
                 line = "PRESORT_FLAG = True\n" if args.presort else "PRESORT_FLAG = False\n"
             elif "PARALLEL_OPTION = " in line:
                 line = "PARALLEL_OPTION = True\n" if args.parallel_option else "PARALLEL_OPTION = False\n"
+            elif "PARALLEL_M = " in line:
+                line = "PARALLEL_M = {}\n".format(args.parallel_m)
+            
             elif "SELECT_DIM = " in line:
                 line = "SELECT_DIM = {}\n".format(args.sort_dim)
             elif "SAVE_COMPUTATION_TWO_AXIS = " in line:

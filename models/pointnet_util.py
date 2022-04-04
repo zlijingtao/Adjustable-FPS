@@ -15,6 +15,7 @@ from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 '''Universal Setting'''
 PRESORT_FLAG = True
 PARALLEL_OPTION = True
+PARALLEL_M = 16
 SELECT_DIM = 0
 SAVE_COMPUTATION_TWO_AXIS = False
 
@@ -260,15 +261,24 @@ def farthest_point_sample(xyz, npoint):
     if TEST_DIMSORT:
         
         if PARALLEL_OPTION: # solve problem on 16 cores.
+
+            if PARALLEL_M > npoint:
+                real_parallel_m = npoint
+            elif npoint % PARALLEL_M != 0:
+                print("Warning: npoint is can not be perfectly divided by parallel_m")
+                real_parallel_m = PARALLEL_M
+            else:
+                real_parallel_m = PARALLEL_M
+
             distance = torch.ones(B, N).to(device) * 1e10
-            farthest = torch.zeros((B, 16)).long().to(device)
+            farthest = torch.zeros((B, real_parallel_m)).long().to(device)
             batch_indices = torch.arange(B, dtype=torch.long).to(device)
-            point_partition = npoint//16
+            point_partition = npoint//real_parallel_m
             
-            for c in range(16):
-                local_region_l = (N // 16) * c
-                local_region_u = N // 16 + local_region_l
-                if c == 15:
+            for c in range(real_parallel_m):
+                local_region_l = (N // real_parallel_m) * c
+                local_region_u = N // real_parallel_m + local_region_l
+                if c == real_parallel_m - 1:
                     local_region_u = N
                 
                 farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
@@ -284,6 +294,8 @@ def farthest_point_sample(xyz, npoint):
                         elif SELECT_DIM == 2:
                             centroid = xyz[batch_indices, farthest[:, c], :2].view(B, 1, 2)
                     
+                    if point_partition <= 1:
+                        return centroids
                     x_range = torch.clip((farthest[:, c].view(B, 1) + torch.arange(- DIMSORT_RANGE//2, DIMSORT_RANGE//2 + 1, dtype=torch.long).to(device)), local_region_l, local_region_u-1).to(device)
                     
                     dist = torch.ones(B, N).to(device) * 1e10
@@ -351,15 +363,23 @@ def farthest_point_sample(xyz, npoint):
 
     else:
         if PARALLEL_OPTION: # solve problem on 16 cores.
+
+            if PARALLEL_M > npoint:
+                real_parallel_m = npoint
+            elif npoint % PARALLEL_M != 0:
+                print("Warning: npoint is can not be perfectly divided by parallel_m")
+                real_parallel_m = PARALLEL_M
+            else:
+                real_parallel_m = PARALLEL_M
             distance = torch.ones(B, N).to(device) * 1e10
-            farthest = torch.zeros((B, 16)).long().to(device)
+            farthest = torch.zeros((B, real_parallel_m)).long().to(device)
             batch_indices = torch.arange(B, dtype=torch.long).to(device)
-            point_partition = npoint//16
+            point_partition = npoint//real_parallel_m
             
-            for c in range(16):
-                local_region_l = (N // 16) * c
-                local_region_u = N // 16 + local_region_l
-                if c == 15:
+            for c in range(real_parallel_m):
+                local_region_l = (N // real_parallel_m) * c
+                local_region_u = N // real_parallel_m + local_region_l
+                if c == real_parallel_m - 1:
                     local_region_u = N
                 farthest[:, c] =  torch.randint(local_region_l, local_region_u, (B,), dtype=torch.long).to(device)
                 for i in range(point_partition):
@@ -374,6 +394,9 @@ def farthest_point_sample(xyz, npoint):
                         elif SELECT_DIM == 2:
                             centroid = xyz[batch_indices, farthest[:, c], :2].view(B, 1, 2)
                     
+                    if point_partition <= 1:
+                        return centroids
+
                     x_range = torch.arange(local_region_l, local_region_u, dtype=torch.long).unsqueeze(0).repeat(B, 1).to(device)
                     dist = torch.ones(B, N).to(device) * 1e10
                     if not SAVE_COMPUTATION_TWO_AXIS:
