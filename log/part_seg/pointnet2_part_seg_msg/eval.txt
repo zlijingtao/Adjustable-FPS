@@ -3034,3 +3034,5 @@
 2022-03-30 12:22:13,320 - Model - INFO - Class avg mIOU is: 0.81063
 2022-03-30 12:22:13,320 - Model - INFO - Inctance avg mIOU (10-time avg) is: 0.84392 (0.00000)
 2022-03-30 12:22:13,320 - Model - INFO - Time cost (10-time avg) is: 0.41890 (0.00000)
+2022-04-04 14:32:50,092 - Model - INFO - PARAMETER ...
+2022-04-04 14:32:50,092 - Model - INFO - Namespace(avg_time=10, batch_size=24, gpu='0', log_dir='pointnet2_part_seg_msg', normal=True, num_batch=120, num_point=2048, num_votes=1)
