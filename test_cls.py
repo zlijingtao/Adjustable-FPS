@@ -76,7 +76,7 @@ def single_test(model, num_batch, num_class=40, vote_num=1):
         for j in tqdm(range(num_batch), total=num_batch):
             points = torch.load("class_test_sample//class_point_batch_{}.pt".format(j))
             target = torch.load("class_test_sample//class_target_batch_{}.pt".format(j))
-            
+            # print(points.size())
             if BATCH_SIZE < 24:
                 points = points[:BATCH_SIZE, :, :]
                 target = target[:BATCH_SIZE, :]

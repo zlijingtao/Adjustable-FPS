@@ -14,7 +14,7 @@ import importlib
 from tqdm import tqdm
 import provider
 import numpy as np
-from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE
+from models.pointnet_util import VISUALIZE, USE_GPU, BATCH_SIZE
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
@@ -151,16 +151,6 @@ def main(args):
 
                     torch_data = torch.Tensor(batch_data)
 
-                    
-
-                    # batch_point_index = torch.Tensor(batch_point_index)
-                    # batch_smpw = torch.Tensor(batch_smpw)
-                    # if PRESORT_FLAG:
-                    #     torch_data, batch_point_index, batch_smpw = pcloud_sort(torch_data, batch_point_index, batch_smpw, sel_dim = SELECT_DIM)
-                    
-                    # batch_point_index = batch_point_index.numpy()
-                    # batch_smpw = batch_smpw.numpy()
-
                     torch_data = torch_data.transpose(2, 1)
                     if USE_GPU:
                         torch_data= torch_data.float().cuda()
@@ -185,7 +175,6 @@ def main(args):
                 total_iou_deno_class[l] += total_iou_deno_class_tmp[l]
 
             iou_map = np.array(total_correct_class_tmp) / (np.array(total_iou_deno_class_tmp, dtype=np.float) + 1e-6)
-            print(iou_map)
             arr = np.array(total_seen_class_tmp)
             tmp_iou = np.mean(iou_map[arr != 0])
             log_string('Mean IoU of %s: %.4f' % (scene_id[batch_idx], tmp_iou))
