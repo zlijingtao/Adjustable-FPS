@@ -13,6 +13,7 @@ parser.add_argument('--use_gpu', action='store_true', default=False, help='if us
 parser.add_argument('--batch_size', default=24, type=int, help='batch size of the PD data input, maximum is 24')
 parser.add_argument('--test_dimsort', action='store_true', default=False, help='flag to enable dimsort heuristic')
 parser.add_argument('--dimsort_range', default=4, type=int, help='specify the dimsort range')
+parser.add_argument('--coarse_sort_k', default=1, type=int, help='specify the coarse_sort_k')
 parser.add_argument('--test_grid_gcn', action='store_true', default=False, help='flag to enable grid gcn')
 parser.add_argument('--gridgcn_sample_opt', default='rvs', type=str, help='grid-gcn sample option, choose from cas or rvs')
 parser.add_argument('--voxel_size', default=40, type=int, help='voxel_size for grid-gcn')
@@ -42,6 +43,8 @@ with open(file_name, "w") as out_file:
         try:
             if "PRESORT_FLAG = " in line:
                 line = "PRESORT_FLAG = True\n" if args.presort else "PRESORT_FLAG = False\n"
+            elif "COARSESORT_SETTING = " in line:
+                line = "COARSESORT_SETTING = {}\n".format(args.coarse_sort_k)
             elif "PARALLEL_OPTION = " in line:
                 line = "PARALLEL_OPTION = True\n" if args.parallel_option else "PARALLEL_OPTION = False\n"
             elif "PARALLEL_M = " in line:

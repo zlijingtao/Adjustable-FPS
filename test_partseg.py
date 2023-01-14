@@ -11,7 +11,7 @@ import sys
 import importlib
 from tqdm import tqdm
 import numpy as np
-from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE
+from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE, COARSESORT_SETTING
 from PIL import Image
 from visualizer.pc_utils import point_cloud_three_views
 from time import time
@@ -128,7 +128,7 @@ def main(args):
                     # print(points.size())
                     # print(target.size())
                     # points = points.transpose(2, 1)
-                    points, target = pcloud_sort(points.transpose(2, 1), target, sel_dim = SELECT_DIM)
+                    points, target = pcloud_sort(points.transpose(2, 1), target, sel_dim = SELECT_DIM, coarse_sort = COARSESORT_SETTING)
                     points = points.transpose(2, 1)
                 
                 if VISUALIZE and j == 0:

@@ -5,7 +5,7 @@ Date: Nov 2019
 from data_utils.ModelNetDataLoader import ModelNetDataLoader
 import argparse
 import numpy as np
-from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE
+from models.pointnet_util import pcloud_sort, PRESORT_FLAG, VISUALIZE, SELECT_DIM, USE_GPU, BATCH_SIZE, COARSESORT_SETTING
 import os
 import torch
 import logging
@@ -88,7 +88,7 @@ def single_test(model, num_batch, num_class=40, vote_num=1):
             
             if PRESORT_FLAG:
                 points = points.permute(0, 2, 1)
-                points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM)
+                points, target = pcloud_sort(points, target, sel_dim = SELECT_DIM, coarse_sort=COARSESORT_SETTING)
                 points = points.permute(0, 2, 1)
             if VISUALIZE and j == 0:
                 # print("save original PD")

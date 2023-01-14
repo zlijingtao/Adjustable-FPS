@@ -14,8 +14,9 @@ from grid_gcn.grid_gcn_final import RVS, CAS, VoxelModule
 
 '''Universal Setting'''
 PRESORT_FLAG = True
+COARSESORT_SETTING = 16
 PARALLEL_OPTION = True
-PARALLEL_M = 64
+PARALLEL_M = 32
 SELECT_DIM = 2
 SAVE_COMPUTATION_TWO_AXIS = False
 
@@ -530,10 +531,11 @@ def query_ball_point(radius, nsample, xyz, new_xyz):
     group_idx[mask] = group_first[mask]
     return group_idx
 
-def pcloud_sort(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
+def pcloud_sort(npoint, npoint2 = None, npoint3 = None, sel_dim = -1, coarse_sort = 1):
     #firstly choose the longest dimension to sort
     # print("Doing sorting")
     batch_size = npoint.size(0)
+    n_point = npoint.size(1)
     if sel_dim == -1:
         range_x = torch.max(npoint[:, :, 0]) - torch.min(npoint[:, :, 0])
         range_y = torch.max(npoint[:, :, 1]) - torch.min(npoint[:, :, 1])
@@ -551,7 +553,17 @@ def pcloud_sort(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
     if npoint3 is not None:
         output3 = torch.zeros_like(npoint3)
     for i in range(batch_size):
-        _, idx = torch.sort(npoint[i, :, sel_dim])
+        if coarse_sort == 1:
+            _, idx = torch.sort(npoint[i, :, sel_dim])
+        else:
+            _, idx = torch.sort(npoint[i, :, sel_dim])
+            k_idx = []
+            for j in range(n_point//coarse_sort):
+                r=torch.randperm(coarse_sort)
+                temp_idx = idx[j*coarse_sort:(j+1)*coarse_sort]
+                k_idx.append(temp_idx[r])
+            idx = torch.cat(k_idx, dim=0)
+        
         output[i, :, :] = npoint[i, idx, :]
         
         if npoint2 is not None:
@@ -577,10 +589,11 @@ def pcloud_sort(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
 
 
 
-def pcloud_sort_np(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
+def pcloud_sort_np(npoint, npoint2 = None, npoint3 = None, sel_dim = -1, coarse_sort = 1):
     #firstly choose the longest dimension to sort
     # print("Doing sorting")
     batch_size = npoint.shape[0]
+    n_point = npoint.shape[1]
     if sel_dim == -1:
         range_x = np.max(npoint[:, :, 0]) - np.min(npoint[:, :, 0])
         range_y = np.max(npoint[:, :, 1]) - np.min(npoint[:, :, 1])
@@ -598,7 +611,17 @@ def pcloud_sort_np(npoint, npoint2 = None, npoint3 = None, sel_dim = -1):
     if npoint3 is not None:
         output3 = np.zeros_like(npoint3)
     for i in range(batch_size):
-        idx = np.argsort(npoint[i, :, sel_dim])
+        # coarse_sort is untested TODO: test it
+        if coarse_sort == 1:
+            idx = np.argsort(npoint[i, :, sel_dim])
+        else:
+            idx = np.argsort(npoint[i, :, sel_dim])
+            k_idx = []
+            for j in range(n_point//coarse_sort):
+                r=np.randperm(coarse_sort)
+                temp_idx = idx[j*coarse_sort:(j+1)*coarse_sort]
+                k_idx.append(temp_idx[r])
+            idx = np.concatenate(k_idx, axis=0)
         output[i, :, :] = npoint[i, idx, :]
         
         if npoint2 is not None:

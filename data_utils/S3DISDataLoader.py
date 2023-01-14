@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from torch.utils.data import Dataset
-from models.pointnet_util import pcloud_sort_np, PRESORT_FLAG, SELECT_DIM
+from models.pointnet_util import pcloud_sort_np, PRESORT_FLAG, SELECT_DIM, COARSESORT_SETTING
 
 class S3DISDataset(Dataset):
     def __init__(self, split='train', data_root='trainval_fullarea', num_point=4096, test_area=5, block_size=1.0, sample_rate=1.0, transform=None):
@@ -101,7 +101,7 @@ class ScannetDatasetWholeScene():
 
             if PRESORT_FLAG:
                 data = np.expand_dims(data, axis=0)
-                data = pcloud_sort_np(data, sel_dim= SELECT_DIM)
+                data = pcloud_sort_np(data, sel_dim= SELECT_DIM, coarse_sort=COARSESORT_SETTING)
                 data = np.squeeze(data, axis=0)
             points = data[:, :3]
             self.scene_points_list.append(data[:, :6])
