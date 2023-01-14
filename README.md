@@ -1,24 +1,25 @@
-# Dimsort on PD sampling acceleration
+# Adjustable Farthest Point Sampling Method for PointNet++
 
 This repo is adapted from [
-Pointnet_Pointnet2_pytorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch), for testing the Dimsort Sampling algorithm Performance on downstreaming PointNet++ tasks.
-
-## Roadmap
-**2022/03/21:**
-
-(1) Add new applications, including classification and segmentation, and semantic segmentation with visualization. 
-
-(2) Add random point sampling algorithm
-
-### Setup (Edit in run_inference.sh)
-
-change arguments and add necessary flags to setup.py call in run_inference.sh, for example (testing dimsort-seq-FPS):
-
-```
-python setup.py --visualize --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size} --presort --test_dimsort
-```
+Pointnet_Pointnet2_pytorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch), for testing the a heuristic Sampling algorithm Performance on downstreaming PointNet++ tasks. This work is published as proceedings of SIPS 2022 and its pdf is available at (IEEE, final version)[https://ieeexplore.ieee.org/abstract/document/9919246] and (Arxiv, accepted version)[https://arxiv.org/pdf/2208.08795.pdf]
 
 ### Run
+
+First, please refer to Pointnet_Pointnet2_pytorch and train a pointnet++ model on three tasks.
+
+Then, to play with the proposed sample methods, please change arguments and add necessary flags to setup.py call in bash files, for example:
+
+```
+python setup.py --use_gpu --parallel_option --presort --coarse_sort_k=${coarse_sort_k} --parallel_m=${parallel_m} --sort_dim=${sort_dim} --batch_size=${batch_size} --dimsort_range=${dimsort_range} --gridgcn_sample_opt=${gridgcn_sample_opt} --voxel_size=${voxel_size}
+```
+
+Finally, test its performance using the pre-trained pointnet++ model.
+
+```
+python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
+```
+
+<!-- ### Run
 ```
 bash run_inference.sh
 ```
@@ -48,4 +49,4 @@ bash run_inference.sh
 |**Grid-GCN-40 (RVS)**|0.91110 (0.00143)|0.82380 (0.00422)| 13.46429 (0.10773)|
 |**Grid-GCN-40 (CAS)**|0.90940 (0.00165)|0.82015 (0.00560)| 17.53124 (0.15838)|
 
-(parallel is default set to 16-core)
+(parallel is default set to 16-core) -->
